@@ -1,4 +1,6 @@
 FitTracker::Application.routes.draw do
+  get "users/new"
+
   get "static_pages/contact"
 
   #get "static_pages/about"
