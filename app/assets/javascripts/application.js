@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require_tree ./global
+//= require ./jquery-ui-1.10.2/jquery-ui
