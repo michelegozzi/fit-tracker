@@ -1,5 +1,7 @@
-<% provide(:title) %>
-
-<h1>A MUST for every MILF in the world. With total respect!!!</h1>
-
-
+<!-- 10.31 -->
+<% if signed_in? %>
+	<%= render 'static_pages/home_for_signed_users' %> 
+<% else %>
+	<!-- EX10.5/3 -->
+	<%= render 'static_pages/home_for_unsigned_users' %> 
+<% end %> 

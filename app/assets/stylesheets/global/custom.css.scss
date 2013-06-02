@@ -1,19 +1,18 @@
-@import "bootstrap";
+
 
 /* mixins, variables, etc. */
 
-/* $grayMediumLight: #eaeaea; */
+$grayMediumLight: #eaeaea;
+$navbarBackground: #efefef;
+$navbarBackgroundHighlight: #CF9BFF;
+/*
 
-$grayMediumLight: #eb00ff;
-$violet: #eb00ff;
+$navbarBackground: #000000;
 
-$grayDarker: #eb00ff;
+$navbarText: #ffffff;
+*/
 
-$navbarBackground: #e0f;
-
-$navbarText: #eb00ff;
-
-
+@import "bootstrap";
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -65,7 +64,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  /*color: $grayLight;*/
+  color: $grayLight;
 }
 
 p {
@@ -257,3 +256,6 @@ aside {
   }
 }
 
+.navbar-inner {
+  border: 0px none transparent;
+}

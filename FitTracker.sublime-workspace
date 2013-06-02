@@ -7,6 +7,57 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/users/_sheets.html.erb",
+			"settings":
+			{
+				"buffer_size": 343,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 525,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/users/show.js.erb",
+			"settings":
+			{
+				"buffer_size": 296,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 769,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2327,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class SheetsController < ApplicationController\n\n	def show\n\n		if signed_in? \n			@sheets = current_user.sheets.find_all\n\n\n{\"title\":\"Varsity Cheerleading practice\",\"start\":\"2011-10-13\",\"allday\":false},\n			\n		else\n			redirect_to root_url\n		end\n	end\n\n\nend\n",
+			"file": "app/controllers/sheets_controller.rb",
+			"file_size": 166,
+			"file_write_time": 1370026440000000,
+			"settings":
+			{
+				"buffer_size": 251,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -19,7 +70,7 @@
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 139.0
 	},
 	"distraction_free":
 	{
@@ -32,6 +83,57 @@
 	},
 	"file_history":
 	[
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application.css",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/application.js",
+		"/home/michele/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
+		"/home/michele/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/michele/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529164947_add_category_to_meals.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529212058_add_indexes_to_sheets.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529212559_add_index_to_meals_sheet_id.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/sheet.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529172031_add_sheet_id_to_meals.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/user.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/config/routes.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528055555_add_index_to_users_email.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529170005_add_fuelsheet_id_to_meals.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/index.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/_home_for_unsigned_users.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/custom.css.scss",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/custom.css",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/application_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/jquery-ui-1.10.2/jquery-ui.css",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_info.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/_home_for_signed_users.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/show.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/show_follow.html.erb",
+		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/app/views/layouts/_header.html.erb",
+		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/app/assets/stylesheets/custom.css.scss",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528164229_add_remember_token_to_users.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528164507_add_admin_to_users.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/users_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/new.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_error_messages.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/home.html.erb",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/views/chapter02/index.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/views/chapter02/examples/_ex03_toggle_text.html.erb",
+		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/config/routes.rb",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/helpers/application_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/assets/stylesheets/application.css",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/assets/javascripts/application.js",
 		"/opt/nant-0.92/examples/NUnit2/ReferenceAssemblies/Helper.cs",
 		"/opt/nant-0.92/examples/NUnit2/ReferenceAssemblies/ReferenceTest.cs",
 		"/opt/nant-0.92/examples/NUnit2/ReferenceAssemblies/default.build",
@@ -70,7 +172,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
@@ -80,6 +182,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$",
+			"toggle",
+			"ctrl+k",
+			"ctrl+u",
+			"ctrl+k",
+			"#11.17",
+			"$",
+			"box_sizing",
+			"nav-bar",
 			"gedit"
 		],
 		"highlight": true,
@@ -88,6 +199,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"jQuery",
 			"sublime"
 		],
 		"reverse": false,
@@ -99,8 +211,169 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/users/_sheets.html.erb",
+					"settings":
+					{
+						"buffer_size": 343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								343,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/users/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/users/show.js.erb",
+					"settings":
+					{
+						"buffer_size": 296,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								37,
+								37
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								768,
+								768
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 2327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/sheets_controller.rb",
+					"settings":
+					{
+						"buffer_size": 251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								198,
+								198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -110,7 +383,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -150,16 +423,20 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/home/michele/Dropbox/Projects/ror/jQueryNinja/jQueryNinja.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 228.0,
 	"status_bar_visible": true
 }
