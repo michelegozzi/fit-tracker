@@ -13,6 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require_tree ./global
 //= require ./jquery-ui-1.10.2/jquery-ui
 //= require ./jqueryplugins/fullcalendar/fullcalendar.min
