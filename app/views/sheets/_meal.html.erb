@@ -1,0 +1,9 @@
+<% # if object.any? %>
+	<% # object.each do |meal| %>
+		<li>
+			<span class="content"><%= meal.name %> at <%= meal.time %> (<%= meal.calories %> calories)</span>
+			
+			<% #= render 'shared/delete_confirmation', object: micropost %>
+		</li>
+	<% # end %>
+<% # end %>

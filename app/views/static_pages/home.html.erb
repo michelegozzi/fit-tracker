@@ -4,4 +4,37 @@
 <% else %>
 	<!-- EX10.5/3 -->
 	<%= render 'static_pages/home_for_unsigned_users' %> 
-<% end %> 
+<% end %>
+
+<script>
+
+	jQuery(document).ready(function () {
+		jQuery('input.wg').rating( { stylePrefix: 'glass' } );
+		jQuery('input.battery').rating( { stylePrefix: 'battery' } );
+
+
+		//$.fn.rating.options.starWidth = '50';
+
+		$('.auto-submit-star').rating({
+			callback: function(value, link){
+				alert(value);
+			}
+		});
+	});
+</script>
+
+<div id="waterglass">
+	<input name="star1" type="radio" class="wg"/>
+	<input name="star1" type="radio" class="wg"/>
+	<input name="star1" type="radio" class="wg"/>
+	<input name="star1" type="radio" class="wg"/>
+	<input name="star1" type="radio" class="wg"/>
+</div>
+
+<div id="energy">
+	<input name="battery1" type="radio" class="battery" value="1" />
+	<input name="battery1" type="radio" class="battery" value="2" />
+	<input name="battery1" type="radio" class="battery" value="3" />
+	<input name="battery1" type="radio" class="battery" value="4" />
+	<input name="battery1" type="radio" class="battery" value="5" />
+</div>

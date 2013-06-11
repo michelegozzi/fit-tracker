@@ -18,9 +18,38 @@
 #
 
 class Sheet < ActiveRecord::Base
-  attr_accessible :calories_target, :date, :day, :energy_level, :goals_met, :notes, :sleep_hours, :water_glasses, :week_num
+	attr_accessible :calories_target, :date, :day, :energy_level, :goals_met, :notes, :sleep_hours, :water_glasses, :week_num, :meals_attributes
 
-  has_many :meals, :dependent => :destroy
+	has_many :meals, :dependent => :destroy
 
-  belongs_to :user
+	accepts_nested_attributes_for :meals, :allow_destroy => true
+
+	belongs_to :user
+
+	NOTES_MAXIMUM = 255
+	SLEEP_HOURS = Array(0..24)	# or (0..24).to_a
+	GOALS_MET = [['Yes', 1], ['No', 0]]
+
+
+	validates :calories_target, presence: true
+	validates :date, presence: true, uniqueness: true
+	#:week_num
+	#:day
+	validates :water_glasses,
+		presence: true,
+		:numericality => {
+			:only_integer => true,
+			:greater_than_or_equal_to => 0,
+			:less_than_or_equal_to => 8
+		}
+	validates :sleep_hours,
+		presence: true,
+		:numericality => {
+			:only_integer => true,
+			:greater_than_or_equal_to => 0,
+			:less_than_or_equal_to => 24
+		}
+	validates :notes, length: { maximum: NOTES_MAXIMUM }
+	validates :goals_met, presence: true
+	validates :energy_level, presence: true
 end

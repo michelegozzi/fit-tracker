@@ -2,7 +2,8 @@ namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
     #make_users
-    make_sheets
+    #make_sheets
+    make_meals
   end
 end
 
@@ -54,6 +55,22 @@ def make_sheets
       user.sheets.create!( calories_target: calories_target, date: date, day: day, energy_level: energy_level, goals_met: goals_met, notes: notes, sleep_hours: sleep_hours, water_glasses: water_glasses, week_num: week_num )
     end
   end
+end
+
+def make_meals
+  users = User.all(limit: 6)
+
+    users.each do |user|
+      user.sheets.each do |sheet|
+        sheet.meals.create!(name: 'Yogurt', time: sheet.date, calories: 100, category: 1)
+        sheet.meals.create!(name: 'Caffe', time: sheet.date, calories: 30, category: 1)
+        sheet.meals.create!(name: 'Mela', time: sheet.date, calories: 80, category: 1)
+        sheet.meals.create!(name: 'Pasta', time: sheet.date, calories: 200, category: 3)
+        sheet.meals.create!(name: 'Pesce', time: sheet.date, calories: 120, category: 5)
+        sheet.meals.create!(name: 'Insalata', time: sheet.date, calories: 50, category: 5)
+
+      end
+    end
 end
 
 # 11.17

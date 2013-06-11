@@ -13,7 +13,7 @@
 #
 
 class Meal < ActiveRecord::Base
-  attr_accessible :calories, :name, :time
+  attr_accessible :calories, :name, :time, :category
 
   belongs_to :sheet
 end

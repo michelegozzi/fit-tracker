@@ -10,6 +10,10 @@
  * = require ./jquery-ui-1.10.2/jquery-ui
  *
  *= require_self
- *= require_tree ./global
  *= require ./jqueryplugins/fullcalendar/fullcalendar
+ *= require ./jqueryplugins/rating/jquery.rating
+ *= require ./jqueryplugins/rating/jquery.rating.custom
+ *= require ./bootstrap/datepicker/bootstrap-datepicker
+ *= require ./bootstrap/timepicker/bootstrap-timepicker.min
+ *= require_tree ./global
  */

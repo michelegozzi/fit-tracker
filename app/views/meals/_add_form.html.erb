@@ -1,0 +1,17 @@
+<div id="dialog-form" title="Create new meal" style="margin-top: 20px">
+	<p class="validateTips">All form fields are required.</p>
+	<form>
+		<fieldset>
+			<input type="hidden" id="mealCategory" value="" />
+			<label for="mealName">Name</label>
+			<input type="text" name="name" id="mealName" class="text ui-widget-content ui-corner-all" />
+			<label for="mealTime">Time</label>
+			<div class="input-append bootstrap-timepicker">
+            	<input id="mealTime" type="text" class="input-small">
+            	<span></span> class="add-on"><i class="icon-time"></i></span>
+        	</div>
+			<label for="mealCalories">Calories</label>
+			<input type="number" name="calories" id="mealCalories" value="0" class="text ui-widget-content ui-corner-all" />
+		</fieldset>
+	</form>
+</div>

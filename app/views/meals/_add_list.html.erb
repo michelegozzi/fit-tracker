@@ -1,0 +1,23 @@
+<h3><%= category %> (<span id="<%= category.downcase %>-total-calories">0</span>):</h3>
+<div id="<%= category.downcase %>-meals-container" class="ui-widget meals-container">
+	
+	<table id="<%= category.downcase %>-meals" class="ui-widget ui-widget-content">
+		<thead>
+			<tr class="ui-widget-header ">
+				<th>Name</th>
+				<th>Time</th>
+				<th>Calories</th>
+				<th><i id="add-<%= category.downcase %>-meal" class="icon-plus"></i></th>
+			</tr>
+		</thead>
+		<tbody category="<%= category.downcase %>">
+			<% if meals.any? %>
+				<%= render :partial => 'meals/meal', :collection => meals %>
+			<% else %>
+			<% end %>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+	initTotalCalories('<%= category.downcase %>');
+	</script>
+</div>

@@ -1,0 +1,48 @@
+maxL = <%= Sheet::NOTES_MAXIMUM %>;
+var bName = navigator.appName;
+
+function taLimit(taObj) {
+	if (taObj.value.length==maxL) return false;
+	return true;
+}
+
+function taCount(taObj,Cnt) { 
+	objCnt=createObject(Cnt);
+	objVal=taObj.value;
+	if (objVal.length>maxL) objVal=objVal.substring(0,maxL);
+	if (objCnt) {
+		if(bName == "Netscape"){	
+			objCnt.textContent=maxL-objVal.length;}
+		else{objCnt.innerText=maxL-objVal.length;}
+	}
+	return true;
+}
+
+function createObject(objId) {
+	if (document.getElementById) return document.getElementById(objId);
+	else if (document.layers) return eval("document." + objId);
+	else if (document.all) return eval("document.all." + objId);
+	else return eval("document." + objId);
+}
+
+jQuery(document).ready(function () {
+	//jQuery( '#sheet_date' ).datepicker({
+	jQuery( '#sheet_date_markup' ).datepicker({
+		showButtonPanel: true
+		//format: 'dd-mm-yyyy'
+	});
+
+	jQuery('input.wg').rating( { stylePrefix: 'glass' } );
+	jQuery('input.battery').rating( { stylePrefix: 'battery' } );
+
+
+	//$.fn.rating.options.starWidth = '50';
+
+	$('.auto-submit-star').rating({
+		callback: function(value, link){
+			alert(value);
+		}
+	});
+
+	jQuery('#accordion').accordion( { collapsible: true, heightStyle: "content" });
+});

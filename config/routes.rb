@@ -8,7 +8,7 @@ FitTracker::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :sheets, only: [:index, :show, :create, :destroy]
+  resources :sheets #, only: [:index, :show, :create, :destroy]
 
   resources :meals, only: [:create, :destroy]
 

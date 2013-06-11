@@ -15,3 +15,6 @@
 //= require bootstrap
 //= require ./jquery-ui-1.10.2/jquery-ui
 //= require ./jqueryplugins/fullcalendar/fullcalendar.min
+//= require ./jqueryplugins/rating/jquery.rating
+//= require ./bootstrap/datepicker/bootstrap-datepicker
+//= require ./bootstrap/timepicker/bootstrap-timepicker.min

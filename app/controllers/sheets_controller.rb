@@ -1,41 +1,58 @@
 class SheetsController < ApplicationController
+	require 'json'
+
+	before_filter :signed_in_user, only: [:show, :new, :create, :edit, :update, :destroy]
 
 	def show
-		if signed_in? 
-			@sheet = current_user.sheets.find(params[:id])
+		@sheet = current_user.sheets.find(params[:id])
+		@meals = @sheet.meals.paginate(page: params[:page], :per_page => 3)
+	end
+
+	def new
+		@sheet = current_user.sheets.new
+		@sheet.date = Time.new #.strftime("%d-%m-%Y")
+
+		@breakfast_meals = []
+		@lunch_meals = []
+		@dinner_meals = []
+	end
+
+	def create
+		@sheet = current_user.sheets.new(params[:sheet])
+		if @sheet.save
+			#parsed_json = JSON(your_json_string)
+
+
+
+			flash[:success] = "Sheet created!"
+			redirect_to @sheet
 		else
-			redirect_to root_url
+			render 'new'
+		end
+	end
+
+	def edit
+		@sheet = Sheet.find(params[:id])
+		@breakfast_meals = @sheet.meals.where("category = :category", {:category => 1})
+		@lunch_meals = @sheet.meals.where("category = :category", {:category => 3})
+		@dinner_meals = @sheet.meals.where("category = :category", {:category => 5})
+	end
+
+	def update
+		if @sheet.update_attributes(params[:sheet])
+			flash[:success] = "Sheet updated"
+			redirect_to @sheet
+		else
+			render 'edit'
 		end
 	end
 
 
 	def index
-
-#		if signed_in? 
-			#@sheets = current_user.sheets.find_all
-
-			#@celebs = Celebrity.find_by_sql("SELECT id, first_name || ' ' || last_name AS name FROM celebrities WHERE first_name LIKE '#{@starts}%'")
-
-		
-  		#respond_to do |format|
-    		#format.html
-    	#	format.json { @celebs.to_json }
-  		#end
-
-  		#render :json => @celebs
-
-
-#{"title":"Varsity Cheerleading practice","start":"2011-10-13","allday":false},
-			
-#		else
-#			redirect_to root_url
-#		end
-#	end
-
 		if signed_in? 
+			day = 0
 
-			@sheets = current_user.sheets.find_all
-			
+			@sheets = current_user.sheets.find(:all, :order => "date").each { |s| s.day = day = day+1 }
 			render :json => custom_json_for(@sheets) # in questo modo posso vedere il json da browser
 
 			return
@@ -63,16 +80,8 @@ class SheetsController < ApplicationController
 					:backgroundColor => sheet.goals_met? ? "green" : "red",
 					:allDay => true,
 					:user_id => "#{sheet.user_id}"
-
-#<Sheet id: 1, calories_target: 1300, date: "2013-05-20 17:25:43",
-# week_num: 1, day: 1, water_glasses: 5, sleep_hours: 9
-#, notes: "Eligendi quia ratione assumenda non rem.", : true, energy_level: 7, user_id: 1, created_at: "2013-05-30 17:25:43", updated_at: "2013-05-30 17:25:43">
-
-
 				}
 			end
 			list.to_json
 		end
-
-
 end

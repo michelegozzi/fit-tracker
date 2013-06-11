@@ -1,2 +1,32 @@
 <% provide(:title, "Day ##{@sheet.day}") %>
 
+<div class="row">
+	<aside class="span4">
+		<section>
+			<%= link_to "Edit", edit_sheet_path(@sheet) %>
+		</section>
+		<section>
+			<b>Calories Target:</b><%= @sheet.calories_target %>
+		</section>
+		<section>
+			<b>Date:</b><%= @sheet.date.strftime("%d-%m-%Y") %>
+		</section>
+		<section>
+			<b>Goals Met:</b><%= Sheet::GOALS_MET.select {|a| a.include?(@sheet.goals_met ? 1 : 0) }.first.first %>
+		</section>
+	</aside>
+
+
+	<div class="span8">
+		<% if @sheet.meals.any? %>
+			<h3>Meals (<%= @sheet.meals.count %>)</h3>
+			<ol class="meals">
+				<%= render :partial => 'meal', :collection => @meals %>
+			</ol>
+			<%= will_paginate @meals %>
+		<% end %>
+	</div>
+
+
+</div>
+

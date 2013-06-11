@@ -12,6 +12,7 @@ gem 'will_paginate', '3.0.3'					#9.31
 gem 'bootstrap-will_paginate', '0.0.6'			#9.31
 gem 'jquery-rails'
 gem 'debugger', group: [:development, :test]
+gem 'json'
 
 	
 # Bundle edge Rails instead:
