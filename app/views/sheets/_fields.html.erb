@@ -2,12 +2,12 @@
 
 <%= render 'shared/error_messages', object: f.object %>
 
-<%= f.fields_for :meals do |meal_fields| %>
-	<%= meal_fields.text_field :name %>
-	<%= meal_fields.number_field :calories %>
-	<%= meal_fields.text_field :time %>
-	<%= meal_fields.hidden_field :category %>
-<% end %>
+<% #= f.fields_for :meals do |meal_fields| %>
+	<% #= meal_fields.text_field :name %>
+	<% #= meal_fields.number_field :calories %>
+	<% #= meal_fields.text_field :time %>
+	<% #= meal_fields.hidden_field :category %>
+<% #end %>
 
 <%= f.label :calories_target , :label => "Calories Target", placeholder: "Put your calories target here..." %>
 <%= f.number_field :calories_target %>

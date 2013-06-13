@@ -13,7 +13,60 @@
 #
 
 class Meal < ActiveRecord::Base
-  attr_accessible :calories, :name, :time, :category
+	attr_accessible :calories, :name, :category, :time
 
-  belongs_to :sheet
+	attr_accessor :timepart
+	attr_accessible :timepart
+
+	#attr_accessor_with_default :timepart, Date.new.strftime("%I:%M %p")
+
+	belongs_to :sheet
+
+	CATEGORIES = [['Breakfast', 1], ['Lunch', 3], ['Dinner', 5]]
+
+
+	before_save do |meal|
+		logger.debug "DBG_20130612_1346 before_save"
+		meal.calories += 1
+		#meal.time = Time.zone.parse(meal.timepart)
+		#logger.debug meal.timepart.to_s
+		#logger.debug meal.time.to_s
+	end
+
+	before_save :parse_categories
+	after_initialize :parse_categories
+	before_create :parse_categories
+	before_validation :test_before_validation
+
+	after_initialize do |meal|
+		logger.debug "DBG_20130612_1345 after_initialize"
+		if meal.time.nil?
+			meal.timepart = Date.new.strftime("%I:%M %p")
+		else
+			meal.timepart = meal.time.strftime("%I:%M %p")
+		end
+		#meal.datepart = Date.today.to_time
+
+		#meal.time = Date.today.to_time
+	end
+
+	private
+		def test_before_validation
+			logger.debug "DBG_20130612_2246 test_before_validation: #{self.category}"
+		end
+
+		def parse_categories
+			logger.debug "DBG_20130612_2000 parse_categories: #{self.category}"
+			item = Meal::CATEGORIES.select {|c| c.include?(self.category.to_s.capitalize)}
+
+			if item.any?
+				self.category = item[0][1].to_i
+			end
+
+			self.category = self.category.to_i
+
+			#CATEGORIES.select {|a| a.include?(self.category) }
+
+			#self.category = SecureRandom.urlsafe_base64
+		end
 end

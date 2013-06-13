@@ -3,6 +3,8 @@ class SheetsController < ApplicationController
 
 	before_filter :signed_in_user, only: [:show, :new, :create, :edit, :update, :destroy]
 
+	before_filter :fix_meals_params, :only => [:create, :update]
+
 	def show
 		@sheet = current_user.sheets.find(params[:id])
 		@meals = @sheet.meals.paginate(page: params[:page], :per_page => 3)
@@ -39,6 +41,7 @@ class SheetsController < ApplicationController
 	end
 
 	def update
+		@sheet = Sheet.find(params[:id])
 		if @sheet.update_attributes(params[:sheet])
 			flash[:success] = "Sheet updated"
 			redirect_to @sheet
@@ -83,5 +86,12 @@ class SheetsController < ApplicationController
 				}
 			end
 			list.to_json
+		end
+
+		def fix_meals_params
+
+			o = params[:sheet][:meals]
+			debugger
+			logger.debug o
 		end
 end

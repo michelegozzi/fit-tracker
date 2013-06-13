@@ -10,7 +10,7 @@
 		<%= form_for(@sheet) do |f| %>
 			<%= f.label "Meals" %>
 			<div id="accordion">
-				<%= render :partial => 'meals/add_list', :locals => { :meals => @breakfast_meals, :category => "Breakfast" } %>
+				<%= render :partial => 'meals/add_fields', :locals => { :f => f, :meals => @breakfast_meals, :category => "Breakfast" } %>
 				<%= render :partial => 'meals/add_list', :locals => { :meals => @lunch_meals, :category => "Lunch" } %>
 				<%= render :partial => 'meals/add_list', :locals => { :meals => @dinner_meals, :category => "Dinner" } %>
 			</div>

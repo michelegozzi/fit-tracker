@@ -200,7 +200,25 @@ jQuery(document).ready(function() {
 			jQuery('#dialog-form').dialog('open');
 	});
 
-	jQuery('#mealTime').timepicker();
+	//jQuery('#mealTime').timepicker();
+
+	// copy timepart value to time value
+	jQuery('input.meal-timepart-field').each(function () {
+		
+		var dest = jQuery(this).siblings('input.meal-time-field').first();
+
+		if (dest === undefined)	{
+			console.error('sibling element \"input.meal-time-field\" not found');
+		}
+		else {
+			console.log('copy from ' + jQuery(this).attr('id') + ' to ' + dest.attr('id'));
+			dest.val(jQuery(this).val());
+		}
+	});
+	
+	jQuery('.meal-time-field').timepicker();
+
+	
 
 	//
 	//jQuery( '#mealTime' ).datetimepicker({
@@ -221,4 +239,18 @@ function initTotalCalories(category) {
 	);
 
 	jQuery("#" + category + "-total-calories").html(calories);
+}
+
+
+
+
+function remove_fields(link) {
+	$(link).prev("input[type=hidden]").val("1");
+	$(link).closest(".fields").hide();
+}
+
+function add_fields(link, association, content) {
+	var new_id = new Date().getTime();
+	var regexp = new RegExp("new_" + association, "g")
+	$(link).parent().before(content.replace(regexp, new_id));
 }
