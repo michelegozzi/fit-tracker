@@ -5,6 +5,16 @@ namespace :db do
     #make_sheets
     make_meals
   end
+
+  task normalize_time: :environment do
+    normalize_time
+  end
+
+  task init_time: :environment do
+    init_time
+  end
+
+  
 end
 
 def make_users
@@ -62,15 +72,51 @@ def make_meals
 
     users.each do |user|
       user.sheets.each do |sheet|
-        sheet.meals.create!(name: 'Yogurt', time: sheet.date, calories: 100, category: 1)
-        sheet.meals.create!(name: 'Caffe', time: sheet.date, calories: 30, category: 1)
-        sheet.meals.create!(name: 'Mela', time: sheet.date, calories: 80, category: 1)
-        sheet.meals.create!(name: 'Pasta', time: sheet.date, calories: 200, category: 3)
-        sheet.meals.create!(name: 'Pesce', time: sheet.date, calories: 120, category: 5)
-        sheet.meals.create!(name: 'Insalata', time: sheet.date, calories: 50, category: 5)
+        time = Time.new(2000, 1 , 1)
+        sheet.meals.create!(name: 'Yogurt', time: time + (8*3600 + 15*60) , calories: 100, category: 1)
+        sheet.meals.create!(name: 'Caffe', time: time + (8*3600 + 15*60), calories: 30, category: 1)
+        sheet.meals.create!(name: 'Mela', time: time + (10*3600 + 35*60), calories: 80, category: 1)
+        sheet.meals.create!(name: 'Pasta', time: time + (13*3600 + 5*60), calories: 200, category: 3)
+        sheet.meals.create!(name: 'Pesce', time: time + (19*3600 + 10*60), calories: 120, category: 5)
+        sheet.meals.create!(name: 'Insalata', time: time + (19*3600 + 10*60), calories: 50, category: 5)
 
       end
     end
+end
+
+def normalize_time
+  Meal.all.each do |meal|
+
+
+    if !meal.time.nil?
+
+      timeoffset = meal.time.hour*3600 + meal.time.min * 60
+      meal.time = Time.new(2000, 1 , 1) + timeoffset
+      meal.save
+    end
+  end
+end
+
+def init_time
+
+  time = Time.local(2000, 1 , 1)
+  
+  Meal.all.each do |meal|
+    if !meal.category.nil?
+
+      if meal.category == 1
+        meal.time = time + (8*3600 + 15*60)
+        meal.save
+      elsif meal.category == 3
+        meal.time = time + (13*3600 + 5*60)
+        meal.save
+      elsif meal.category == 5
+        meal.time = time + (19*3600 + 10*60)
+        meal.save
+      end
+    end
+  end
+
 end
 
 # 11.17

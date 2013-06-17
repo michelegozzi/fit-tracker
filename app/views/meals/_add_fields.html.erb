@@ -8,11 +8,15 @@
 				<th>Time</th>
 				<th>Calories</th>
 				<th>Category</th>
-				<th><i id="add-<%= category.downcase %>-meal" class="icon-plus"></i></th>
+				<!--<th><i id="add-[category-downcase]-meal" class="icon-plus"></i></th>-->
+				<th><%= link_to_add_fields "Add", f, :meals, category %></th>
 			</tr>
 		</thead>
 		<tbody category="<%= category.downcase %>">
 			<%= f.fields_for :meals, meals do |meal_fields| %>
+
+			<%= render "meal_item_fields", :f => meal_fields %>
+
 			<tr>
 				<td><%= meal_fields.text_field :name %></td>
 				<td>

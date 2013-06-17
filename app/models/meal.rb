@@ -13,7 +13,7 @@
 #
 
 class Meal < ActiveRecord::Base
-	attr_accessible :calories, :name, :category, :time
+	attr_accessible :calories, :name, :category, :time, :daytime
 
 	attr_accessor :timepart
 	attr_accessible :timepart
@@ -22,12 +22,30 @@ class Meal < ActiveRecord::Base
 
 	belongs_to :sheet
 
-	CATEGORIES = [['Breakfast', 1], ['Lunch', 3], ['Dinner', 5]]
+	CATEGORIES = [['breakfast', 1], ['lunch', 3], ['dinner', 5]]
+
+
+
+	validates :name, presence: true, length: { maximum: 50 }
+	validates :calories,
+		presence: true,
+		:numericality => {
+			:only_integer => true,
+			:greater_than => 0
+		}
+	validates :time, presence: true
+	validates :category,
+		presence: true,
+		:numericality => {
+			:only_integer => true,
+			:greater_than => 0
+		}
+
 
 
 	before_save do |meal|
 		logger.debug "DBG_20130612_1346 before_save"
-		meal.calories += 1
+		#meal.calories += 1
 		#meal.time = Time.zone.parse(meal.timepart)
 		#logger.debug meal.timepart.to_s
 		#logger.debug meal.time.to_s
@@ -41,7 +59,7 @@ class Meal < ActiveRecord::Base
 	after_initialize do |meal|
 		logger.debug "DBG_20130612_1345 after_initialize"
 		if meal.time.nil?
-			meal.timepart = Date.new.strftime("%I:%M %p")
+			meal.timepart = Time.local(2000, 1, 1).strftime("%I:%M %p")
 		else
 			meal.timepart = meal.time.strftime("%I:%M %p")
 		end
@@ -56,14 +74,16 @@ class Meal < ActiveRecord::Base
 		end
 
 		def parse_categories
+			#debugger
 			logger.debug "DBG_20130612_2000 parse_categories: #{self.category}"
-			item = Meal::CATEGORIES.select {|c| c.include?(self.category.to_s.capitalize)}
+			item = Meal::CATEGORIES.select {|c| c.include?(self.category.to_s)}
 
 			if item.any?
 				self.category = item[0][1].to_i
 			end
 
 			self.category = self.category.to_i
+			#debugger
 
 			#CATEGORIES.select {|a| a.include?(self.category) }
 

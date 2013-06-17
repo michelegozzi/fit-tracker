@@ -29,15 +29,15 @@ module ApplicationHelper
 	#	image_tag(gravatar_url, alt: "#{user.name}", class: "gravatar")
 	#end
 
-	def link_to_remove_fields(name, f)
-		f.hidden_field(:_destroy) + link_to_function(name, "remove_fields(this)")
+	def link_to_remove_meal_fields(name, f)
+		f.hidden_field(:_destroy) + link_to_function(name, "remove_meal_fields(this)")
 	end
 
-	def link_to_add_fields(name, f, association)
-		new_object = f.object.class.reflect_on_association(association).klass.new
+	def link_to_add_meal_fields(name, f, association, categoryId)
+		new_object = f.object.class.reflect_on_association(association).klass.new(:category => categoryId, :calories => 0)
 		fields = f.fields_for(association, new_object, :child_index => "new_#{association}") do |builder|
 			render(association.to_s.singularize + "_fields", :f => builder)
 		end
-		link_to_function(name, h("add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")"))
+		link_to_function(name, "add_meal_fields(this, '#{association}', '#{escape_javascript(fields)}')")
 	end
 end

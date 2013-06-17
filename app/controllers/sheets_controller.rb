@@ -7,7 +7,7 @@ class SheetsController < ApplicationController
 
 	def show
 		@sheet = current_user.sheets.find(params[:id])
-		@meals = @sheet.meals.paginate(page: params[:page], :per_page => 3)
+		@meals = @sheet.meals.order("time ASC").paginate(page: params[:page], :per_page => 3)
 	end
 
 	def new
@@ -42,6 +42,10 @@ class SheetsController < ApplicationController
 
 	def update
 		@sheet = Sheet.find(params[:id])
+		@breakfast_meals = @sheet.meals.where("category = :category", {:category => 1})
+		@lunch_meals = @sheet.meals.where("category = :category", {:category => 3})
+		@dinner_meals = @sheet.meals.where("category = :category", {:category => 5})
+		
 		if @sheet.update_attributes(params[:sheet])
 			flash[:success] = "Sheet updated"
 			redirect_to @sheet
@@ -91,7 +95,7 @@ class SheetsController < ApplicationController
 		def fix_meals_params
 
 			o = params[:sheet][:meals]
-			debugger
+			#debugger
 			logger.debug o
 		end
 end

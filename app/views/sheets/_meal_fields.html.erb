@@ -1,0 +1,15 @@
+<tr>
+	<td><%= f.text_field :name, :class => 'meal-name-field' %></td>
+	<td>
+		<div class="input-append bootstrap-timepicker">
+		<%= f.hidden_field :timepart, :class => 'meal-timepart-field' %>
+		<%= f.text_field :time, :class => 'input-small meal-time-field' %>
+		<span class="add-on"><i class="icon-time"></i></span>
+	</div>
+	</td>
+	<td><%= f.number_field :calories, :class => 'meal-calories-field' %></td>
+	<td> <!--<i class="icon-remove"></i>-->
+		<%= link_to_remove_meal_fields '<i class="icon-remove"></i>'.html_safe, f %>
+		<%= f.hidden_field :category, :class => 'meal-category-field' %>
+	</td>
+</tr>

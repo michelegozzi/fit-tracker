@@ -55,12 +55,15 @@ function printTime(o) {
 	return result;
 }
 
+/*
 function removeItem(o) {
 	console.log(o);
 	var tr = o.parents('tr');
 	var tbody = tr.parents('tbody');
-	var category = tbody.attr('category');
-	console.log(category);	
+	var categoryId = tbody.attr('categoryId');
+	console.log(categoryId);
+	var categoryKey = tbody.attr('categoryKey');
+	console.log(categoryKey);
 
 	console.log(tr);
 	tr.remove();
@@ -81,10 +84,12 @@ function removeItem(o) {
 	);
 
 	console.log(calories);
-	jQuery("#" + category + "-total-calories").html(calories);
+	jQuery("#" + categoryKey + "-total-calories").html(calories);
 }
+*/
 
 jQuery(document).ready(function() {
+	/*
 	jQuery( "#dialog-form" ).dialog({
 		autoOpen: false,
 		height: 400,
@@ -94,7 +99,7 @@ jQuery(document).ready(function() {
 			"Add new meal": function() {
 				console.log('Add new meal');
 				var bValid = true;
-				var category = jQuery("#mealCategory").val();
+				var categoryKey = jQuery("#mealCategory").val();
 				var mealName = jQuery( "#mealName" );
 				var mealTime = jQuery( "#mealTime" );
 				var mealCalories = jQuery( "#mealCalories" );
@@ -114,7 +119,7 @@ jQuery(document).ready(function() {
 
 				if ( bValid ) {
 					// create row
-					jQuery( "#" + category + "-meals tbody" ).append(
+					jQuery( "#" + categoryKey + "-meals tbody" ).append(
 					"<tr><td>" + mealName.val() + "</td>"
 					+ "<td>" + mealTime.val() + "</td>"
 					+ "<td>" + mealCalories.val() + "</td>"
@@ -123,24 +128,25 @@ jQuery(document).ready(function() {
 
 					// create remove event & calculate calories
 					var calories = 0;
-					/*
-					var rows = jQuery( "#" + category + "-meals tbody > tr");
-					console.log(rows);
-					rows.each(
-						function () {
-							jQuery(this).find('.icon-remove').click( function() {
-								removeItem(jQuery(this));
-							});
+					
 
-							var td = jQuery(this).find('td:eq(2)');
-							console.log(td);
-							calories += parseInt(td.html());
-						}
-					);
-					*/
+					//var rows = jQuery( "#" + categoryKey + "-meals tbody > tr");
+					//console.log(rows);
+					//rows.each(
+					//	function () {
+					//		jQuery(this).find('.icon-remove').click( function() {
+					//			removeItem(jQuery(this));
+					//		});
+
+					//		var td = jQuery(this).find('td:eq(2)');
+					//		console.log(td);
+					//		calories += parseInt(td.html());
+					//	}
+					//);
+					
 
 					// set remove action
-					var lastRow = jQuery( "#" + category + "-meals tbody > tr" ).last();
+					var lastRow = jQuery( "#" + categoryKey + "-meals tbody > tr" ).last();
 					lastRow.find('.icon-remove').click( function() {
 						removeItem(jQuery(this));
 					});
@@ -152,7 +158,7 @@ jQuery(document).ready(function() {
 
 					console.log("calories=" + calories);
 
-					var totalCalories = jQuery("#" + category + "-total-calories");
+					var totalCalories = jQuery("#" + categoryKey + "-total-calories");
 
 					calories += parseInt(totalCalories.html());
 					totalCalories.html(calories);
@@ -181,7 +187,9 @@ jQuery(document).ready(function() {
 			$('#mealTime').timepicker('setTime', printTime(jQuery.now()));
 		}
 	});
+	*/
 
+	/*
 	jQuery('#add-breakfast-meal')
 		.click(function() {
 			jQuery('#dialog-form input#mealCategory').val('breakfast');
@@ -199,6 +207,7 @@ jQuery(document).ready(function() {
 			jQuery('#dialog-form #mealCategory').val('dinner');
 			jQuery('#dialog-form').dialog('open');
 	});
+	*/
 
 	//jQuery('#mealTime').timepicker();
 
@@ -216,20 +225,15 @@ jQuery(document).ready(function() {
 		}
 	});
 	
+	// set timepicker function for all time fields
 	jQuery('.meal-time-field').timepicker();
-
-	
-
-	//
-	//jQuery( '#mealTime' ).datetimepicker({
-	//});
 });
 
-function initTotalCalories(category) {
-	var rows = jQuery("#" + category + "-meals tbody > tr");
+function initTotalCalories(categoryKey) {
+	var rows = jQuery("#" + categoryKey + "-meals tbody > tr");
 	var calories = 0;
 
-	console.log(rows);
+	//console.log(rows);
 	rows.each(
 		function () {
 			var td = jQuery(this).find('td:eq(2)');
@@ -238,12 +242,12 @@ function initTotalCalories(category) {
 		}
 	);
 
-	jQuery("#" + category + "-total-calories").html(calories);
+	jQuery("#" + categoryKey + "-total-calories").html(calories);
 }
 
 
 
-
+/*
 function remove_fields(link) {
 	$(link).prev("input[type=hidden]").val("1");
 	$(link).closest(".fields").hide();
@@ -253,4 +257,103 @@ function add_fields(link, association, content) {
 	var new_id = new Date().getTime();
 	var regexp = new RegExp("new_" + association, "g")
 	$(link).parent().before(content.replace(regexp, new_id));
+}
+*/
+
+function remove_meal_fields(link) {
+	jQuery(link).prev("input[type=hidden]").val('1');
+	//$(link).up(".fields").hide();
+
+	
+	var tr = jQuery(link).parents('tr');
+	
+	var tbody = tr.parents('tbody');
+	var categoryKey = tbody.attr('categoryKey');
+	console.log(categoryKey);	
+
+	tr.children('input[type=hidden]')
+
+	console.log(tr);
+	tr.hide();
+
+	var calories = 0;
+
+	var rows = jQuery(tbody).children("tr");
+
+	console.log(rows);
+
+	rows.each(
+		function () {
+			var td = jQuery(this).find('td:eq(2)');
+			console.log(td);
+			calories += parseInt(td.html());
+		}
+	);
+
+	console.log(calories);
+	jQuery("#" + categoryKey + "-total-calories").html(calories);
+}
+
+/*
+function init_fields(categoryId, tbody) {
+
+	console.log('init_fields');
+
+	var lastRow = tbody.children('tr').last();
+
+	if (lastRow === undefined) {
+		console.log('last row is undefined');
+	}
+	else
+	{
+		console.log(lastRow);
+
+		var timeField = lastRow.find('input.meal-time-field');
+
+		if (timeField === undefined) {
+			console.log('timeField is undefined');
+		}
+		else {
+			console.log(timeField);
+			timeField.timepicker();
+		}
+		
+		var categoryField = lastRow.find('input.meal-category-field');
+
+		if (categoryField === undefined) {
+			console.log('categoryField is undefined');
+		}
+		else {
+			console.log(categoryField);
+			categoryField.attr('value', categoryId);
+		}
+
+		lastRow.find('input.meal-calories-field').attr('value', '0');
+
+	}
+}
+*/
+
+function add_meal_fields(link, association, content) {
+	//console.log('add_fields for:' + association);
+	var new_id = new Date().getTime();
+	var regexp = new RegExp("new_" + association, "g")
+	/*
+	$(link).up().insert({
+		before: content.replace(regexp, new_id)
+	});
+	*/
+
+	var table = jQuery(link).parents('table');
+	//console.log(table);
+	var tbody = table.find('tbody');
+
+	var categoryId = tbody.attr('categoryId');
+
+	//console.log(tbody);
+	tbody.append(content.replace(regexp, new_id));
+
+	tbody.children('tr').find('input.meal-time-field').timepicker();
+
+	//setTimeout(function() { init_fields(categoryId, tbody); },2000);
 }
