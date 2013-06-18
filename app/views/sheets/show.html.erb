@@ -1,12 +1,33 @@
 <% provide(:title, "Day ##{@sheet.day}") %>
 
-<div class="row">
-	<aside class="span4">
+<script type="text/javascript">
+	jQuery(document).ready(function () {
+		jQuery('#accordion').accordion( { collapsible: true, heightStyle: "content" });
+
+		
+
+		jQuery('input:radio[class=wg][value=<%= @sheet.water_glasses%>]').prop('checked', true);
+		jQuery('input:radio[class=battery][value=<%= @sheet.energy_level%>]').prop('checked', true);
+
+		jQuery('input.wg').rating( { stylePrefix: 'glass' } );
+		jQuery('input.battery').rating( { stylePrefix: 'battery' } );
+		//$.fn.rating.options.starWidth = '50';
+
+		$('.auto-submit-star').rating({
+			callback: function(value, link){
+				alert(value);
+			}
+		});
+	});
+</script>
+
+<div class="row-fluid">
+	<aside class="span3">
 		<section>
 			<%= link_to "Edit", edit_sheet_path(@sheet) %>
 		</section>
 		<section>
-			<b>Calories Target:</b><%= @sheet.calories_target %>
+			<b>Calorie Target:</b><%= @sheet.calorie_target %>
 		</section>
 		<section>
 			<b>Date:</b><%= @sheet.date.strftime("%d-%m-%Y") %>
@@ -14,19 +35,71 @@
 		<section>
 			<b>Goals Met:</b><%= Sheet::GOALS_MET.select {|a| a.include?(@sheet.goals_met ? 1 : 0) }.first.first %>
 		</section>
+		<section>
+			<b>Sleep Hours:</b><%= @sheet.sleep_hours %>
+		</section>
+		<section>
+			<b>Water Glasses:</b>
+			<div id="waterglasses">
+				<input name="water_glasses" type="radio" class="wg" value="1" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="2" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="3" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="4" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="5" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="6" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="7" disabled="disabled"/>
+				<input name="water_glasses" type="radio" class="wg" value="8" disabled="disabled"/>
+			</div>
+		</section>
+		<section>
+			<b>Energy Level:</b>
+			<div id="energylevel">
+				<input name="battery1" type="radio" class="battery" value="1" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="2" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="3" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="4" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="5" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="6" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="7" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="8" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="9" disabled="disabled"/>
+				<input name="battery1" type="radio" class="battery" value="10" disabled="disabled"/>
+			</div>
+		</section>
 	</aside>
 
-
-	<div class="span8">
+	<div class="span4">
 		<% if @sheet.meals.any? %>
 			<h3>Meals (<%= @sheet.meals.count %>)</h3>
-			<ol class="meals">
-				<%= render :partial => 'meal', :collection => @meals %>
-			</ol>
-			<%= will_paginate @meals %>
+			
+			<div id="accordion">
+				<% Meal::CATEGORIES.each do |category| %>
+					<%= render :partial => 'meals_table',
+						:locals => {
+							:meals => @sheet.meals.where("category = :category", {:category => category[1]}).order("time ASC"),
+							:categoryId => category[1],
+							:categoryKey => category[0]
+						} %>
+				<% end %>
+			</div>
+
+			
 		<% end %>
+
+		<table class="table table-bordered" width="90%">
+			<thead>
+				<tr class="ui-widget-header ">
+					<th>Total Calories Consumed:</th>
+					<th><%= @sheet.total_calories_consumed %></th>
+				</tr>
+			</thead>
+		</table>
+				
 	</div>
 
+	<div class="span5">
+		<label for="notes">Notes:</label>
+		<textarea id="notes" rows="5"><%= @sheet.notes %></textarea>
+	</div>
 
 </div>
-

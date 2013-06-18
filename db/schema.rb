@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529212559) do
+ActiveRecord::Schema.define(:version => 20130618063240) do
 
   create_table "meals", :force => true do |t|
     t.string   "name"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20130529212559) do
   add_index "meals", ["sheet_id"], :name => "index_meals_on_sheet_id"
 
   create_table "sheets", :force => true do |t|
-    t.integer  "calories_target"
+    t.integer  "calorie_target"
     t.datetime "date"
     t.integer  "week_num"
     t.integer  "day"
@@ -36,8 +36,9 @@ ActiveRecord::Schema.define(:version => 20130529212559) do
     t.boolean  "goals_met"
     t.integer  "energy_level"
     t.integer  "user_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.integer  "total_calories_consumed"
   end
 
   add_index "sheets", ["date", "user_id"], :name => "index_sheets_on_date_and_user_id", :unique => true

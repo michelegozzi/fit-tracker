@@ -2,92 +2,88 @@
 
 <%= render 'shared/error_messages', object: f.object %>
 
-<% #= f.fields_for :meals do |meal_fields| %>
-	<% #= meal_fields.text_field :name %>
-	<% #= meal_fields.number_field :calories %>
-	<% #= meal_fields.text_field :time %>
-	<% #= meal_fields.hidden_field :category %>
-<% #end %>
+<div class="row-fluid">
+	<aside class="span3">
+		<section>
+			<%= f.label :calorie_target , :label => "Calorie Target", placeholder: "Put your calories target here..." %>
+			<%= f.number_field :calorie_target %>
+		</section>
+		<section>
+			<%= f.label :date %>
+			<div class="input-append date" id="sheet_date_markup" data-date="<%= f.object.date.strftime("%d-%m-%Y") %>" data-date-format="dd-mm-yyyy">
+				<%= f.text_field :date, :size => 10, :value => f.object.date.strftime("%d-%m-%Y") %>
+				<span class="add-on"><i class="icon-th"></i></span>
+			</div>
+		</section>
+		<section>
+			<%= f.label :sleep_hours %>
+			<%= f.select :sleep_hours, 
+				Sheet::SLEEP_HOURS.collect {|p| [ p==0 ? 'None' : pluralize(p, "hour"), p ] },
+				:class => 'span3'
+				%>
+		</section>
+	</aside>
 
-<%= f.label :calories_target , :label => "Calories Target", placeholder: "Put your calories target here..." %>
-<%= f.number_field :calories_target %>
+	<div class="span4">
+		<%= f.label :water_glasses %>
+		<%= f.radio_button :water_glasses, 1, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 2, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 3, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 4, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 5, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 6, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 7, :class => 'wg' %>
+		<%= f.radio_button :water_glasses, 8, :class => 'wg' %>
+		<br>
 
-<%= f.label :date %>
-<div class="input-append date" id="sheet_date_markup" data-date="<%= f.object.date.strftime("%d-%m-%Y") %>" data-date-format="dd-mm-yyyy">
-<% #= f.text_field :date, :class => 'span2', :size => 16, :value => Time.new.strftime("%d-%m-%Y") %>
-<%= f.text_field :date, :class => 'span2', :size => 16, :value => f.object.date.strftime("%d-%m-%Y") %>
-<span class="add-on"><i class="icon-th"></i></span>
-</div>
-
-<div>
-	<%= f.label :notes do
-		
-	('Notes (<b><span id="notesCounter">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe
-	end %>
-
-	<%= f.text_area :notes,
-		placeholder: "Put your notes here...",
-		:onkeypress => "return taLimit(this);",
-		:onkeyup => "return taCount(this,'notesCounter');" %>
-</div>
-<div>
-	<%= f.label :water_glasses %>
-	<%= f.radio_button :water_glasses, 1, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 2, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 3, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 4, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 5, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 6, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 7, :class => 'wg' %>
-	<%= f.radio_button :water_glasses, 8, :class => 'wg' %>
-
-</div>
-<br>
-<div>
-
-<%= f.label :sleep_hours %>
-<%= f.select :sleep_hours,
-		Sheet::SLEEP_HOURS.collect {|p| [ p==0 ? 'None' : pluralize(p, "hour"), p ] }
-		#Sheet::SLEEP_HOURS.collect {|p| [ p, p ] },
-		#{:include_blank => 'None'}
-		%>
+		<%= f.label "Meals" %>
+		<div id="accordion">
+			<% Meal::CATEGORIES.each do |category| %>
+				<%= render :partial => 'meals_list',
+					:locals => {
+						:f => f,
+						:meals => @sheet.meals.where("category = :category", {:category => category[1]}),
+						:categoryId => category[1],
+						:categoryKey => category[0]
+					} %>
+			<% end %>
+		</div>
 	</div>
 
+	<div class="span5">
+		<div>
+			<%= f.label :notes do
+			('Notes (<b><span id="notesCounter">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe
+			end %>
 
-<div id="energy">
-	<%= f.label :energy_level %>
-	<%= f.radio_button :energy_level, 1, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 2, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 3, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 4, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 5, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 6, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 7, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 8, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 9, :class => 'battery' %>
-	<%= f.radio_button :energy_level, 10, :class => 'battery' %>
-	<br>
+			<%= f.text_area :notes,
+				:rows => 5,
+				placeholder: "Put your notes here...",
+				:onkeypress => "return taLimit(this);",
+				:onkeyup => "return taCount(this,'notesCounter');" %>
+		</div>
+		<br>
+
+		<div id="energy">
+			<%= f.label :energy_level %>
+			<%= f.radio_button :energy_level, 1, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 2, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 3, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 4, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 5, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 6, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 7, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 8, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 9, :class => 'battery' %>
+			<%= f.radio_button :energy_level, 10, :class => 'battery' %>
+			<br>
+		</div>
+
+		<div>
+			<%= f.label :goals_met %>
+			<%= f.select :goals_met, Sheet::GOALS_MET, {:prompt => 'Choose ...'} %>
+		</div>
+	</div>
 </div>
-
-<div>
-<% #= f.check_box :goals_met %>
-<%= f.label :goals_met %>
-<%= f.select :goals_met, Sheet::GOALS_MET, {:prompt => 'Choose ...'} %>
-</div>
-
-<!--
-calories_target
-date
-week_num
-day
-water_glasses
-sleep_hours
-notes
-goals_met
-energy_level
-user_id
-created_at
-updated_at
--->
 
 <%= debug(f.object) if Rails.env.development? %>

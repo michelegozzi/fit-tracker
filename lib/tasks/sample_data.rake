@@ -51,7 +51,7 @@ def make_sheets
       week_start = now.strftime("%U").to_i - 1
     end
 
-    calories_target = prng.rand(10..20) * 100
+    calorie_target = prng.rand(10..20) * 100
     date = now - ( 86400 * (max + 1 - i) * 2 )
     day = i
     energy_level = prng.rand(1..10)
@@ -62,7 +62,7 @@ def make_sheets
     week_num = now.strftime("%U").to_i - week_start
 
     users.each do |user|
-      user.sheets.create!( calories_target: calories_target, date: date, day: day, energy_level: energy_level, goals_met: goals_met, notes: notes, sleep_hours: sleep_hours, water_glasses: water_glasses, week_num: week_num )
+      user.sheets.create!( calorie_target: calorie_target, date: date, day: day, energy_level: energy_level, goals_met: goals_met, notes: notes, sleep_hours: sleep_hours, water_glasses: water_glasses, week_num: week_num )
     end
   end
 end

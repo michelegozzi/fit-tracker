@@ -1,0 +1,29 @@
+
+	<h3><%= categoryKey.capitalize %></h3>
+	<div>
+		<table id="<%= categoryKey %>-meals" class="table table-bordered table-hover" width="90%">
+			<thead>
+				<tr class="ui-widget-header ">
+					<th>Name</th>
+					<th>Time</th>
+					<th>Calories</th>
+				</tr>
+			</thead>
+			<tbody categoryKey="<%= categoryKey %>" categoryId="<%= categoryId %>" >
+				<%
+					total_calories = 0
+					meals.each do |meal|
+					total_calories += meal.calories
+					 %>
+				<%= render :partial => 'meals_table_row', :locals => { :meal => meal } %>
+				<% end %>
+				<tr class="ui-widget-footer">
+					<td colspan="2">Total calories for <%= categoryKey %>:</td>
+					<td><%= total_calories%></td>
+				</tr>
+			</tbody>
+			
+			
+
+		</table>
+	</div>

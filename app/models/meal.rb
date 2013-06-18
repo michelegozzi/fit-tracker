@@ -22,7 +22,7 @@ class Meal < ActiveRecord::Base
 
 	belongs_to :sheet
 
-	CATEGORIES = [['breakfast', 1], ['lunch', 3], ['dinner', 5]]
+	CATEGORIES = [['breakfast', 1], ['snack1', 2], ['lunch', 3], ['snack2', 4], ['dinner', 5]]
 
 
 

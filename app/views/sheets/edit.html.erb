@@ -1,31 +1,9 @@
 <% provide(:title, "Edit sheet") %>
-<% include_javascript 'meals/add.js' %>
+<% include_javascript 'sheets/meals.js' %>
 
 <h1>Update current sheet</h1>
 
-<div class="row">
-	<div class="span6 offset3">
-		<% #= render 'meals/add_form' %>
-
-		<%= form_for(@sheet) do |f| %>
-			<%= f.label "Meals" %>
-
-			<div id="accordion">
-				<% Meal::CATEGORIES.each do |category| %>
-					<%= render :partial => 'meals_list', :locals => { :f => f, :meals => @breakfast_meals, :categoryId => category[1], :categoryKey => category[0] } %>
-					<% #= render :partial => 'meals/add_list', :locals => { :meals => @lunch_meals, :category => "Lunch" } %>
-					<% #= render :partial => 'meals/add_list', :locals => { :meals => @dinner_meals, :category => "Dinner" } %>
-				
-				<% end %>
-			</div>
-
-			<%= render 'fields', f: f %>
-
-			<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
-		<% end %>
-	</div>
-</div>
-
-<%
-#@sheet.meals.where("category = :category", {:category => 1})
-%>
+<%= form_for(@sheet) do |f| %>
+	<%= render 'fields', f: f %>
+	<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+<% end %>

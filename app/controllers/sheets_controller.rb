@@ -7,25 +7,22 @@ class SheetsController < ApplicationController
 
 	def show
 		@sheet = current_user.sheets.find(params[:id])
-		@meals = @sheet.meals.order("time ASC").paginate(page: params[:page], :per_page => 3)
+		#@meals = @sheet.meals.order("time ASC").paginate(page: params[:page], :per_page => 3)
 	end
 
 	def new
 		@sheet = current_user.sheets.new
 		@sheet.date = Time.new #.strftime("%d-%m-%Y")
 
-		@breakfast_meals = []
-		@lunch_meals = []
-		@dinner_meals = []
+		#@breakfast_meals = []
+		#@lunch_meals = []
+		#@dinner_meals = []
 	end
 
 	def create
 		@sheet = current_user.sheets.new(params[:sheet])
 		if @sheet.save
 			#parsed_json = JSON(your_json_string)
-
-
-
 			flash[:success] = "Sheet created!"
 			redirect_to @sheet
 		else
@@ -35,22 +32,16 @@ class SheetsController < ApplicationController
 
 	def edit
 		@sheet = Sheet.find(params[:id])
-		@breakfast_meals = @sheet.meals.where("category = :category", {:category => 1})
-		@lunch_meals = @sheet.meals.where("category = :category", {:category => 3})
-		@dinner_meals = @sheet.meals.where("category = :category", {:category => 5})
 	end
 
 	def update
 		@sheet = Sheet.find(params[:id])
-		@breakfast_meals = @sheet.meals.where("category = :category", {:category => 1})
-		@lunch_meals = @sheet.meals.where("category = :category", {:category => 3})
-		@dinner_meals = @sheet.meals.where("category = :category", {:category => 5})
 		
 		if @sheet.update_attributes(params[:sheet])
 			flash[:success] = "Sheet updated"
 			redirect_to @sheet
 		else
-			render 'edit'
+			render 'edit', params[:sheet]
 		end
 	end
 

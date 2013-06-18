@@ -1,25 +1,33 @@
 jQuery(document).ready(function() {
 
-    // page is now ready, initialize the calendar...
+	// page is now ready, initialize the calendar...
 
-    jQuery('#calendar').fullCalendar({
-        // put your options and callbacks here
-        events: '/sheets',
+	jQuery('#calendar').fullCalendar({
+		// put your options and callbacks here
+		events: '/sheets',
 
-        dayClick: function() {
-        	alert('a day has been clicked!');
-    	},
+		dayClick: function(date, allDay, jsEvent, view) {
 
-    	eventClick: function(calEvent, jsEvent, view) {
+			if (allDay) {
+				console.log('Clicked on the entire day: ' + date);
+			}
+			else {
+				console.log('Clicked on the slot: ' + date);
+			}
+			console.log('a day has been clicked!');
+			document.location = "/sheets/new";
+		},
 
-        	alert('Event: ' + calEvent.title);
-        	alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-        	alert('View: ' + view.name);
+		eventClick: function(calEvent, jsEvent, view) {
 
-        	// change the border color just for fun
-        	$(this).css('border-color', 'red');
+			console.log('Event: ' + calEvent.title);
+			console.log('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+			console.log('View: ' + view.name);
 
-        	document.location = "/sheets/" + calEvent.id;
-    	}
-    })
+			// change the border color just for fun
+			$(this).css('border-color', 'red');
+
+			document.location = "/sheets/" + calEvent.id;
+		}
+	})
 });

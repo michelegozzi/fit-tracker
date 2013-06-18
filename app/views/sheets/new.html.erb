@@ -3,24 +3,7 @@
 
 <h1>New Sheet</h1>
 
-<div class="row">
-	<div class="span6 offset3">
-		<%= render 'meals/add_form' %>
-
-		<%= form_for(@sheet) do |f| %>
-			<% #= render 'shared/error_messages', object: f.object %>
-			
-			<%= f.label "Meals" %>
-			<div id="accordion">
-				<%= render :partial => 'meals/meals_list', :locals => { :f => f, :meals => @breakfast_meals, :category => "Breakfast" } %>
-				<%= render :partial => 'meals/add_list', :locals => { :meals => @lunch_meals, :category => "Lunch" } %>
-				<%= render :partial => 'meals/add_list', :locals => { :meals => @dinner_meals, :category => "Dinner" } %>
-			</div>
-
-			<%= render 'fields', f: f %>
-			
-
-			<%= f.submit "Save", class: "btn btn-large btn-primary", onclick: "return false;" %>
-		<% end%>
-	</div>
-</div>
+<%= form_for(@sheet) do |f| %>
+	<%= render 'fields', f: f %>
+	<%= f.submit "Save", class: "btn btn-large btn-primary", onclick: "return false;" %>
+<% end%>

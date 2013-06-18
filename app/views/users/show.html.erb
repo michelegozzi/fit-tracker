@@ -1,9 +1,11 @@
 <% provide(:title, @user.name) %>
 
+<h1>Profile</h1>
+
 <% include_javascript 'users/show.js' %>
 
-<div class="row">
-	<aside class="span4">
+<div class="row-fluid">
+	<aside class="span3">
 		<section>
 			<h1>
 				<%= gravatar_for @user, size: 40 %>
@@ -13,19 +15,18 @@
 		
 	</aside>
 
-	<% if @user.sheets.any? %>
+	<div class="span7">
 
-		<div id='calendar'></div>
+		<% if @user.sheets.any? %>
 
-		<h3>Sheets (<%= @user.sheets.count %>)</h3>
-			<%= render :partial => "sheets", :object => @sheets %>
-	<% end %>
+			<div id='calendar'></div>
+
+			<h3>Sheets (<%= @user.sheets.count %>)</h3>
+				<%= render :partial => "sheets", :object => @sheets %>
+		<% end %>
+
+	</div>
 
 	
 
 </div>
-
-<!-- <div>
-	<h2>sheets</h2>-->
-	<% #= render :partial => "sheets", :collection => @sheets %>
-<!--</div> -->

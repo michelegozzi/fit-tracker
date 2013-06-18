@@ -1,14 +1,17 @@
 <% if object.errors.any? %>
-	<div id="error_explanation">
-		<div class="alert alert-error">
-			<!-- 10.35 -->
-			The form contains <%= pluralize(object.errors.count, "error") %>.
+
+	<div class="row-fluid">
+		<div id="error_explanation" class="span6 offset3">
+			<div class="alert alert-error">
+				<!-- 10.35 -->
+				The form contains <%= pluralize(object.errors.count, "error") %>.
+			</div>
+			<ul>
+				<!-- 10.35 -->
+				<% object.errors.full_messages.each do |msg| %>
+				<li>* <%= msg %></li>
+				<% end %>
+			</ul>
 		</div>
-		<ul>
-			<!-- 10.35 -->
-			<% object.errors.full_messages.each do |msg| %>
-			<li>* <%= msg %></li>
-			<% end %>
-		</ul>
 	</div>
 <% end %>
