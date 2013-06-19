@@ -1,0 +1,6 @@
+<div id="energyLevelContainer">
+	<input type="hidden" id="energyLevelCheckedValue" value="<%= checked_value %>" />
+	<% (1..9).each do |i| %>
+	<input name="energy_level" type="radio" class="energyLevel" value="<%= i %>" <%= disabled ? 'disabled="disabled"'.html_safe : '' %> />
+	<% end %>
+</div>

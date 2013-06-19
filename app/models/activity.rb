@@ -1,5 +1,5 @@
 class Activity < ActiveRecord::Base
-	attr_accessible :name, :time, :duration, :level, :category	#, :sheet_id
+	attr_accessible :name, :time, :duration, :intensity, :category	#, :sheet_id
 
 	attr_accessor :timepart
 	attr_accessible :timepart
@@ -7,6 +7,7 @@ class Activity < ActiveRecord::Base
 	belongs_to :sheet
 
 	CATEGORIES = [['turbofire_class', 1], ['other', 2]]
+	INTENSITY_LEVEL = [['low', 1], ['medium', 2], ['high', 3]]
 
 	validates :name, presence: true, length: { maximum: 50 }
 	validates :time, presence: true
@@ -16,11 +17,12 @@ class Activity < ActiveRecord::Base
 			:only_integer => true,
 			:greater_than => 0
 		}
-	validates :level,
+	validates :intensity,
 		presence: true,
 		:numericality => {
 			:only_integer => true,
-			:greater_than => 0
+			:greater_than => 0,
+			:less_than_or_equal_to => 3
 		}
 	validates :category,
 		presence: true,

@@ -3,7 +3,15 @@
 <%= render 'shared/error_messages', object: f.object %>
 
 <div class="row-fluid">
-	<aside class="span3">
+	<aside class="span2">
+		<section>
+			<% if params[:action]=="edit" %>
+			<%= link_to "Back", sheet_path(@sheet) %>
+			<% else %>
+			<%= link_to "Back", current_user %>
+			<% end %>
+		</section>
+
 		<section>
 			<%= f.label :calorie_target , :label => "Calorie Target", placeholder: "Put your calories target here..." %>
 			<%= f.number_field :calorie_target %>
@@ -22,80 +30,86 @@
 				:class => 'span3'
 				%>
 		</section>
+		<section>
+			<%= f.label :water_glasses %>
+			<%= f.radio_button :water_glasses, 1, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 2, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 3, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 4, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 5, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 6, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 7, :class => 'waterGlasses' %>
+			<%= f.radio_button :water_glasses, 8, :class => 'waterGlasses' %>
+			<br>
+		</section>
+		<section>
+			<div id="energy">
+				<%= f.label :energy_level %>
+				<%= f.radio_button :energy_level, 1, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 2, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 3, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 4, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 5, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 6, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 7, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 8, :class => 'energyLevel' %>
+				<%= f.radio_button :energy_level, 9, :class => 'energyLevel' %>
+				<% #= f.radio_button :energy_level, 10, :class => 'battery' %>
+				<br>
+			</div>
+		</section>
+		<section>
+			<div>
+				<%= f.label :goals_met %>
+				<%= f.select :goals_met, Sheet::GOALS_MET, {:prompt => 'Choose ...'} %>
+			</div>
+		</section>
 	</aside>
 
-	<div class="span4">
-		<%= f.label :water_glasses %>
-		<%= f.radio_button :water_glasses, 1, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 2, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 3, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 4, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 5, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 6, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 7, :class => 'wg' %>
-		<%= f.radio_button :water_glasses, 8, :class => 'wg' %>
-		<br>
+	<div class="span10">
+		<div class="row-fluid">
+			<div class="span6">
+				<%= f.label "Meals" %>
+				<div id="mealsAccordion">
+					<% Meal::CATEGORIES.each do |category| %>
+						<%= render :partial => 'meals_list',
+							:locals => {
+								:f => f,
+								:meals => @sheet.meals.where("category = :category", {:category => category[1]}),
+								:categoryId => category[1],
+								:categoryKey => category[0]
+							} %>
+					<% end %>
+				</div>
+			</div>
 
-		<%= f.label "Meals" %>
-		<div id="mealsAccordion">
-			<% Meal::CATEGORIES.each do |category| %>
-				<%= render :partial => 'meals_list',
-					:locals => {
-						:f => f,
-						:meals => @sheet.meals.where("category = :category", {:category => category[1]}),
-						:categoryId => category[1],
-						:categoryKey => category[0]
-					} %>
-			<% end %>
+			<div class="span6">
+				<%= f.label "Activities" %>
+				<div id="activitiesAccordion">
+					<% Activity::CATEGORIES.each do |category| %>
+						<%= render :partial => 'activities_list',
+							:locals => {
+								:f => f,
+								:activities => @sheet.activities.where("category = :category", {:category => category[1]}),
+								:categoryId => category[1],
+								:categoryKey => category[0]
+							} %>
+					<% end %>
+				</div>
+			</div>
 		</div>
-	</div>
+		<div class="row-fluid">
+			<div class="span12">
+				<%= f.label :notes do
+				('Notes (<b><span id="notesCounter">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe
+				end %>
 
-	<div class="span5">
-		<%= f.label "Activities" %>
-		<div id="activitiesAccordion">
-			<% Activity::CATEGORIES.each do |category| %>
-				<%= render :partial => 'activities_list',
-					:locals => {
-						:f => f,
-						:activities => @sheet.activities.where("category = :category", {:category => category[1]}),
-						:categoryId => category[1],
-						:categoryKey => category[0]
-					} %>
-			<% end %>
-		</div>
-
-
-		<div>
-			<%= f.label :notes do
-			('Notes (<b><span id="notesCounter">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe
-			end %>
-
-			<%= f.text_area :notes,
-				:rows => 5,
-				placeholder: "Put your notes here...",
-				:onkeypress => "return taLimit(this);",
-				:onkeyup => "return taCount(this,'notesCounter');" %>
-		</div>
-		<br>
-
-		<div id="energy">
-			<%= f.label :energy_level %>
-			<%= f.radio_button :energy_level, 1, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 2, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 3, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 4, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 5, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 6, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 7, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 8, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 9, :class => 'battery' %>
-			<%= f.radio_button :energy_level, 10, :class => 'battery' %>
-			<br>
-		</div>
-
-		<div>
-			<%= f.label :goals_met %>
-			<%= f.select :goals_met, Sheet::GOALS_MET, {:prompt => 'Choose ...'} %>
+				<%= f.text_area :notes,
+					:rows => 5,
+					placeholder: "Put your notes here...",
+					:onkeypress => "return taLimit(this);",
+					:onkeyup => "return taCount(this,'notesCounter');" %>
+			</div>
 		</div>
 	</div>
 </div>

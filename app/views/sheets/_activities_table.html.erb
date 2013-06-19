@@ -1,0 +1,30 @@
+
+	<h3><%= categoryKey.titleize %></h3>
+	<div>
+		<table id="<%= categoryKey %>-activities" class="table table-bordered table-hover" width="90%">
+			<thead>
+				<tr class="ui-widget-header ">
+					<th>Name</th>
+					<th>Time</th>
+					<th>Duration</th>
+					<th>Intensity</th>
+				</tr>
+			</thead>
+			<tbody categoryKey="<%= categoryKey %>" categoryId="<%= categoryId %>" >
+				<%
+					total_duration = 0
+					activities.each do |activity|
+					total_duration += activity.duration
+					 %>
+				<%= render :partial => 'activities_table_row', :locals => { :activity => activity } %>
+				<% end %>
+				<tr class="ui-widget-footer">
+					<td colspan="3">Total duration for <%= categoryKey.titleize %>:</td>
+					<td><%= total_duration%> min.</td>
+				</tr>
+			</tbody>
+			
+			
+
+		</table>
+	</div>

@@ -1,13 +1,13 @@
 <h3><%= categoryKey.titleize %> (<span id="<%= categoryKey %>-total-duration">0</span>):</h3>
-<div id="<%= categoryKey %>-activities-container" class="ui-widget activities-container">
+<div id="<%= categoryKey %>-activities-container" width="90%">
 	
-	<table id="<%= categoryKey %>-activities" class="ui-widget ui-widget-content">
+	<table id="<%= categoryKey %>-activities" class="table table-bordered" width="90%">
 		<thead>
 			<tr class="ui-widget-header ">
 				<th>Name</th>
 				<th>Time</th>
 				<th>Duration</th>
-				<th>Level</th>
+				<th>Intensity</th>
 				<th><%= link_to_add_activity_fields '<i class="icon-plus"></i>'.html_safe, f, :activities, categoryId %></th>
 			</tr>
 		</thead>

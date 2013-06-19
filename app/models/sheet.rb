@@ -70,6 +70,6 @@ class Sheet < ActiveRecord::Base
 				logger.debug "DBG_20130612_2000 update_total_calories_consumed: #{self.total_calories_consumed}"
 			end
 
-			debugger
+			#debugger
 		end
 end

@@ -1,0 +1,7 @@
+<tr>
+	<td><%= activity.name %></td>
+	<td><%= activity.time.localtime.strftime("%I:%M %p") %></td>
+	<td><%= activity.duration %></td>
+	<td><%= Activity::INTENSITY_LEVEL.select {|a| a.include?(activity.intensity ? 1 : 0) }.first.first.capitalize %>
+	</td>
+</tr>			

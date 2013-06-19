@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Act",
+				"activity-intensity-field"
+			],
+			[
+				"new",
+				"new_object"
+			],
+			[
 				"ca",
 				"category"
 			],
@@ -28,26 +36,34 @@
 	"buffers":
 	[
 		{
-			"file": "app/models/meal.rb",
+			"file": "app/views/sheets/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 2117,
+				"buffer_size": 2477,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/sheets_controller.rb",
+			"file": "app/views/shared/_error_messages.html.erb",
 			"settings":
 			{
-				"buffer_size": 2573,
+				"buffer_size": 395,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/sheets/_meal_fields.html.erb",
+			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 520,
+				"buffer_size": 766,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/sheets/_fields.html.erb",
+			"settings":
+			{
+				"buffer_size": 3903,
 				"line_ending": "Unix"
 			}
 		}
@@ -76,29 +92,62 @@
 	},
 	"file_history":
 	[
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/edit.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/meals/add.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_water_glasses_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_energy_level_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/sheet.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activity_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_table_row.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/show.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_water_glasses_control.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_energy_level_control.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/show.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_table.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/new.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130619193335_rename_intensity_for_activities.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_add_fields.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/sheet.css",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/meals.css",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/log/development.log",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/FitTracker.sublime-workspace",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_add_fields.html.erb.old",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/edit.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/activities.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130619063006_add_sheet_id_index_to_activities.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130619062906_add_category_to_activities.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/users/show.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_table.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_table_row.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/sheet_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130618063240_add_total_calories_consumed_to_sheets.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_error_messages.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/meals/add.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/edit.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/show.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130618060922_rename_calorie_target_for_sheets.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529171812_create_sheets.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/custom.css.scss",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_add_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/application.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130613175552_add_daytime_to_meals.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528164507_add_admin_to_users.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528164229_add_remember_token_to_users.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528055555_add_index_to_users_email.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meal_item_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meals_list.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_add_form.html.erb",
 		"/home/michele/Dropbox/Projects/ror/railscast/196-nested-model-form-part-1/README",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/log/development.log",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/sheet.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environment.rb",
 		"/home/michele/Downloads/197-nested-model-form-part-2/surveysays/app/controllers/surveys_controller.rb",
 		"/home/michele/Downloads/197-nested-model-form-part-2/surveysays/app/models/survey.rb",
@@ -113,13 +162,8 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_add_list.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meal.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/show.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/show.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/meal.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/custom.css.scss",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/global/meals.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery-ui-1.10.2/jquery-ui.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/bootstrap/timepicker/bootstrap-timepicker.min.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application.css",
@@ -149,7 +193,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/jqueryplugins/rating/jquery.rating.custom.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jqueryplugins/rating/jquery.rating.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jqueryplugins/rating/jquery.rating.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_error_messages.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environments/production.rb",
 		"/home/michele/Downloads/star-rating/jquery.rating.css",
@@ -157,7 +200,6 @@
 		"/home/michele/Downloads/star-rating/jquery.rating.pack.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/_sheets.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_show.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/users/show.js.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529164947_add_category_to_meals.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529212058_add_indexes_to_sheets.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130529212559_add_index_to_meals_sheet_id.rb",
@@ -174,36 +216,10 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/show_follow.html.erb",
 		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/app/views/layouts/_header.html.erb",
 		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/app/assets/stylesheets/custom.css.scss",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
 		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/app/views/layouts/application.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/users_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/views/chapter02/index.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
-		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/views/chapter02/examples/_ex03_toggle_text.html.erb",
-		"/home/michele/Dropbox/Projects/ror/OpenInfoClin/config/routes.rb",
-		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/views/layouts/application.html.erb",
-		"/home/michele/Dropbox/Projects/ror/jQueryNinja/Gemfile",
-		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/helpers/application_helper.rb",
-		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/assets/stylesheets/application.css",
-		"/home/michele/Dropbox/Projects/ror/jQueryNinja/app/assets/javascripts/application.js",
-		"/opt/nant-0.92/examples/NUnit2/ReferenceAssemblies/Helper.cs",
-		"/opt/nant-0.92/examples/NUnit2/ReferenceAssemblies/ReferenceTest.cs",
-		"/opt/nant-0.92/examples/NUnit2/ReferenceAssemblies/default.build",
-		"/opt/nant-0.92/examples/Filters/ReplaceCharacter/ReplaceCharacter.cs",
-		"/opt/nant-0.92/examples/Filters/ReplaceCharacter/default.build",
-		"/opt/nant-0.92/examples/StyleTask/SimpleExtensionObject/SimpleExtension.build",
-		"/opt/nant-0.92/examples/Solution/cs/default.build",
-		"/opt/nant-0.92/examples/Solution/cs/WinForms/cs.build",
-		"/opt/nant-0.92/examples/ScriptTask/script-sample.build",
-		"/opt/nant-0.92/examples/examples.build",
-		"/usr/local/bin/nant",
-		"/usr/lib/pkgconfig/apache-log4net.pc",
-		"/usr/lib/pkgconfig/log4net.pc",
-		"/etc/hosts",
-		"/usr/lib/pkgconfig/wcf.pc",
-		"/usr/lib/pkgconfig/nautilus-sendto.pc",
-		"/usr/lib/pkgconfig/cecil.pc",
-		"/usr/lib/pkgconfig/xorg-wacom.pc"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb"
 	],
 	"find":
 	{
@@ -214,6 +230,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/home/michele/Dropbox/Projects/ror/FitTracker/",
 			"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals",
 			""
 		]
@@ -223,6 +240,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"level",
+			"meal",
+			"meals",
+			"meals.css",
+			"link_to_add_fields",
+			"calor",
+			">\n",
+			"link_to_remove_meal_fields",
+			"link_to_add_meal_fields",
+			"link_to_add_activity_fields",
+			"printTime",
+			"if (allDay) {\n            alert('Clicked on the entire day: ' + date);\n            }else{\n            alert('Clicked on the slot: ' + date);\n            }",
+			"calories_target",
+			"offset3",
+			"row",
+			"update_attributes",
 			"link_to_add_fields",
 			"attr",
 			"last",
@@ -291,6 +324,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"intensity",
+			"activity",
+			"activities",
 			"mealCategory",
 			"jQuery",
 			"sublime"
@@ -304,77 +340,103 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/meal.rb",
+					"file": "app/views/sheets/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 2117,
+						"buffer_size": 2477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								777,
-								777
+								139,
+								211
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 136.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/sheets_controller.rb",
+					"file": "app/views/shared/_error_messages.html.erb",
 					"settings":
 					{
-						"buffer_size": 2573,
+						"buffer_size": 395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								654,
-								654
+								96,
+								96
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 367.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/sheets/_meal_fields.html.erb",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 520,
+						"buffer_size": 766,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								468,
+								468
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/sheets/_fields.html.erb",
+					"settings":
+					{
+						"buffer_size": 3903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								210,
+								210
 							]
 						],
 						"settings":
@@ -442,7 +504,7 @@
 		[
 			[
 				"",
-				"/home/michele/Dropbox/Projects/ror/railscasts/197-nested-model-form-part-2/197-nested-model-form-part-2.sublime-project"
+				"/home/michele/Dropbox/Projects/ror/RailsExample/RailsExample.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -451,6 +513,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 308.0,
+	"side_bar_width": 425.0,
 	"status_bar_visible": true
 }

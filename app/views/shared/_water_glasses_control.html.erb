@@ -1,0 +1,6 @@
+<div id="waterglasses">
+	<input type="hidden" id="waterGlassesCheckedValue" value="<%= checked_value %>" />
+	<% (1..8).each do |i| %>
+	<input name="water_glasses" type="radio" class="waterGlasses" value="<%= i %>" <%= disabled ? 'disabled="disabled"'.html_safe : '' %> />
+	<% end %>
+</div>

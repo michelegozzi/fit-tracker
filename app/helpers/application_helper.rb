@@ -43,7 +43,7 @@ module ApplicationHelper
 	end
 
 	def link_to_add_activity_fields(name, f, association, categoryId)
-	 	new_object = f.object.class.reflect_on_association(association).klass.new(:category => categoryId, :duration => 0, :level => 0)
+	 	new_object = f.object.class.reflect_on_association(association).klass.new(:category => categoryId, :duration => 0, :intensity => 0)
 	 	link_to_add_fields(name, f, association, categoryId, new_object)
 	# 	fields = f.fields_for(association, new_object, :child_index => "new_#{association}") do |builder|
 	# 		render(association.to_s.singularize + "_fields", :f => builder)
