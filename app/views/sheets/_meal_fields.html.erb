@@ -9,7 +9,7 @@
 	</td>
 	<td><%= f.number_field :calories, :class => 'meal-calories-field' %></td>
 	<td> <!--<i class="icon-remove"></i>-->
-		<%= link_to_remove_meal_fields '<i class="icon-remove"></i>'.html_safe, f %>
+		<%= link_to_remove_fields '<i class="icon-remove"></i>'.html_safe, f, :meals %>
 		<%= f.hidden_field :category, :class => 'meal-category-field' %>
 	</td>
 </tr>

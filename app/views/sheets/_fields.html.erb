@@ -37,7 +37,7 @@
 		<br>
 
 		<%= f.label "Meals" %>
-		<div id="accordion">
+		<div id="mealsAccordion">
 			<% Meal::CATEGORIES.each do |category| %>
 				<%= render :partial => 'meals_list',
 					:locals => {
@@ -51,6 +51,20 @@
 	</div>
 
 	<div class="span5">
+		<%= f.label "Activities" %>
+		<div id="activitiesAccordion">
+			<% Activity::CATEGORIES.each do |category| %>
+				<%= render :partial => 'activities_list',
+					:locals => {
+						:f => f,
+						:activities => @sheet.activities.where("category = :category", {:category => category[1]}),
+						:categoryId => category[1],
+						:categoryKey => category[0]
+					} %>
+			<% end %>
+		</div>
+
+
 		<div>
 			<%= f.label :notes do
 			('Notes (<b><span id="notesCounter">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe

@@ -18,11 +18,13 @@
 #
 
 class Sheet < ActiveRecord::Base
-	attr_accessible :calorie_target, :date, :day, :energy_level, :goals_met, :notes, :sleep_hours, :water_glasses, :week_num, :total_calories_consumed, :meals_attributes
+	attr_accessible :calorie_target, :date, :day, :energy_level, :goals_met, :notes, :sleep_hours, :water_glasses, :week_num, :total_calories_consumed, :meals_attributes, :activities_attributes
 
 	has_many :meals, :dependent => :destroy
+	has_many :activities, :dependent => :destroy
 
 	accepts_nested_attributes_for :meals, :allow_destroy => true
+	accepts_nested_attributes_for :activities, :allow_destroy => true
 
 	belongs_to :user
 

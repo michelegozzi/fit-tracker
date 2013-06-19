@@ -1,0 +1,16 @@
+<tr>
+	<td><%= f.text_field :name, :class => 'activity-name-field' %></td>
+	<td>
+		<div class="input-append bootstrap-timepicker">
+		<%= f.hidden_field :timepart, :class => 'activity-timepart-field' %>
+		<%= f.text_field :time, :class => 'input-small activity-time-field' %>
+		<span class="add-on"><i class="icon-time"></i></span>
+	</div>
+	</td>
+	<td><%= f.number_field :duration, :class => 'activity-duration-field' %></td>
+	<td><%= f.number_field :level, :class => 'activity-level-field' %></td>
+	<td>
+		<%= link_to_remove_fields '<i class="icon-remove"></i>'.html_safe, f, :activities %>
+		<%= f.hidden_field :category, :class => 'activity-category-field' %>
+	</td>
+</tr>

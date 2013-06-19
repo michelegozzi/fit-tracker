@@ -1,0 +1,24 @@
+<h3><%= categoryKey.titleize %> (<span id="<%= categoryKey %>-total-duration">0</span>):</h3>
+<div id="<%= categoryKey %>-activities-container" class="ui-widget activities-container">
+	
+	<table id="<%= categoryKey %>-activities" class="ui-widget ui-widget-content">
+		<thead>
+			<tr class="ui-widget-header ">
+				<th>Name</th>
+				<th>Time</th>
+				<th>Duration</th>
+				<th>Level</th>
+				<th><%= link_to_add_activity_fields '<i class="icon-plus"></i>'.html_safe, f, :activities, categoryId %></th>
+			</tr>
+		</thead>
+		<tbody categoryKey="<%= categoryKey %>" categoryId="<%= categoryId %>" >
+			<%= f.fields_for :activities, activities do |activity_fields| %>
+				<%= render :partial => 'activity_fields', :locals => { :f => activity_fields, :categoryId => categoryId } %>
+			<% end %>
+
+		</tbody>
+	</table>
+	<script type="text/javascript">
+	initTotalDuration('<%= categoryKey %>');
+	</script>
+</div>
