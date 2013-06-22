@@ -23,6 +23,12 @@
 				<span class="add-on"><i class="icon-th"></i></span>
 			</div>
 		</section>
+
+		<section>
+			<%= f.label :week_num, "Week Number" %>
+			<%= f.number_field :week_num %>
+		</section>
+
 		<section>
 			<%= f.label :sleep_hours %>
 			<%= f.select :sleep_hours, 

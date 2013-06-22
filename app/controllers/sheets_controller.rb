@@ -45,6 +45,19 @@ class SheetsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@sheet = current_user.sheets.find(params[:id])
+		#if current_user?(@user)
+		#	flash[:error] = "You can't destroy yourself."
+		#	redirect_to users_url
+		#else
+			@sheet.destroy
+			flash[:success] = "Sheet destroyed."
+			redirect_to current_user
+		#end
+
+	end
+
 
 	def index
 		if signed_in? 

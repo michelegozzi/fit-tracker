@@ -1,11 +1,23 @@
-<!-- 10.32 -->
-<a href="<%= user_path(current_user) %>">
-	<%= gravatar_for current_user, size: 52 %>
-</a>
-<h1>
-	<%= current_user.name %>
-</h1>
-<span>
-	<%= link_to "view my profile", current_user %>
-	<%= link_to "new sheet", new_sheet_path %>
-</span>
+<% include_javascript 'users/show.js' %>
+
+<div class="row-fluid">
+	<aside class="span3">
+		<section>
+			<%= render :partial => "shared/user_stat" %>
+		</section>
+		<section>
+			<%= link_to "New", new_sheet_path %>
+		</section>
+		
+	</aside>
+		
+	<div id="calendar" class="span6"></div>
+	
+	<div class="span3">
+		<% #if object.sheets.any? %>
+		<% if @sheets.any? %>
+			<h3>Sheets (<%= @sheets.count %>)</h3>
+				<%= render :partial => "shared/user_sheets_table" %>
+		<% end %>
+	</div>
+</div>

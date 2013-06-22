@@ -34,7 +34,7 @@ class Sheet < ActiveRecord::Base
 
 
 	validates :calorie_target, presence: true
-	validates :date, presence: true, uniqueness: true
+	validates :date, presence: true #, uniqueness: true
 	#:week_num
 	#:day
 	validates :water_glasses,

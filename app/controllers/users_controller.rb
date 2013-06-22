@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	helper_method :sort_column, :sort_direction
 
 	before_filter :signed_in_user, only: [:edit, :update, :destroy, :following, :followers] #9.22, 9.46, 11.30
 	before_filter :correct_user, only: [:edit, :update]
@@ -11,8 +12,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-
-		@sheets = @user.sheets.paginate(page: params[:page], :per_page => 3)
+		@sheets = @user.sheets.order(sort_column + " " + sort_direction).paginate(page: params[:page], :per_page => 4)
 	end
 
 	def new
@@ -82,6 +82,14 @@ class UsersController < ApplicationController
 
 		def avoided_to_signed_in_user
 			redirect_to(root_path) unless !signed_in?
+		end
+
+		def sort_column
+			Sheet.column_names.include?(params[:sort]) ? params[:sort] : "date"
+		end
+
+		def sort_direction
+			%w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
 		end
 
 

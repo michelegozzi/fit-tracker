@@ -1,32 +1,3 @@
 <% provide(:title, @user.name) %>
-
 <h1>Profile</h1>
-
-<% include_javascript 'users/show.js' %>
-
-<div class="row-fluid">
-	<aside class="span3">
-		<section>
-			<h1>
-				<%= gravatar_for @user, size: 40 %>
-				<%= @user.name %>
-			</h1>
-		</section>
-		
-	</aside>
-
-	<div class="span7">
-
-		<% if @user.sheets.any? %>
-
-			<div id='calendar'></div>
-
-			<h3>Sheets (<%= @user.sheets.count %>)</h3>
-				<%= render :partial => "sheets", :object => @sheets %>
-		<% end %>
-
-	</div>
-
-	
-
-</div>
+<%= render 'shared/user_info' %>

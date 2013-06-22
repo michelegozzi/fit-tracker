@@ -6,19 +6,28 @@
 <div class="row-fluid">
 	<aside class="span2">
 		<section>
-			<%= link_to "Edit", edit_sheet_path(@sheet) %>
+			<%= link_to "Edit", edit_sheet_path(@sheet) %> | 
+			<%= link_to "Delete", @sheet, method: :delete, data: { confirm: "You sure?" } %>
 		</section>
 		<section>
-			<b>Calorie Target:</b><%= @sheet.calorie_target %>
+			<b>Calorie Target:</b>
+			<%= @sheet.calorie_target %>
 		</section>
 		<section>
-			<b>Date:</b><%= @sheet.date.strftime("%d-%m-%Y") %>
+			<b>Date:</b>
+			<%= @sheet.date.strftime("%d-%m-%Y") %>
 		</section>
 		<section>
-			<b>Goals Met:</b><%= Sheet::GOALS_MET.select {|a| a.include?(@sheet.goals_met ? 1 : 0) }.first.first %>
+			<b>Week #:</b>
+			<%= @sheet.week_num.nil? ? 0 : @sheet.week_num.ordinalize %>
 		</section>
 		<section>
-			<b>Sleep Hours:</b><%= @sheet.sleep_hours %>
+			<b>Goals Met:</b>
+			<%= Sheet::GOALS_MET.select {|a| a.include?(@sheet.goals_met ? 1 : 0) }.first.first %>
+		</section>
+		<section>
+			<b>Sleep Hours:</b>
+			<%= @sheet.sleep_hours %>
 		</section>
 		<section>
 			<b>Water Glasses:</b>

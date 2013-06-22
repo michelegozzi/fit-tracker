@@ -1,0 +1,29 @@
+<%#= will_paginate @sheets %>
+<table id="userSheetsTable" class="table table-bordered table-hover sortable">
+	<thead>
+		<tr class="ui-widget-header ">
+				<!--
+				<a href="< % = url_for(:action = > params[:action],
+					:controller = > params[:controller],
+					:page = > params[:page],
+					:orderdir = > params[:orderdir].nil? ? true : !params[:orderdir],
+					:order = > 'date'
+					) % >">Date</a>-->
+				<th><%= sortable "date" %></th>
+				<th><%= sortable "goals_met", "Goals Met" %></th>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @sheets.each do |sheet| %>
+
+		<tr>
+			<td><%= sheet.date.strftime("%d/%m/%Y %I:%M %p") %></td>
+			<td><%= sheet.goals_met? ? "Y" : "N" %></td>
+			<input type="hidden" value="<%= sheet.id %>" />
+		</tr>
+
+		<% end %>
+	</tbody>
+</table>
+<%= will_paginate @sheets %>

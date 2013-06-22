@@ -25,9 +25,19 @@ jQuery(document).ready(function() {
 			console.log('View: ' + view.name);
 
 			// change the border color just for fun
-			$(this).css('border-color', 'red');
+			//$(this).css('border-color', 'red');
 
-			document.location = "/sheets/" + calEvent.id;
+			document.location = "/sheets/" + calEvent.id; // + "?title=" + calEvent.title;
 		}
 	})
+
+	jQuery('#userSheetsTable > tbody').children('tr').each(function () {
+		console.log('TR');
+		jQuery(this).click( function () {
+			console.log('click');
+			var id = jQuery(this).find('input[type=hidden]').val();
+			console.log('id'+id)
+			document.location = "/sheets/" + id;
+		});
+	});
 });

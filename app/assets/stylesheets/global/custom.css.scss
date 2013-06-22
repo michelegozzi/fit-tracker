@@ -2,8 +2,8 @@
 
 /* mixins, variables, etc. */
 
-$baseFontSize: 13px;	/* 14px; */
-$baseLineHeight: 18px;	/* 20px; */
+/*$baseFontSize: 13px;*/	/* 14px; */
+/*$baseLineHeight: 18px;*/	/* 20px; */
 
 $grayMediumLight: #eaeaea;
 $navbarBackground: #efefef;
@@ -196,7 +196,7 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-	font-size: 0.7em;
+	font-size: 1.1em;
 	border: 1px solid #bbb;
 	width: 100%;
 	margin-bottom: 15px;
