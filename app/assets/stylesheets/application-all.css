@@ -15,5 +15,5 @@
  *= require ./jqueryplugins/rating/jquery.rating.custom
  *= require ./bootstrap/datepicker/bootstrap-datepicker
  *= require ./bootstrap/timepicker/bootstrap-timepicker.min
- *= require_tree ./global
+ *= require_tree ./all
  */

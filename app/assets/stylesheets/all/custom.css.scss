@@ -83,13 +83,13 @@ p {
 /* header */
 
 #logo {
-	float: left;
-	margin-right: 10px;
+	/*float: left;*/
+	/*margin-right: 10px;*/
 	font-size: 1.7em;
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: -1px;
-	padding-top: 9px;
+	/*padding-top: 9px;*/
 	font-weight: bold;
 	line-height: 1;
 	&:hover {
@@ -272,12 +272,19 @@ aside {
 	}
 }
 
+/*
 .navbar-inner {
 	border: 0px none transparent;
 }
+*/
 
 /*
 .ui-widget {
 	font-size: 0.7em;
 }
 */
+
+.navbar .brand {
+  /*padding: 10px 20px 10px; */
+  margin-left: 0px
+}
