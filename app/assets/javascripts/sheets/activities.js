@@ -9,13 +9,15 @@ jQuery(document).ready(function() {
 			console.error('sibling element \"input.activity-time-field\" not found');
 		}
 		else {
-			console.log('copy from ' + jQuery(this).attr('id') + ' to ' + dest.attr('id'));
+			//console.log('copy from ' + jQuery(this).attr('id') + ' to ' + dest.attr('id'));
 			dest.val(jQuery(this).val());
 		}
 	});
 	
 	// set timepicker function for all time fields
-	jQuery('.activity-time-field').timepicker();
+	jQuery('.activity-time-field').each(function(){
+		jQuery(this).customTimePicker(true);
+	});
 });
 
 function initTotalDuration(categoryKey) {
@@ -26,7 +28,7 @@ function initTotalDuration(categoryKey) {
 	rows.each(
 		function () {
 			var td = jQuery(this).find('td:eq(2)');
-			console.log(td);
+			//console.log(td);
 			duration += parseInt(td.html());
 		}
 	);
@@ -40,27 +42,27 @@ function remove_activity_fields(link) {
 	var tr = jQuery(link).parents('tr');
 	var tbody = tr.parents('tbody');
 	var categoryKey = tbody.attr('categoryKey');
-	console.log(categoryKey);	
+	//console.log(categoryKey);	
 
 	tr.children('input[type=hidden]')
 
-	console.log(tr);
+	//console.log(tr);
 	tr.hide();
 
 	var duration = 0;
 	var rows = jQuery(tbody).children("tr");
 
-	console.log(rows);
+	//console.log(rows);
 
 	rows.each(
 		function () {
 			var td = jQuery(this).find('td:eq(2)');
-			console.log(td);
+			//console.log(td);
 			duration += parseInt(td.html());
 		}
 	);
 
-	console.log(duration);
+	//console.log(duration);
 	jQuery("#" + categoryKey + "-total-duration").html(duration);
 }
 
@@ -71,5 +73,5 @@ function add_activity_fields(link, association, content) {
 	var table = jQuery(link).parents('table');
 	var tbody = table.find('tbody');
 	var categoryId = tbody.attr('categoryId');
-	tbody.append(content.replace(regexp, new_id)).find('input.activity-time-field').timepicker();
+	tbody.append(content.replace(regexp, new_id)).find('input.activity-time-field').last().customTimePicker(false);
 }

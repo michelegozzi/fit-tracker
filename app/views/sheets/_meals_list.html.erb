@@ -1,14 +1,13 @@
 <h3><%= categoryKey.capitalize %> (<span id="<%= categoryKey %>-total-calories">0</span>):</h3>
 <div id="<%= categoryKey %>-meals-container">
 	<!-- class="ui-widget meals-container" -->
-	<table id="<%= categoryKey %>-meals" class="table table-bordered" width="90%">
-		<!-- class="ui-widget ui-widget-content" -->
+	<table id="<%= categoryKey %>-meals" class="table table-bordered fit-table">
 		<thead>
-			<tr class="ui-widget-header ">
+			<tr>
 				<th>Name</th>
 				<th>Time</th>
 				<th>Calories</th>
-				<th><%= link_to_add_meal_fields '<i class="icon-plus"></i>'.html_safe, f, :meals, categoryId %></th>
+				<th><%= link_to_add_meal_fields '<i class="icon-plus icon-white"></i>'.html_safe, f, :meals, categoryId %></th>
 			</tr>
 		</thead>
 		<tbody categoryKey="<%= categoryKey %>" categoryId="<%= categoryId %>" >

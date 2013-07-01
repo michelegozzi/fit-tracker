@@ -7,13 +7,11 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- * = require ./jquery-ui-1.10.2/jquery-ui
  *
- *= require_self
- *= require ./jqueryplugins/fullcalendar/fullcalendar
- *= require ./jqueryplugins/rating/jquery.rating
- *= require ./jqueryplugins/rating/jquery.rating.custom
- *= require ./bootstrap/datepicker/bootstrap-datepicker
- *= require ./bootstrap/timepicker/bootstrap-timepicker.min
- *= require_tree ./all
+ * require_self
+ *= require ./jquery/main
+ *= require ./jquery-ui/main
+ *= require ./bootstrap/main
+ *= require ./all/main
+ * require_tree ./all
  */

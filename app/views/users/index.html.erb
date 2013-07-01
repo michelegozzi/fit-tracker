@@ -2,11 +2,17 @@
 <% provide(:title, 'All users') %>
 <h1>All users</h1>
 
-<!-- 9.34 -->
-<%= will_paginate @users %>
+<div class="fit-pagination">
+	<%= will_paginate @users, :container => false %>
+</div>
 
 <ul class="users">
 	<%= render :partial => "user", :collection => @users %>
 </ul>
 
-<%= will_paginate @users %>
+<div class="fit-pagination">
+	<div class="fit-page-entries-info">
+		<%= page_entries_info @users %>
+	</div>
+	<%= will_paginate @users, :container => false %>
+</div>

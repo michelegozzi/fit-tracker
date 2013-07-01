@@ -1,9 +1,9 @@
 
 	<h3><%= categoryKey.titleize %></h3>
 	<div>
-		<table id="<%= categoryKey %>-activities" class="table table-bordered table-hover" width="90%">
+		<table id="<%= categoryKey %>-activities" class="table table-bordered table-hover fit-table">
 			<thead>
-				<tr class="ui-widget-header ">
+				<tr>
 					<th>Name</th>
 					<th>Time</th>
 					<th>Duration</th>
@@ -18,9 +18,9 @@
 					 %>
 				<%= render :partial => 'activities_table_row', :locals => { :activity => activity } %>
 				<% end %>
-				<tr class="ui-widget-footer">
+				<tr class="footer">
 					<td colspan="3">Total duration for <%= categoryKey.titleize %>:</td>
-					<td><%= total_duration%> min.</td>
+					<td class="duration"><%= total_duration%> min.</td>
 				</tr>
 			</tbody>
 			

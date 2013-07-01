@@ -1,9 +1,9 @@
 
 	<h3><%= categoryKey.capitalize %></h3>
 	<div>
-		<table id="<%= categoryKey %>-meals" class="table table-bordered table-hover" width="90%">
+		<table id="<%= categoryKey %>-meals" class="table table-bordered table-hover fit-table">
 			<thead>
-				<tr class="ui-widget-header ">
+				<tr>
 					<th>Name</th>
 					<th>Time</th>
 					<th>Calories</th>
@@ -17,9 +17,9 @@
 					 %>
 				<%= render :partial => 'meals_table_row', :locals => { :meal => meal } %>
 				<% end %>
-				<tr class="ui-widget-footer">
+				<tr class="footer">
 					<td colspan="2">Total calories for <%= categoryKey %>:</td>
-					<td><%= total_calories%></td>
+					<td class="calories"><%= total_calories%></td>
 				</tr>
 			</tbody>
 			

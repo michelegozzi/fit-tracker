@@ -1,35 +1,14 @@
-maxL = <%= Sheet::NOTES_MAXIMUM %>;
-var bName = navigator.appName;
 
-function taLimit(taObj) {
-	if (taObj.value.length==maxL) return false;
-	return true;
-}
-
-function taCount(taObj,Cnt) { 
-	objCnt=createObject(Cnt);
-	objVal=taObj.value;
-	if (objVal.length>maxL) objVal=objVal.substring(0,maxL);
-	if (objCnt) {
-		if(bName == "Netscape"){	
-			objCnt.textContent=maxL-objVal.length;}
-		else{objCnt.innerText=maxL-objVal.length;}
-	}
-	return true;
-}
-
-function createObject(objId) {
-	if (document.getElementById) return document.getElementById(objId);
-	else if (document.layers) return eval("document." + objId);
-	else if (document.all) return eval("document.all." + objId);
-	else return eval("document." + objId);
-}
 
 jQuery(document).ready(function () {
-	//jQuery( '#sheet_date' ).datepicker({
-	jQuery( '#sheet_date_markup' ).datepicker({
-		showButtonPanel: true
-		//format: 'dd-mm-yyyy'
+	jQuery('#sheet_date').datepicker({
+		dateFormat: 'dd-mm-yy'
+	});
+
+	jQuery('.ui-datepicker-trigger').each(function(){
+		jQuery(this).click(function(){
+			jQuery(this).prev().first('input.hadDatepicker').datepicker("show");
+		});
 	});
 
 	jQuery('input.waterGlasses').rating( { stylePrefix: 'glass' } );
@@ -46,4 +25,142 @@ jQuery(document).ready(function () {
 
 	jQuery('#mealsAccordion').accordion( { collapsible: true, heightStyle: "content" });
 	jQuery('#activitiesAccordion').accordion( { collapsible: true, heightStyle: "content" });
+
+	$('#fieldsTab a:first').tab('show');
+
+	$('#fieldsTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	});
+
+	jQuery('#validation_error').hide();
+
+	jQuery('input#btnValidate').click(function(){
+		var result = validateForm();
+
+		return (result == 0);
+	});
+
+	jQuery('input[type=submit]').click(function(){
+		var result = validateForm();
+		return (result == 0);
+	});
 });
+
+$.fn.customTimePicker = function(debug){
+	this.timepicker({
+		timeFormat: "hh:mm TT"
+	});
+
+	if (debug) console.log(this);
+
+	if (debug) console.log(this.next().first());
+	this.next().first().click(
+		function () {
+			if (debug) console.log(jQuery(this).prev().first('input.hadDatepicker'));
+			jQuery(this).prev().first('input.hadDatepicker').timepicker("show");
+		});
+
+	return this;
+};
+
+$.fn.validate = function(pattern){
+	var patt=new RegExp(pattern);
+	//console.log(this.attr('id')+'=['+this.val()+']');
+	if (patt.test(this.val())) {
+		this.removeClass('alert-error');
+		return 0;
+	}
+		
+	else {
+		this.addClass('alert-error');
+		return 1;
+	}
+};
+
+$.fn.validateIntRange = function(min, max){
+	
+	var value = parseInt(this.val());
+
+	console
+
+	if (value >= min && ( max === undefined || value <= max ) ) {
+		this.removeClass('alert-error');
+		return 0;
+	}
+	else {
+		this.addClass('alert-error');
+		return 1;
+	}
+};
+
+$.fn.validateDrop = function(){
+	//this.attr("selectedIndex")
+	//console.log('selected index for ' + this.attr('id') + ' = [' + this[0].selectedIndex + ']');
+	
+	if (this[0].selectedIndex > 0) {
+		this.removeClass('alert-error');
+		return 0;
+	}
+	else
+	{
+		this.addClass('alert-error');
+		return 1;
+	}
+
+	
+};
+
+function validateForm(){
+	
+	var result = 0;
+	result += jQuery('input#sheet_date').validate(dateDDMMYYYYRegex);
+	result += jQuery('input#sheet_week_num').validate(intRegex);
+	result += jQuery('select#sheet_goals_met').validateDrop();
+	result += jQuery('input#sheet_calorie_target').validate(intRegex);
+	result += jQuery('input#sheet_calorie_target').validateIntRange(1, 1000);
+	
+	jQuery('input.meal-name-field').each(function(){
+		result += jQuery(this).validate(nameRegex);
+	});
+
+	jQuery('input.meal-time-field').each(function(){
+		result += jQuery(this).validate(timeRegex);
+	});
+
+	jQuery('input.meal-calories-field').each(function(){
+		result += jQuery(this).validate(nameRegex);
+		result += jQuery(this).validateIntRange(1, 1000);
+	});
+
+	jQuery('input.activity-name-field').each(function(){
+		result += jQuery(this).validate(nameRegex);
+	});
+
+	jQuery('input.activity-time-field').each(function(){
+		result += jQuery(this).validate(timeRegex);
+	});
+
+	jQuery('input.activity-duration-field').each(function(){
+		result += jQuery(this).validate(nameRegex);
+		result += jQuery(this).validateIntRange(1, 1000);
+	});
+
+	if (result > 0) {
+		var message = "The form contains " + result + " error";
+		message += result > 1 ? "s" : "";
+		jQuery('#validation_error_message').html(message);
+		jQuery('#validation_error').show();
+	}
+	else {
+		jQuery('#validation_error').hide();	
+	}
+
+
+	return result;
+}
+
+var dateDDMMYYYYRegex = /(0[1-9]|[12][0-9]|3[01])[\-\.](0[1-9]|1[012])[\-\.](19|20)\d\d/gm;
+var timeRegex = /(0[1-9]|[1][12])[:]([0-5]\d)[\s](AM|PM)/gm;
+var intRegex = /[0-9 -()+]+$/;
+var nameRegex = /\w+/;

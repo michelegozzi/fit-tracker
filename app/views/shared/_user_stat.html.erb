@@ -1,12 +1,13 @@
 <% if signed_in? %>
-	<a href="<%= user_path(@user) %>">
-		<%= gravatar_for @user, size: 40 %>
-	</a>
-	<h1>
-		<%= @user.name %>
-	</h1>
+	
+	<% if !object.nil? %>
+		<h4><a href="<%= user_path(object) %>"><%= gravatar_for object, size: 35 %></a><%= object.name %></h4>
+	<% else %>
+		<h4><a href="<%= user_path(current_user) %>"><%= gravatar_for current_user, size: 35 %></a><%= current_user.name %></h4>
+	<% end %>
+	
 <% else %>
-	<h1>
+	<h3>
 		Anonimous User (<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>)
-	</h1>
+	</h3>
 <% end %>

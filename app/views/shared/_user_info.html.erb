@@ -1,17 +1,20 @@
 <% include_javascript 'users/show.js' %>
 
 <div class="row-fluid">
-	<aside class="span3">
+	<aside class="span2">
 		<section>
-			<%= render :partial => "shared/user_stat" %>
+			<%= render "shared/user_stat", object: @user %>
+			<%= render 'shared/breadcrumb', object: @sheet %>
 		</section>
 		<section>
-			<%= link_to "New", new_sheet_path %>
+			
 		</section>
 		
 	</aside>
-		
-	<div id="calendar" class="span6"></div>
+
+	<div class="span5">
+		<div id="calendar"></div>
+	</div>
 	
 	<div class="span3">
 		<% #if object.sheets.any? %>

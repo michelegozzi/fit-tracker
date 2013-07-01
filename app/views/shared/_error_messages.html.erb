@@ -1,13 +1,11 @@
 <% if object.errors.any? %>
 
 	<div class="row-fluid">
-		<div id="error_explanation" class="span5 offset2">
+		<div id="error_explanation" class="span8 offset2">
 			<div class="alert alert-error">
-				<!-- 10.35 -->
 				The form contains <%= pluralize(object.errors.count, "error") %>.
 			</div>
 			<ul>
-				<!-- 10.35 -->
 				<% object.errors.full_messages.each do |msg| %>
 				<li>* <%= msg %></li>
 				<% end %>

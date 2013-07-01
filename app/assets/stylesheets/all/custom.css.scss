@@ -1,13 +1,18 @@
-
+/*@import 'bootstrap';*/
 
 /* mixins, variables, etc. */
 
 /*$baseFontSize: 13px;*/	/* 14px; */
 /*$baseLineHeight: 18px;*/	/* 20px; */
 
-$grayMediumLight: #eaeaea;
-$navbarBackground: #efefef;
-$navbarBackgroundHighlight: #CF9BFF;
+$gray: #eaeaea;
+$grayDarker: darken($gray, 15);
+$grayLight: lighten($gray, 10);
+$grayLighter: lighten($gray, 15);
+$grayMediumLight: lighten($gray, 5);
+$navbarBackground: #cc0000;
+$navbarBackgroundHighlight: lighten($navbarBackground, 5);
+$blue: #049cdb;
 /*
 
 $navbarBackground: #000000;
@@ -15,37 +20,12 @@ $navbarBackground: #000000;
 $navbarText: #ffffff;
 */
 
-@import "bootstrap";
+
 
 @mixin box_sizing {
 	-moz-box-sizing: border-box; 
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box;
-}
-
-/* universal */
-
-html {
-	overflow-y: scroll;
-}
-
-body {
-	padding-top: 60px;
-}
-
-section {
-	overflow: auto;
-}
-
-textarea {
-	resize: vertical;
-}
-
-.center {
-	text-align: center;
-	h1 {
-		margin-bottom: 10px;
-	}
 }
 
 /* typography */

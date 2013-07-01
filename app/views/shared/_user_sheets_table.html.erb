@@ -1,29 +1,31 @@
 <%#= will_paginate @sheets %>
-<table id="userSheetsTable" class="table table-bordered table-hover sortable">
+<table id="userSheetsTable" class="table table-bordered table-hover sortable fit-table">
 	<thead>
-		<tr class="ui-widget-header ">
-				<!--
-				<a href="< % = url_for(:action = > params[:action],
-					:controller = > params[:controller],
-					:page = > params[:page],
-					:orderdir = > params[:orderdir].nil? ? true : !params[:orderdir],
-					:order = > 'date'
-					) % >">Date</a>-->
-				<th><%= sortable "date" %></th>
-				<th><%= sortable "goals_met", "Goals Met" %></th>
-			</th>
+		<tr>
+			<th><%= sortable "date" %></th>
+			<th><%= sortable "goals_met", "Goals Met" %></th>
 		</tr>
 	</thead>
 	<tbody>
 		<% @sheets.each do |sheet| %>
 
 		<tr>
-			<td><%= sheet.date.strftime("%d/%m/%Y %I:%M %p") %></td>
-			<td><%= sheet.goals_met? ? "Y" : "N" %></td>
+			<td class="date">
+				<%= sheet.date.strftime("%d/%m/%Y") %>
+			</td>
+			<td class="goals">
+				<i class="<%= sheet.goals_met? ? 'icon-thumbs-up' : 'icon-thumbs-down' %>"></i>
+			</td>
 			<input type="hidden" value="<%= sheet.id %>" />
 		</tr>
 
 		<% end %>
 	</tbody>
 </table>
-<%= will_paginate @sheets %>
+
+<div class="fit-pagination">
+	<div class="fit-page-entries-info">
+		<%= page_entries_info @sheets %>
+	</div>
+	<%= will_paginate @sheets, :container => false %>
+</div>

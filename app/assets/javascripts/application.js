@@ -10,11 +10,6 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require bootstrap
-//= require ./jquery-ui-1.10.2/jquery-ui
-//= require ./jqueryplugins/fullcalendar/fullcalendar.min
-//= require ./jqueryplugins/rating/jquery.rating
-//= require ./bootstrap/datepicker/bootstrap-datepicker
-//= require ./bootstrap/timepicker/bootstrap-timepicker.min
+//= require ./jquery/main
+//= require ./jquery-ui/main
+//= require ./bootstrap/main

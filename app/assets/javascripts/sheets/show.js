@@ -13,4 +13,11 @@ jQuery(document).ready(function () {
 			alert(value);
 		}
 	});
+
+	$('#fieldsTab a:first').tab('show');
+
+	$('#fieldsTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	});
 });

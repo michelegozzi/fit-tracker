@@ -1,21 +1,21 @@
 <tr>
-	<td>
+	<td class="name">
 		<%= f.text_field :name, :class => 'activity-name-field' %>
 	</td>
-	<td>
+	<td class="time">
 		<div class="input-append bootstrap-timepicker">
 		<%= f.hidden_field :timepart, :class => 'activity-timepart-field' %>
 		<%= f.text_field :time, :class => 'input-small activity-time-field' %>
 		<span class="add-on"><i class="icon-time"></i></span>
 		</div>
 	</td>
-	<td>
+	<td class="duration">
 		<%= f.number_field :duration, :class => 'activity-duration-field' %>
 	</td>
-	<td>
+	<td class="intensity">
 		<%= f.select :intensity, Activity::INTENSITY_LEVEL, {:prompt => 'Choose ...'}, :class => 'activity-intensity-field' %>
 	</td>
-	<td>
+	<td class="remove">
 		<%= link_to_remove_fields '<i class="icon-remove"></i>'.html_safe, f, :activities %>
 	</td>
 </tr>

@@ -7,6 +7,7 @@ class SheetsController < ApplicationController
 
 	def show
 		@sheet = current_user.sheets.find(params[:id])
+		store_location
 		#@meals = @sheet.meals.order("time ASC").paginate(page: params[:page], :per_page => 3)
 	end
 
@@ -46,6 +47,7 @@ class SheetsController < ApplicationController
 	end
 
 	def destroy
+		debugger
 		@sheet = current_user.sheets.find(params[:id])
 		#if current_user?(@user)
 		#	flash[:error] = "You can't destroy yourself."

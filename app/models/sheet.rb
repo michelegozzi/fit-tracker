@@ -30,7 +30,7 @@ class Sheet < ActiveRecord::Base
 
 	NOTES_MAXIMUM = 255
 	SLEEP_HOURS = Array(0..24)	# or (0..24).to_a
-	GOALS_MET = [['Yes', 1], ['No', 0]]
+	GOALS_MET = [['Yes', true], ['No', false]]
 
 
 	validates :calorie_target, presence: true
@@ -52,8 +52,14 @@ class Sheet < ActiveRecord::Base
 			:less_than_or_equal_to => 24
 		}
 	validates :notes, length: { maximum: NOTES_MAXIMUM }
-	validates :goals_met, presence: true
-	validates :energy_level, presence: true
+	#validates :goals_met, presence: true
+	validates :energy_level,
+		presence: true,
+		:numericality => {
+			:only_integer => true,
+			:greater_than_or_equal_to => 0,
+			:less_than_or_equal_to => 9
+		}
 
 	before_save :update_total_calories_consumed
 
