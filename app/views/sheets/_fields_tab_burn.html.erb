@@ -1,0 +1,51 @@
+<div class="tab-pane" id="burn">
+	<div class="row-fluid">
+
+		<div class="span9">
+			<%= f.label "Activities" %>
+			<div id="activitiesAccordion">
+				<% Activity::CATEGORIES.each do |category| %>
+					<%= render :partial => 'activities_list',
+						:locals => {
+							:f => f,
+							:activities => @sheet.activities.where("category = :category", {:category => category[1]}),
+							:categoryId => category[1],
+							:categoryKey => category[0]
+						} %>
+				<% end %>
+			</div>
+		</div>
+		<div class="span3">
+			<section>
+				<div id="energy">
+					<%= f.label :energy_level %>
+					<%= f.radio_button :energy_level, 1, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 2, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 3, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 4, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 5, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 6, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 7, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 8, :class => 'energyLevel' %>
+					<%= f.radio_button :energy_level, 9, :class => 'energyLevel' %>
+					<% #= f.radio_button :energy_level, 10, :class => 'battery' %>
+					<br>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="row-fluid">
+
+		<div class="span12">
+			<%= f.label :notes do
+				('Notes (<b><span id="notesCounter">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe
+				end %>
+
+				<%= f.text_area :notes,
+					:rows => 5,
+					placeholder: "Put your notes here...",
+					:onkeypress => "return taLimit(this);",
+					:onkeyup => "return taCount(this,'notesCounter');", :class => 'span12' %>
+		</div>
+	</div>
+</div>

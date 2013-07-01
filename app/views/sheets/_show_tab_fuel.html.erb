@@ -1,0 +1,53 @@
+<div class="tab-pane active" id="fuel">
+	<div class="row-fluid">
+
+		<div class="span8">
+			<% if sheet.meals.any? %>
+				<h3>Meals (<%= sheet.meals.count %>)</h3>
+				
+				<div id="mealsAccordion">
+					<% Meal::CATEGORIES.each do |category| %>
+						<%= render :partial => 'meals_table',
+							:locals => {
+								:meals => sheet.meals.where("category = :category", {:category => category[1]}).order("time ASC"),
+								:categoryId => category[1],
+								:categoryKey => category[0]
+							} %>
+					<% end %>
+				</div>
+			<% end %>
+
+			<table class="table table-bordered" width="90%">
+				<thead>
+					<tr class="ui-widget-header ">
+						<th>Total Calories Consumed:</th>
+						<th><%= sheet.total_calories_consumed %></th>
+					</tr>
+				</thead>
+			</table>
+
+		</div>
+		<div class="span4">
+			<table class="table">
+				<thead>
+					<tr>
+						<td>Calorie Target:</td>
+						<td><%= sheet.calorie_target %></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Water Glasses:</td>
+						<td><%= render :partial => 'shared/water_glasses_control', :locals => { :disabled => true, :checked_value => sheet.water_glasses } %></td>
+					</tr>
+					<tr>
+						<td>Sleep Hours:</td>
+						<td><%= @sheet.sleep_hours %></td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+		</div>
+	</div>
+</div>

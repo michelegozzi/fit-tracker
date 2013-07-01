@@ -1,0 +1,44 @@
+<div class="tab-pane active" id="fuel">
+
+	<div class="row-fluid">
+		<div class="span8">
+			<%= f.label "Meals" %>
+			<div id="mealsAccordion">
+				<% Meal::CATEGORIES.each do |category| %>
+					<%= render :partial => 'meals_list',
+						:locals => {
+							:f => f,
+							:meals => @sheet.meals.where("category = :category", {:category => category[1]}),
+							:categoryId => category[1],
+							:categoryKey => category[0]
+						} %>
+				<% end %>
+			</div>
+		</div>
+		<div class="span4">
+			<section>
+				<%= f.label :calorie_target , :label => "Calorie Target", placeholder: "Put your calories target here..." %>
+				<%= f.number_field :calorie_target %>
+			</section>
+			<section>
+				<%= f.label :sleep_hours %>
+				<%= f.select :sleep_hours, 
+					Sheet::SLEEP_HOURS.collect {|p| [ p==0 ? 'None' : pluralize(p, "hour"), p ] },
+					:class => 'span3'
+					%>
+			</section>
+			<section>
+				<%= f.label :water_glasses %>
+				<%= f.radio_button :water_glasses, 1, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 2, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 3, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 4, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 5, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 6, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 7, :class => 'waterGlasses' %>
+				<%= f.radio_button :water_glasses, 8, :class => 'waterGlasses' %>
+				<br>
+			</section>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,42 @@
+<ul class="breadcrumb">
+	<% if params[:controller]=="sheets" %>
+ 		<% if params[:action]=="edit" %>
+			<li>
+				<% # sheet_path(object) %>
+				<%= link_to "Back", :back %>
+				<span class="divider">/</span>
+			</li>
+			<li>
+				<%= link_to "New", new_sheet_path %>
+				<span class="divider">/</span>
+			</li>
+			<li>
+				<%= link_to "Delete", object, method: :delete, data: { confirm: "You sure?" } %>
+			</li>
+		<% elsif params[:action]=="show" %>
+			<li>
+				<%= link_to "Edit", edit_sheet_path(object) %>
+				<span class="divider">/</span>
+			</li>
+			<li>
+				<%= link_to "New", new_sheet_path %>
+				<span class="divider">/</span>
+			</li>
+			<li> 
+				<%= link_to "Delete", object, method: :delete, data: { confirm: "You sure?" } %>
+			</li>
+		<% else %>
+			<li>
+				<% # current_user %>
+				<%= link_to "Back", :back %>
+			</li>
+		<% end %>
+	<% elsif params[:controller]=="users" or params[:controller]=="static_pages" %>
+		<% if params[:action]=="show" or params[:action]=="home" %>
+			<li>
+				<%= link_to "New", new_sheet_path %>
+			</li>
+		<% end %>
+	<% end %>
+</ul>
+		

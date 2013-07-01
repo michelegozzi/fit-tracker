@@ -1,0 +1,41 @@
+<div class="tab-pane" id="burn">
+	<div class="row-fluid">
+
+		<div class="span8">
+			<% if sheet.activities.any? %>
+				<h3>Activities (<%= sheet.activities.count %>)</h3>
+
+				<div id="activitiesAccordion">
+					<% Activity::CATEGORIES.each do |category| %>
+						<%= render :partial => 'activities_table',
+							:locals => {
+								:activities => sheet.activities.where("category = :category", {:category => category[1]}).order("time ASC"),
+								:categoryId => category[1],
+								:categoryKey => category[0]
+							} %>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<div class="span4">
+			<table class="table">
+				<thead>
+					<tr>
+						<td>
+							Energy Level:
+							<%= render :partial => 'shared/energy_level_control', :locals => { :disabled => true, :checked_value => sheet.energy_level } %>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<label for="notes">Notes:</label>
+							<textarea id="notes" rows="5"><%= sheet.notes %></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
