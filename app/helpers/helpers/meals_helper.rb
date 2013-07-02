@@ -1,0 +1,2 @@
+module Helpers::MealsHelper
+end

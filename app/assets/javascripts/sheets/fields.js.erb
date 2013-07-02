@@ -155,10 +155,64 @@ function validateForm(){
 	else {
 		jQuery('#validation_error').hide();	
 	}
-
-
 	return result;
 }
+
+/*
+	
+	*/
+
+$.fn.customTypeahead = function(customOptions) {
+
+	var defaults = {
+		//url : undefined,			// customOptions.url = 'window.location.origin+"/helpers/meals?q='
+		type : 'GET',	// or POST
+		async : false,
+		//targetProperty : undefined,
+		//targetObj : undefined,
+		property: 'name',
+		items: 4
+	};
+
+	customOptions = $.extend({}, $.fn.customTypeahead.defaults, customOptions);
+
+	if (customOptions.url !== undefined) {
+
+		this.typeahead({
+			source: function(typeahead, query) {
+				$.ajax({
+					url: customOptions.url,
+					type: customOptions.type,
+					data: { q: query },
+					dataType: "JSON",
+					async: false,
+					success: function(data) {
+						typeahead.process(data);
+					}
+				});
+			},
+			property: customOptions.property,
+			items:customOptions.items,
+			onselect: function (obj) {
+				console.log(obj);
+
+				if (customOptions.targetObj !== undefined && customOptions.targetProperty !== undefined) {
+					$(customOptions.targetObj).val(obj[customOptions.targetProperty]);
+				}
+			}
+		});
+	}
+	else {
+		console.error("customOption.url is undefined.");
+	}
+
+};
+
+
+
+
+
+
 
 var dateDDMMYYYYRegex = /(0[1-9]|[12][0-9]|3[01])[\-\.](0[1-9]|1[012])[\-\.](19|20)\d\d/gm;
 var timeRegex = /(0[1-9]|[1][12])[:]([0-5]\d)[\s](AM|PM)/gm;

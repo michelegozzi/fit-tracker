@@ -87,7 +87,15 @@ function add_meal_fields(link, association, content) {
 	var table = jQuery(link).parents('table');
 	var tbody = table.find('tbody');
 	var categoryId = tbody.attr('categoryId');
-	tbody.append(content.replace(regexp, new_id)).find('input.meal-time-field').last().customTimePicker(true);
+	var ar = tbody.append(content.replace(regexp, new_id));
+	
+	ar.find('input.meal-time-field').last().customTimePicker(true);
+	ar.find('input.meal-name-field').last().customTypeahead({
+		url: window.location.origin+'/helpers/meals',
+		property: 'name',
+		targetProperty: 'calories',
+		targetObj: ar.find('input.meal-calories-field').last()
+	});
 }
 
 

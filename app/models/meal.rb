@@ -12,6 +12,8 @@
 #  sheet_id   :integer
 #
 
+ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless defined?(ActiveRecord::MissingAttributeError)
+
 class Meal < ActiveRecord::Base
 	attr_accessible :calories, :name, :category, :time, :daytime
 
@@ -43,34 +45,33 @@ class Meal < ActiveRecord::Base
 
 
 
-	before_save do |meal|
-		logger.debug "DBG_20130612_1346 before_save"
+	#before_save do |meal|
+	#	logger.debug "DBG_20130612_1346 before_save"
 		#meal.calories += 1
 		#meal.time = Time.zone.parse(meal.timepart)
 		#logger.debug meal.timepart.to_s
 		#logger.debug meal.time.to_s
-	end
+	#end
 
 	before_save :parse_categories
 	after_initialize :parse_categories
 	before_create :parse_categories
 	before_validation :test_before_validation
-
-	after_initialize do |meal|
-		logger.debug "DBG_20130612_1345 after_initialize"
-		if meal.time.nil?
-			meal.timepart = Time.local(2000, 1, 1).strftime("%I:%M %p")
-		else
-			meal.timepart = meal.time.strftime("%I:%M %p")
-		end
-		#meal.datepart = Date.today.to_time
-
-		#meal.time = Date.today.to_time
-	end
+	after_initialize :set_timepart
 
 	private
 		def test_before_validation
 			logger.debug "DBG_20130612_2246 test_before_validation: #{self.category}"
+		end
+
+		def set_timepart
+			logger.debug "DBG_20130612_1345 after_initialize"
+			if self.time.nil?
+				self.timepart = Time.local(2000, 1, 1).strftime("%I:%M %p")
+			else
+				self.timepart = self.time.strftime("%I:%M %p")
+			end
+		rescue ActiveRecord::MissingAttributeError
 		end
 
 		def parse_categories
@@ -88,5 +89,6 @@ class Meal < ActiveRecord::Base
 			#CATEGORIES.select {|a| a.include?(self.category) }
 
 			#self.category = SecureRandom.urlsafe_base64
+		rescue ActiveRecord::MissingAttributeError
 		end
 end

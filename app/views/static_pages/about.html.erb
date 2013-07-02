@@ -1,5 +1,23 @@
 <% provide(:title, 'About') %>
 
+<% include_javascript 'sheets/fields.js' %>
+
 <h1>About</h1>
 
 <p>I created this app for my wife, so she'll be hot all the time. Yep!</p>
+
+<script>
+	
+	jQuery(document).ready(function () {
+		$('#meal').customTypeahead({
+			url: window.location.origin+'/helpers/meals',
+			property: 'name',
+			targetProperty: 'calories',
+			targetSelector: '#meal_calories'
+		});
+	});
+	
+</script>
+
+<input type="text" id="meal" class="typeahead" />
+<input type="number" id="meal_calories" />

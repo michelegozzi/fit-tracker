@@ -1,5 +1,10 @@
 FitTracker::Application.routes.draw do
   
+  namespace :helpers do
+    resources :meals, only: [:index]
+  end
+
+
   resources :users #do
     #resources :sheets, only: [:show]
   #end
