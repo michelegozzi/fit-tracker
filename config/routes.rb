@@ -1,20 +1,17 @@
 FitTracker::Application.routes.draw do
-  
+
+  namespace :admin do
+    resources :global_meals, only: [:index, :show, :new, :create, :destroy, :upload]
+  end
+
   namespace :helpers do
     resources :meals, only: [:index]
   end
 
-
-  resources :users #do
-    #resources :sheets, only: [:show]
-  #end
-
+  resources :users
   resources :sessions, only: [:new, :create, :destroy]
-
   resources :sessions, only: [:new, :create, :destroy]
-
   resources :sheets #, only: [:index, :show, :create, :destroy]
-
   resources :meals, only: [:create, :destroy]
 
   root :to => 'static_pages#home'

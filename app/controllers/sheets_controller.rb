@@ -85,9 +85,9 @@ class SheetsController < ApplicationController
 		def custom_json_for(value)
 			list = value.map do |sheet|
 				{
-					:id => "#{sheet.id}",
+					:id => sheet.id,
 					:title => "Day #{sheet.day}",
-					:start => "#{sheet.date}",
+					:start => "#{sheet.date.strftime("%Y-%m-%d")}",
 					#:backgroundColor => sheet.goals_met = 0 ? "grey" : sheet.goals_met = 1 ? "red" : "green",
 					#:backgroundColor => sheet.goals_met?.nil ? "grey" : sheet.goals_met? ? "green" : "red",
 					:backgroundColor => sheet.goals_met? ? "green" : "red",

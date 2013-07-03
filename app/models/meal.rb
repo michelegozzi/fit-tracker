@@ -39,9 +39,19 @@ class Meal < ActiveRecord::Base
 	validates :category,
 		presence: true,
 		:numericality => {
-			:only_integer => true,
-			:greater_than => 0
+			:only_integer => true
 		}
+
+	validates :category,
+		:numericality => {
+			:greater_than_or_equal_to => 1
+		},
+		:if => :validates_user_category?
+	validates :category,
+		:numericality => {
+			:greater_than_or_equal_to => 0
+		},
+		:if => :validates_admin_category?
 
 
 
@@ -60,6 +70,14 @@ class Meal < ActiveRecord::Base
 	after_initialize :set_timepart
 
 	private
+		def validates_user_category
+			!(signed_in_as_admin?)
+		end
+
+		def validates_admin_category
+			signed_in_as_admin?
+		end
+
 		def test_before_validation
 			logger.debug "DBG_20130612_2246 test_before_validation: #{self.category}"
 		end

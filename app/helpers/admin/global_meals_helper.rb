@@ -1,0 +1,2 @@
+module Admin::GlobalMealsHelper
+end
