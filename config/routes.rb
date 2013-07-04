@@ -1,11 +1,16 @@
 FitTracker::Application.routes.draw do
 
   namespace :admin do
-    resources :global_meals, only: [:index, :show, :new, :create, :destroy, :upload]
+    resources :global_meals do
+      collection do
+        post 'upload'
+      end
+    end
   end
 
   namespace :helpers do
-    resources :meals, only: [:index]
+    #resources :meals, only: [:index]
+    resources :foods, only: [:index]
   end
 
   resources :users

@@ -1,0 +1,5 @@
+<collection>
+   <meal name="Meal01" calories="100" />
+   <meal name="Meal02" calories="200" />
+   <meal name="Meal03" calories="300" />
+</collection>

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Helpers::MealsController do
+describe Helpers::FoodsController do
 
   describe "GET 'index'" do
     it "returns http success" do

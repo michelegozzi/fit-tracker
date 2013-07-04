@@ -1,3 +1,6 @@
+require 'rexml/document'
+include REXML
+
 namespace :db do
   desc "Fill database with sample data"
 
@@ -29,6 +32,10 @@ namespace :db do
 
   task init_time: :environment do
     init_time
+  end
+
+  task populatefoods: :environment do
+    add_foods
   end
 
 end
@@ -164,6 +171,50 @@ def init_time
         meal.save
       end
     end
+  end
+
+end
+
+def add_foods
+  
+
+  xmlfile = File.new(Rails.root.join('public', 'uploads', 'Food_Display_Table.xml'))
+  xmldoc = Document.new(xmlfile)
+
+
+  xmldoc.elements.each("Food_Display_Table/Food_Display_Row") do |e|
+
+#    debugger
+    food = Food.new
+
+    e.elements.each("Food_Code") { |i| food.food_code = i.text.to_f }
+    e.elements.each("Display_Name") { |i| food.display_name = i.text.to_s }
+    e.elements.each("Portion_Default") { |i| food.portion_default = i.text.to_f }
+    e.elements.each("Portion_Amount") { |i| food.portion_amount = i.text.to_f }
+    e.elements.each("Portion_Display_Name") { |i| food.portion_display_name = i.text.to_s }
+    e.elements.each("Factor") { |i| food.factor = i.text.to_f }
+    e.elements.each("Increment") { |i| food.increment = i.text.to_f }
+    e.elements.each("Multiplier") { |i| food.multiplier = i.text.to_f }
+    e.elements.each("Grains") { |i| food.grains = i.text.to_f }
+    e.elements.each("Whole_Grains") { |i| food.whole_grains = i.text.to_f }
+    e.elements.each("Vegetables") { |i| food.vegetables = i.text.to_f }
+    e.elements.each("Orange_Vegetables") { |i| food.orange_vegetables = i.text.to_f }
+    e.elements.each("Drkgreen_Vegetables") { |i| food.drkgreen_vegetables = i.text.to_f }
+    e.elements.each("Starchy_vegetables") { |i| food.starchy_vegetables = i.text.to_f }
+    e.elements.each("Other_Vegetables") { |i| food.other_vegetables = i.text.to_f }
+    e.elements.each("Fruits") { |i| food.fruits = i.text.to_f }
+    e.elements.each("Milk") { |i| food.milk = i.text.to_f }
+    e.elements.each("Meats") { |i| food.meats = i.text.to_f }
+    e.elements.each("Soy") { |i| food.soy = i.text.to_f }
+    e.elements.each("Drybeans_Peas") { |i| food.drybeans_peas = i.text.to_f }
+    e.elements.each("Oils") { |i| food.oils = i.text.to_f }
+    e.elements.each("Solid_Fats") { |i| food.solid_fats = i.text.to_f }
+    e.elements.each("Added_Sugars") { |i| food.added_sugars = i.text.to_f }
+    e.elements.each("Alcohol") { |i| food.alcohol = i.text.to_f }
+    e.elements.each("Calories") { |i| food.calories = i.text.to_f }
+    e.elements.each("Saturated_Fats") { |i| food.saturated_fats = i.text.to_f }
+    food.save
+
   end
 
 end

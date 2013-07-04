@@ -13,6 +13,7 @@ gem 'will_paginate', '3.0.3'					#9.31
 gem 'jquery-rails'
 gem 'debugger', group: [:development, :test]
 gem 'json'
+gem 'safe_attributes'
 
 	
 # Bundle edge Rails instead:
