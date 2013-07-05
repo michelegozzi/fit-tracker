@@ -3,7 +3,9 @@ class Helpers::FoodsController < ApplicationController
 		if signed_in? 
 			day = 0
 
-			@foods = Food.where("display_name LIKE :q", :q => "%#{params[:q]}%").select("display_name, portion_display_name, calories").order("display_name")
+			@foods = Food.all_foods("%#{params[:q]}%")
+
+			#@foods = Food.where("display_name LIKE :q", :q => "%#{params[:q]}%").select("display_name, portion_display_name, calories").order("display_name")
 			render :json => custom_json_for(@foods) # in questo modo posso vedere il json da browser
 
 			return
@@ -20,10 +22,12 @@ class Helpers::FoodsController < ApplicationController
 	end		
 
 	private
+
 		def custom_json_for(value)
 			list = value.map do |food|
 				{
-					:name => "#{food.display_name}, #{food.portion_display_name.strip}",
+					#:name => "#{food.display_name}#{ '' : ', '+food.portion_display_name.strip}",
+					:name => food.portion_display_name.nil? ? "#{food.display_name}" : "#{food.display_name}, #{food.portion_display_name}",
 					:calories => "#{food.calories.to_i}"
 				}
 			end

@@ -4,4 +4,11 @@ class Food < ActiveRecord::Base
 	#def getBinding
 	#    return binding()# a method defined in Kernel module
 	#end
+
+	def self.all_foods(q)
+
+		find_by_sql("SELECT * FROM (SELECT display_name, portion_display_name, calories FROM foods WHERE display_name LIKE '#{q}' UNION SELECT DISTINCT name display_name, NULL AS portion_display_name, calories FROM meals WHERE name LIKE '#{q}') ORDER BY display_name")
+		#connection.select_all("SELECT display_name, portion_display_name, calories FROM foods WHERE display_name LIKE '#{q}' UNION SELECT DISTINCT name display_name, NULL AS portion_display_name, calories FROM meals WHERE name LIKE '#{q}'")
+		
+	end
 end

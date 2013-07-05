@@ -851,6 +851,7 @@ a.label:hover,a.label:focus,a.badge:hover,a.badge:focus{color:#fff;text-decorati
 .hero-unit{padding:60px;margin-bottom:30px;font-size:18px;font-weight:200;line-height:25.5px;color:inherit;background-color:#eee;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}.hero-unit h1{margin-bottom:0;font-size:60px;line-height:1;color:inherit;letter-spacing:-1px}
 .hero-unit li{line-height:25.5px}
 header .brand{font-size:1.7em;color:#fff;text-transform:uppercase;letter-spacing:-1px;font-weight:bold}header .brand:hover{color:#fff;text-decoration:none}
+h1{text-align:center}
 .fit-table thead{background:#c00;color:#fff;font-weight:bold}.fit-table thead th{text-align:center}
 .fit-table thead a{color:#fff;text-decoration:none}.fit-table thead a:hover{color:#fff;text-decoration:none}
 .fit-table tbody{border:1px solid #eee;background:#fff;color:#333}.fit-table tbody a{color:#333}

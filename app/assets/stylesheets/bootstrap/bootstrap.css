@@ -5254,6 +5254,9 @@ header .brand:hover {
   color: #ffffff;
   text-decoration: none;
 }
+h1 {
+  text-align: center;
+}
 .fit-table thead {
   background: #cc0000;
   color: #ffffff;

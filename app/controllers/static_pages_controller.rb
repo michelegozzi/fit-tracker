@@ -8,7 +8,7 @@ class StaticPagesController < ApplicationController
 
 		if signed_in?
 			@user = current_user
-			@sheets = @user.sheets.order(sort_column + " " + sort_direction).paginate(page: params[:page], :per_page => 4)
+			@sheets = @user.sheets.order(sort_column + " " + sort_direction).paginate(page: params[:page], :per_page => 7)
 		end
 	end
 
