@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130703194151) do
+ActiveRecord::Schema.define(:version => 20130705161615) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20130703194151) do
     t.datetime "updated_at",                                          :null => false
   end
 
+  add_index "foods", ["display_name"], :name => "index_foods_on_display_name"
+
   create_table "meals", :force => true do |t|
     t.string   "name"
     t.datetime "time"
@@ -67,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20130703194151) do
     t.integer  "sheet_id"
   end
 
+  add_index "meals", ["name"], :name => "index_meals_on_name"
   add_index "meals", ["sheet_id"], :name => "index_meals_on_sheet_id"
 
   create_table "sheets", :force => true do |t|
