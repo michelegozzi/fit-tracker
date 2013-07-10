@@ -47,22 +47,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 1302,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "spec/helpers/helpers/foods_helper_spec.rb.old",
-			"settings":
-			{
-				"buffer_size": 431,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/User/NANT.sublime-build",
 	"command_palette":
@@ -88,6 +72,30 @@
 	},
 	"file_history":
 	[
+		"/home/michele/.bash_profile",
+		"/home/michele/.profile",
+		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/ISSUES.md",
+		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/README.md",
+		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/lib/bundler/rubygems_integration.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_breadcrumb.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/foods_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_breadcrumb.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/show.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/new.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/edit.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/admin/foods/foods_table.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/application.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/table.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/users/show.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/show.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/helpers/foods_helper_spec.rb.old",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/how to install nokogiri with-xml2 include.txt",
 		"/home/michele/Dropbox/Projects/ror/RailsExample/config/application.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/application.rb",
@@ -95,7 +103,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environments/test.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environment.rb",
 		"/home/michele/Dropbox/Projects/ror/RailsExample/config/environment.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/static_pages_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/sheets_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/admin/foods_helper_spec.rb",
@@ -107,25 +114,18 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/meal_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/food_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/activity_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/foods_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/static_pages_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_search_form.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/routes.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_breadcrumb.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130705161548_add_index_to_foods_display_name.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130705161615_add_index_to_meals_name.rb",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/foods_controller.rb",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-variables.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/script/ruby/parse_xml.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/global_meals_controller.rb",
@@ -155,7 +155,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_burn.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application-print.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application-all.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/show.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery-ui/main.js",
 		"/home/michele/Dropbox/Projects/less/bootstrap/less/alerts.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_error_messages.html.erb",
@@ -172,7 +171,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/show.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/application.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meals.html.erb-old",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_stat.html.erb",
@@ -201,21 +199,7 @@
 		"/opt/nant-0.92/examples/Simple/Simple.build",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
 		"/home/michele/Downloads/node-v0.10.12/README.md",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/main.css",
-		"/home/michele/Dropbox/Projects/less/bootstrap-custom/custom-bootstrap.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/bootstrap/main.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/bootstrap/bootstrap.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/jquery/main.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/bootstrap/bootstrap.min.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/main.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/sheet.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_footer.html.erb",
-		"/home/michele/Downloads/bootstrap_custom/css/error.txt",
-		"/home/michele/Downloads/bootstrap/css/bootstrap.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/custom.css.scss.old",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery-ui/1.10.3/css/blitzer/jquery-ui-1.10.3.custom.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/jquery-ui/main.css"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/main.css"
 	],
 	"find":
 	{
@@ -246,6 +230,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"defaults",
 			"helpers/meals",
 			"<",
 			"</Food_Display_Row><Food_Display_Row>",
@@ -372,8 +357,7 @@
 			"draw",
 			"drain",
 			"star-",
-			"options.stylePrefix",
-			"star-"
+			"options.stylePrefix"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -409,62 +393,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 1302,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1054,
-								1054
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 215.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "spec/helpers/helpers/foods_helper_spec.rb.old",
-					"settings":
-					{
-						"buffer_size": 431,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								372,
-								372
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

@@ -193,8 +193,8 @@ def add_foods
     e.elements.each("Portion_Amount") { |i| food.portion_amount = i.text.to_f }
     e.elements.each("Portion_Display_Name") { |i| food.portion_display_name = i.text.to_s }
     e.elements.each("Factor") { |i| food.factor = i.text.to_f }
-    e.elements.each("Increment") { |i| food.increment = i.text.to_f }
-    e.elements.each("Multiplier") { |i| food.multiplier = i.text.to_f }
+    e.elements.each("Increment") { |i| food.increment_factor = i.text.to_f }
+    e.elements.each("Multiplier") { |i| food.multiplier_factor = i.text.to_f }
     e.elements.each("Grains") { |i| food.grains = i.text.to_f }
     e.elements.each("Whole_Grains") { |i| food.whole_grains = i.text.to_f }
     e.elements.each("Vegetables") { |i| food.vegetables = i.text.to_f }

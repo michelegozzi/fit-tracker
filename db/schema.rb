@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130705161615) do
+ActiveRecord::Schema.define(:version => 20130710204533) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
@@ -27,34 +27,34 @@ ActiveRecord::Schema.define(:version => 20130705161615) do
   add_index "activities", ["sheet_id"], :name => "index_activities_on_sheet_id"
 
   create_table "foods", :force => true do |t|
-    t.decimal  "food_code",            :precision => 10, :scale => 0
+    t.integer  "food_code",            :limit => 10
     t.string   "display_name"
-    t.decimal  "portion_default",      :precision => 10, :scale => 5
-    t.decimal  "portion_amount",       :precision => 10, :scale => 5
+    t.decimal  "portion_default",                    :precision => 10, :scale => 5
+    t.decimal  "portion_amount",                     :precision => 10, :scale => 5
     t.string   "portion_display_name"
-    t.decimal  "factor",               :precision => 10, :scale => 5
-    t.decimal  "increment",            :precision => 10, :scale => 5
-    t.decimal  "multiplier",           :precision => 10, :scale => 5
-    t.decimal  "grains",               :precision => 10, :scale => 5
-    t.decimal  "whole_grains",         :precision => 10, :scale => 5
-    t.decimal  "vegetables",           :precision => 10, :scale => 5
-    t.decimal  "orange_vegetables",    :precision => 10, :scale => 5
-    t.decimal  "drkgreen_vegetables",  :precision => 10, :scale => 5
-    t.decimal  "starchy_vegetables",   :precision => 10, :scale => 5
-    t.decimal  "other_vegetables",     :precision => 10, :scale => 5
-    t.decimal  "fruits",               :precision => 10, :scale => 5
-    t.decimal  "milk",                 :precision => 10, :scale => 5
-    t.decimal  "meats",                :precision => 10, :scale => 5
-    t.decimal  "soy",                  :precision => 10, :scale => 5
-    t.decimal  "drybeans_peas",        :precision => 10, :scale => 5
-    t.decimal  "oils",                 :precision => 10, :scale => 5
-    t.decimal  "solid_fats",           :precision => 10, :scale => 5
-    t.decimal  "added_sugars",         :precision => 10, :scale => 5
-    t.decimal  "alcohol",              :precision => 10, :scale => 5
-    t.decimal  "calories",             :precision => 10, :scale => 5
-    t.decimal  "saturated_fats",       :precision => 10, :scale => 5
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
+    t.decimal  "factor",                             :precision => 10, :scale => 5
+    t.decimal  "increment_factor",                   :precision => 10, :scale => 5
+    t.decimal  "multiplier_factor",                  :precision => 10, :scale => 5
+    t.decimal  "grains",                             :precision => 10, :scale => 5
+    t.decimal  "whole_grains",                       :precision => 10, :scale => 5
+    t.decimal  "vegetables",                         :precision => 10, :scale => 5
+    t.decimal  "orange_vegetables",                  :precision => 10, :scale => 5
+    t.decimal  "drkgreen_vegetables",                :precision => 10, :scale => 5
+    t.decimal  "starchy_vegetables",                 :precision => 10, :scale => 5
+    t.decimal  "other_vegetables",                   :precision => 10, :scale => 5
+    t.decimal  "fruits",                             :precision => 10, :scale => 5
+    t.decimal  "milk",                               :precision => 10, :scale => 5
+    t.decimal  "meats",                              :precision => 10, :scale => 5
+    t.decimal  "soy",                                :precision => 10, :scale => 5
+    t.decimal  "drybeans_peas",                      :precision => 10, :scale => 5
+    t.decimal  "oils",                               :precision => 10, :scale => 5
+    t.decimal  "solid_fats",                         :precision => 10, :scale => 5
+    t.decimal  "added_sugars",                       :precision => 10, :scale => 5
+    t.decimal  "alcohol",                            :precision => 10, :scale => 5
+    t.decimal  "calories",                           :precision => 10, :scale => 5
+    t.decimal  "saturated_fats",                     :precision => 10, :scale => 5
+    t.datetime "created_at",                                                        :null => false
+    t.datetime "updated_at",                                                        :null => false
   end
 
   add_index "foods", ["display_name"], :name => "index_foods_on_display_name"
