@@ -7,7 +7,7 @@ class Food < ActiveRecord::Base
 
 	def self.all_foods(q)
 
-		find_by_sql("SELECT * FROM (SELECT display_name, portion_display_name, calories FROM foods WHERE display_name LIKE '#{q}' UNION SELECT DISTINCT name display_name, NULL AS portion_display_name, calories FROM meals WHERE name LIKE '#{q}') ORDER BY display_name")
+		find_by_sql("SELECT * FROM (SELECT display_name, portion_display_name, calories FROM foods WHERE display_name LIKE '#{q}' UNION SELECT DISTINCT name display_name, NULL AS portion_display_name, calories FROM meals WHERE name LIKE '#{q}') m ORDER BY display_name")
 		#connection.select_all("SELECT display_name, portion_display_name, calories FROM foods WHERE display_name LIKE '#{q}' UNION SELECT DISTINCT name display_name, NULL AS portion_display_name, calories FROM meals WHERE name LIKE '#{q}'")
 		
 	end
