@@ -1,0 +1,32 @@
+<% provide(:title, "Food Details") %>
+<% #include_javascript 'admin/foods/show.js' %>
+
+<div class="row-fluid">
+	<aside class="span2">
+		<h3><%= params[:controller].humanize.singularize.upcase %></h3>
+		<%= render "shared/user_stat", object: nil %>
+		<%= render 'breadcrumb', object: @food %>
+		<%= render 'search_form' %>
+	</aside>
+
+	<div class="span8">
+		<div class="row-fluid">
+			<div class="span12">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Name:</th>
+							<th>Calories:</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><%= @food.display_name %></td>
+							<td><%= @food.calories.to_i %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

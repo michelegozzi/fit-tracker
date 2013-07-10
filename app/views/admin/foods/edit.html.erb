@@ -1,0 +1,6 @@
+<% provide(:title, "Edit Food") %>
+
+<%= form_for [:admin, @food] do |f| %>
+	<%= render 'fields', f: f %>
+	
+<% end %>

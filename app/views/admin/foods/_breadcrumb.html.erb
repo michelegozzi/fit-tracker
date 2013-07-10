@@ -1,0 +1,40 @@
+<ul class="breadcrumb">
+	<% if params[:action]=="new" %>
+		<li>
+			<%= link_to "Back", :back %>
+			<span class="divider">/</span>
+		</li>
+	<% elsif params[:action]=="edit" %>
+		<li>
+			<%= link_to "Back", :back %>
+			<span class="divider">/</span>
+		</li>
+		<li>
+			<%= link_to "New", new_admin_food_path %>
+			<span class="divider">/</span>
+		</li>
+		<li>
+			<%= link_to "Delete", admin_food_path(object), method: :delete, data: { confirm: "You sure?" } %>
+		</li>
+	<% elsif params[:action]=="show" %>
+		<li>
+			<%= link_to "All", admin_foods_path %>
+			<span class="divider">/</span>
+		</li>
+		<li>
+			<%= link_to "Edit", edit_admin_food_path(object) %>
+			<span class="divider">/</span>
+		</li>
+		<li>
+			<%= link_to "New", new_admin_food_path %>
+			<span class="divider">/</span>
+		</li>
+		<li> 
+			<%= link_to "Delete", admin_food_path(object), method: :delete, data: { confirm: "You sure?" } %>
+		</li>
+	<% else %>
+		<li>
+			<%= link_to "New", new_admin_food_path %>
+		</li>
+	<% end %>
+</ul>		

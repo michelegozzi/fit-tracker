@@ -1,0 +1,96 @@
+#10.29
+require 'spec_helper'
+
+describe "Micropost pages" do
+
+	subject { page }
+
+	let(:user) { FactoryGirl.create(:user) }
+	before { exec_signin user }
+
+	#10.29
+	describe "10.29 micropost creation" do
+		before { visit root_path }
+
+		describe "10.29 with invalid information" do
+
+			it "should not create a micropost" do
+				expect { click_button "Post" }.not_to change(Micropost, :count)
+			end
+
+			describe "10.29 error messages" do
+				before { click_button "Post" }
+				it { should have_content('error') } 
+			end
+		end
+
+		describe "10.29 with valid information" do
+
+			before { fill_in 'micropost_content', with: "Lorem ipsum" }
+			it "10.29 should create a micropost" do
+				expect { click_button "Post" }.to change(Micropost, :count).by(1)
+				#10.5/1
+				should have_content('1 micropost')
+			end
+		end
+
+		#10.5 Exercises 1,2
+		describe "EX10.5 check microposts sidebar and pagination" do
+
+			before do
+				21.times { FactoryGirl.create(:micropost, user: user) }
+			end
+
+			#EX10.5/1
+			describe ", microposts sidebar should have right counters and pluralizations" do
+				before { visit root_path }
+			
+				it { should have_content('21 microposts') }
+			
+				#EX10.5/2
+				describe ", microposts should be paginated" do
+					it { should have_link('Next') }
+					it { should have_link('Previous', href:'#') }
+
+					describe ", moving to the next page" do
+						before { click_link "Next" }
+						it { should have_link('Next') }
+						it { should_not have_link('Next', href:'#') }
+						it { should have_link('Previous') }
+						it { should_not have_link('Previous', href:'#') }
+
+						describe ", moving to the last page" do
+							before { click_link "Next" }
+							it { should have_link('Next', href:'#') }
+							it { should have_link('Previous') }
+							it { should_not have_link('Previous', href:'#') }
+						end
+					end
+				end
+			end
+		end
+	end
+
+	#10.48
+	describe "10.48 micropost destruction" do
+		before { FactoryGirl.create(:micropost, user: user) }
+
+		describe "10.48 as correct user" do
+			before { visit root_path }
+
+			it "10.48 should delete a micropost" do
+				expect { click_link "delete" }.to change(Micropost, :count).by(-1)
+			end
+		end
+	end
+
+	describe ", EX10.5/4 can't desctruct other user's microposts" do
+			let(:otheruser) { FactoryGirl.create(:user) }
+			before { FactoryGirl.create(:micropost, user: otheruser) }
+			
+			describe ", there isn't the delete link" do
+				before { visit user_path(otheruser) }
+				it { should_not have_link('delete') }
+			end
+		end
+end

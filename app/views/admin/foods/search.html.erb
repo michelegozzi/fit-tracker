@@ -1,0 +1,23 @@
+<% provide(:title, "Foods Manager") %>
+<h1>Foods Manager</h1>
+
+<div class="row-fluid">
+	<aside class="span2">
+
+		<h3><%= params[:controller].humanize.singularize.upcase %></h3>
+		<%= render "shared/user_stat", object: nil %>
+		<%= render 'breadcrumb' %>
+		<%= render 'search_form' %>
+	</aside>
+
+	<div class="span8">
+		<div class="row-fluid">
+			<div class="span12">
+				<% if @foods.any? %>
+					<h3>Foods (<%= @foods.count %>)</h3>
+					<%= render "foods_table" %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

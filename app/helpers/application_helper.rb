@@ -70,7 +70,7 @@ module ApplicationHelper
 		i_css_class = column == sort_column ? sort_direction == "asc" ? icon_asc : icon_desc : icon_default
 		
 		#link_to title, {:sort => column, :direction => direction}, {:class => css_class}
-		link_to "#{title} #{content_tag :i, nil, class: i_css_class}".html_safe, {:sort => column, :direction => direction}, {:class => css_class}
+		link_to "#{title} #{content_tag :i, nil, class: i_css_class}".html_safe, {:sort => column, :direction => direction, :q => params[:q].nil? ? '' : params[:q]}, {:class => css_class}
 
 	end
 

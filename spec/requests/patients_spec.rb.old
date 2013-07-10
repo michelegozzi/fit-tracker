@@ -1,0 +1,54 @@
+require 'spec_helper'
+
+describe "Patients" do
+
+	let(:base_title) { "Rails Example" }
+
+	describe "GET /patients" do
+		it "works! (now write some real specs)" do
+			# Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+			#get patients_index_path
+			get patients_path
+			response.status.should be(200)
+		end
+
+		it "should have the h1 'Last Patients'" do
+			visit '/patients'
+			page.should have_selector('h1', :text => 'Last Patients')
+		end
+
+		it "should have the title 'Patients'" do
+			visit '/patients'
+			page.should have_selector('title', :text => "#{base_title} | Patients")
+		end
+	end
+  
+  
+  
+	describe "Search page" do
+
+		it "should have the content 'Patients Search'" do
+			visit '/patients/search'
+			page.should have_content('Patients Search')
+		end
+
+		it "should have the title 'Patients Search'" do
+			visit '/patients/search'
+			page.should have_selector('title', :text => "#{base_title} | Patients Search")
+		end
+	end
+  
+	describe "Detail page" do
+
+		it "should have the content 'Patient Detail'" do
+			visit '/patients/detail'
+			page.should have_content('Patient Detail')
+		end
+		
+		it "should have the title 'Patients Detail'" do
+			visit '/patients/detail'
+			page.should have_selector('title', :text => "#{base_title} | Patient Detail")
+		end
+	end
+end
+

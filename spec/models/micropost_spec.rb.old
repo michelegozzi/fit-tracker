@@ -1,0 +1,52 @@
+# created via shell with:
+# $ rails generate model Micropost content:string user_id:integer
+require 'spec_helper'
+
+describe Micropost do
+	#10.2
+	let(:user) { FactoryGirl.create(:user) }
+	
+	before { @micropost = user.microposts.build(content: "Asdf asdf") } #10.5
+
+	subject { @micropost }
+
+	it { should respond_to(:content) }
+	it { should respond_to(:user_id) }
+	it { should respond_to(:user) }	#10.8
+	its(:user) { should == user }	#10.8
+
+	#10.3
+	it { should be_valid }
+
+	describe "10.3 when user_id is not present" do
+		before { @micropost.user_id = nil }
+		it { should_not be_valid }
+	end
+
+	#10.5
+	describe "10.5 accessible attributes" do
+		it "10.5 should not allow access to user_id" do
+			expect do
+				Micropost.new(user_id: user.id)
+			end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
+		end
+	end
+
+	#10.8
+	describe "10.8 when user_id is not present" do
+		before { @micropost.user_id = nil }
+		it { should_not be_valid }
+	end
+
+	#10.17
+	describe "10.17 with blank content" do
+		before { @micropost.content = " " }
+		it { should_not be_valid }
+	end
+
+	describe "10.17 with content that is too long" do
+		before { @micropost.content = "a" * 141 }
+		it { should_not be_valid }
+	end
+
+end

@@ -1,9 +1,10 @@
 FitTracker::Application.routes.draw do
 
   namespace :admin do
-    resources :global_meals do
+    resources :foods do
       collection do
         post 'upload'
+        get 'search'
       end
     end
   end

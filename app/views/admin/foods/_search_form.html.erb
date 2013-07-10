@@ -1,0 +1,5 @@
+<%= form_tag({:controller=>"#{params[:controller]}", :action => "search"}, { :method => "get", :class => "form-inline" }) do %>
+	<% #= label_tag :q, "Search for:"  %>
+	<%= text_field_tag :q, params[:q], :class => "input-small", :placeholder => "Search" %>
+	<%= submit_tag "Search", :class => "btn"  %>
+<% end %>

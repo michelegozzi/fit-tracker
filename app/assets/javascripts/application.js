@@ -13,3 +13,4 @@
 //= require ./jquery/main
 //= require ./jquery-ui/main
 //= require ./bootstrap/main
+//= require ./global/table.min.js

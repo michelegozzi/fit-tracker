@@ -1,0 +1,29 @@
+<% include_javascript 'admin/foods/foods_table.js' %>
+
+<table id="foodsTable" class="table table-bordered table-hover sortable fit-table">
+	<thead>
+		<tr>
+			<th><%= sortable "display_name", "Name" %></th>
+			<th><%= sortable "calories", "Calories" %></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @foods.each do |food| %>
+
+		<tr>
+			<td class="name">
+				<%= food.display_name %>
+			</td>
+			<td class="calories">
+				<%= food.calories %>
+			</td>
+			<input type="hidden" value="<%= food.id %>" />
+		</tr>
+
+		<% end %>
+	</tbody>
+</table>
+
+<div class="fit-pagination">
+	<%= will_paginate @foods %>
+</div>
