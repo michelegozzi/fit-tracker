@@ -1,10 +1,25 @@
 <footer class="footer">
-	<small>
-		Powered by <a href="mailto:michelegozzi@gmail.com">Michele Gozzi</a>
-	</small>
-	<nav>
-		<ul>
-			
-		</ul>
-	</nav>
+  <div class="row-fluid">
+    <div class="span3 offset9">
+      <div class="row-fluid">
+        <div class="span2" style="padding-left: 15px">
+          <%= link_to image_tag("rails.png", { alt: "Rails", size: "25x32" } ), 'http://rubyonrails.org/' %>
+        </div>
+        <div class="span10">
+          <small>
+            <nav>
+              <ul>
+                <li>
+                  Powered by <%= mail_to "Michele Gozzi", 'michelegozzi@gmail.com' %>
+                </li>
+                <li>
+                  <%= link_to "My linkedin profile", 'http://it.linkedin.com/in/michelegozzi/' %>
+                </li>
+              </ul>
+            </nav>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

@@ -80,7 +80,7 @@ class Admin::FoodsController < ApplicationController
 
 	private
 		def admin_user
-			redirect_to(root_path) unless current_user.admin?
+			redirect_to(root_path) unless signed_in? and current_user.admin?
 		end
 
 		def sort_column

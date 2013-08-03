@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title><%= full_title(yield(:title)) %></title>
-		<%= stylesheet_link_tag    "application-all", :media => "screen, tv, projection" %>
-		<%= stylesheet_link_tag    "application-print", :media => "print, handheld" %>
-		<%= yield(:extraheadstyle) %>
-		<%= javascript_include_tag "application" %>
-		<%= csrf_meta_tags %>
-		
-		<%= render 'layouts/shim' %>
-		<%= yield(:extrahead) %>
-	</head>
-	<body>
-		<%= render 'layouts/header' %>
-		
-		<div class="container-fluid">
-			<% if flash.any? %>
-				<div class="row-fluid">
-   					<div class="span8 offset2">
-						<% flash.each do |key, value| %>
-							<%= content_tag(:div, value, class: "alert alert-#{key}") %>
-						<% end %>
-					</div>
-				</div>
-			<% end %>
-
-			<%= yield %>
-
-		</div>
-		<%= render 'layouts/footer' %>
-		<%= debug(params) if Rails.env.development? %>
-		
-	</body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application-all", :media => "screen, tv, projection" %>
+    <%= stylesheet_link_tag    "application-print", :media => "print, handheld" %>
+    <%= yield(:extraheadstyle) %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    
+    <%= render 'layouts/shim' %>
+    <%= yield(:extrahead) %>
+  </head>
+  <body>
+    <div id="holder">
+      <%= render 'layouts/header' %>
+    
+      <div id="#body" class="container-fluid">
+        <% if flash.any? %>
+          <div class="row-fluid">
+            <div class="span8 offset2">
+              <% flash.each do |key, value| %>
+                <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+      <%= debug(params) if Rails.env.development? %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>

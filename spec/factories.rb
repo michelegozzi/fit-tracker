@@ -17,8 +17,15 @@ FactoryGirl.define do
 	end
 
 	#10.12
-	factory :micropost do
-		content "Lorem ipsum"
+	factory :sheet do
+		calorie_target 100
+		date { Date.today }
+		week_num 1
+		energy_level 6
+		goals_met true
+		notes { Faker::Lorem.sentence(5) }
+		sleep_hours 7
+		water_glasses 6
 		user
 	end
 end

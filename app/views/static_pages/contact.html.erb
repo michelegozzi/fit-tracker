@@ -1,2 +1,9 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<% provide(:title, 'Contact Me') %>
+
+<h1>Contact</h1>
+
+<div class="row-fluid">
+  <div class="offset3 span6">
+    For any suggestions or comments you can contact me by email: <%= mail_to 'michelegozzi@gmail.com' %>
+  </div>
+</div>

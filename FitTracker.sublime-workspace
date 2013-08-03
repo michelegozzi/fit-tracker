@@ -47,6 +47,39 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "doc/Failures",
+			"settings":
+			{
+				"buffer_size": 12796,
+				"line_ending": "Unix",
+				"name": "Failures:"
+			}
+		},
+		{
+			"file": "/home/michele/Dropbox/Docs/English Lessons/2013-05-05 - chapter 5 - cover letter and CV.txt",
+			"settings":
+			{
+				"buffer_size": 2526,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/michele/Dropbox/Docs/Resume/Uk/Citrix/cover_letter.txt",
+			"settings":
+			{
+				"buffer_size": 2051,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
+			"settings":
+			{
+				"buffer_size": 1930,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/User/NANT.sublime-build",
 	"command_palette":
@@ -59,7 +92,10 @@
 	},
 	"console":
 	{
-		"height": 139.0
+		"height": 139.0,
+		"history":
+		[
+		]
 	},
 	"distraction_free":
 	{
@@ -72,14 +108,33 @@
 	},
 	"file_history":
 	[
+		"/home/michele/Dropbox/Docs/Resume/Uk/cover letter.txt",
+		"/home/michele/Dropbox/Docs/Resume/Uk/Experience Tips",
+		"/home/michele/Dropbox/Docs/Resume/Uk/Michele Gozzi CL.txt",
+		"/home/michele/Desktop/The Hanghover.txt",
+		"/home/michele/Desktop/richieste_hotlist_by_state",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/controllers/admin/foods_controller_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/controllers/static_pages_controller_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/foods_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/factories.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/static_pages_spec.rb",
+		"/home/michele/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/michele/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/michele/Dropbox/Docs/Resume/Uk/SQL Server Interview Questions and Answers.txt",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/contact.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/sheets_helper_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/application_helper_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130710204533_rename_foods_columns.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
 		"/home/michele/.bash_profile",
 		"/home/michele/.profile",
 		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/ISSUES.md",
 		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/README.md",
 		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/lib/bundler/rubygems_integration.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_breadcrumb.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/foods_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_breadcrumb.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
@@ -104,9 +159,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environment.rb",
 		"/home/michele/Dropbox/Projects/ror/RailsExample/config/environment.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/static_pages_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/sheets_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/admin/foods_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/application_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/RailsExample/spec/helpers/static_pages_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/controllers/relationships_controller_spec.rb.old",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/user_spec.rb",
@@ -123,13 +176,11 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130705161548_add_index_to_foods_display_name.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130705161615_add_index_to_meals_name.rb",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/foods_controller.rb",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-variables.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/script/ruby/parse_xml.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/global_meals_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/global_meals/index.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/helpers/meals_helper.rb",
@@ -146,7 +197,6 @@
 		"/home/michele/Dropbox/Projects/less/bootstrap/docs/assets/css/bootstrap.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/log/development.log",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/meals_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/bootstrap/main.js",
@@ -185,21 +235,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/FitTracker.sublime-workspace",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_table_row.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_table_row.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/sheet_table.css.scss",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activity_fields.html.erb",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/fittracker-bootstrap.build",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal_fields.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/custom.css.scss",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/bootstrap.css",
-		"/home/michele/Dropbox/Projects/less/bootstrap/less/sprites.less",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/>",
-		"/home/michele/.config/sublime-text-2/Packages/User/NANT.sublime-build",
-		"/opt/nant-0.92/examples/Simple/Simple.build",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
-		"/home/michele/Downloads/node-v0.10.12/README.md",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/main.css"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_table_row.html.erb"
 	],
 	"find":
 	{
@@ -207,7 +243,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"/home/michele/Dropbox/Projects/ror/FitTracker,/home/michele/Dropbox/Projects/less/custom-bootstrap,/home/michele/Dropbox/Projects/less/fittracker-bootstrap",
@@ -230,6 +266,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"full_title",
 			"defaults",
 			"helpers/meals",
 			"<",
@@ -356,8 +393,7 @@
 			"select",
 			"draw",
 			"drain",
-			"star-",
-			"options.stylePrefix"
+			"star-"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -393,8 +429,120 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "doc/Failures",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Failures:",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 34.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/michele/Dropbox/Docs/English Lessons/2013-05-05 - chapter 5 - cover letter and CV.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2525,
+								2525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 266.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/michele/Dropbox/Docs/Resume/Uk/Citrix/cover_letter.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2051,
+								2051
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								767,
+								767
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -433,6 +581,7 @@
 	{
 		"height": 168.0
 	},
+	"project": "FitTracker.sublime-project",
 	"replace":
 	{
 		"height": 64.0
@@ -458,10 +607,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 473.0,
-	"status_bar_visible": true
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
