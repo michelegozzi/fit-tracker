@@ -12,7 +12,7 @@ class Activity < ActiveRecord::Base
    	#	super(params)
   	#end
 
-	CATEGORIES = [['turbofire_class', 1], ['other', 2]]
+	CATEGORIES = [['fitness_class', 1], ['other', 2]]
 	INTENSITY_LEVEL = [['low', 1], ['medium', 2], ['high', 3]]
 
 	validates :name, presence: true, length: { maximum: 50 }

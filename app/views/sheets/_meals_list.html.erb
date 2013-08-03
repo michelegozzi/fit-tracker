@@ -1,5 +1,7 @@
-<h3><%= categoryKey.capitalize %> (<span id="<%= categoryKey %>-total-calories">0</span>):</h3>
+<h3><%= categoryKey.capitalize %>:</h3>
 <div id="<%= categoryKey %>-meals-container">
+  <% # (<span id="< % = categoryKey % >-total-calories">0</span>): %>
+<input type="hidden" id="<%= categoryKey %>-total-calories" value="0" />
 	<!-- class="ui-widget meals-container" -->
 	<table id="<%= categoryKey %>-meals" class="table table-bordered fit-table">
 		<thead>
