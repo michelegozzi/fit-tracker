@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "1.9.3"
 #source 'vendor/cache'
 
 gem 'rails', '3.2.11'
