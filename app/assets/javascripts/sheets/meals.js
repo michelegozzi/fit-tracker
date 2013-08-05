@@ -91,7 +91,8 @@ function add_meal_fields(link, association, content) {
 	
 	ar.find('input.meal-time-field').last().customTimePicker(true);
 	ar.find('input.meal-name-field').last().customTypeahead({
-		url: window.location.origin+'/helpers/foods',
+		//url: window.location.origin+'/helpers/foods',
+    url: window.location.protocol+window.location.host+'/helpers/foods',
 		property: 'name',
 		targetProperty: 'calories',
 		targetObj: ar.find('input.meal-calories-field').last()
