@@ -57,41 +57,32 @@
 			}
 		},
 		{
-			"contents": "Searching 914 files for \"Turbo\" (regex)\n\n/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb:\n   13    	#end\n   14  \n   15: 	CATEGORIES = [['turbofire_class', 1], ['other', 2]]\n   16  	INTENSITY_LEVEL = [['low', 1], ['medium', 2], ['high', 3]]\n   17  \n\n1 match in 1 file\n",
+			"file": "doc/Setting the default time zone for a Heroku app",
 			"settings":
 			{
-				"buffer_size": 288,
+				"buffer_size": 264,
 				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
+				"name": "Setting the default time zone for a Heroku app"
 			}
 		},
 		{
-			"file": "app/models/activity.rb",
+			"file": "/home/michele/Dropbox/Projects/node/TestWebServer/TestWebServer.js",
 			"settings":
 			{
-				"buffer_size": 1269,
+				"buffer_size": 244,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/sheets/_meals_list.html.erb",
+			"file": "FitTracker.sublime-project",
 			"settings":
 			{
-				"buffer_size": 924,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/sheets/_activities_list.html.erb",
-			"settings":
-			{
-				"buffer_size": 837,
+				"buffer_size": 306,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Packages/User/NANT.sublime-build",
+	"build_system": "Packages/User/nant.sublime-build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -118,6 +109,14 @@
 	},
 	"file_history":
 	[
+		"/home/michele/.config/sublime-text-3/Packages/User/nant.sublime-build",
+		"/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sessions/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/contact.html.erb",
@@ -126,7 +125,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_footer.html.erb",
 		"/home/michele/Dropbox/Docs/English Lessons/2013-05-05 - chapter 5 - cover letter and CV.txt",
-		"/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
 		"/home/michele/Dropbox/Docs/Resume/Uk/Citrix/cover_letter.txt",
 		"/home/michele/Dropbox/Docs/Resume/Uk/cover letter.txt",
 		"/home/michele/Dropbox/Docs/Resume/Uk/Experience Tips",
@@ -143,7 +141,6 @@
 		"/home/michele/Dropbox/Docs/Resume/Uk/SQL Server Interview Questions and Answers.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/sheets_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/application_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130710204533_rename_foods_columns.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
@@ -166,7 +163,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/table.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/users/show.js.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/show.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/helpers/foods_helper_spec.rb.old",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/how to install nokogiri with-xml2 include.txt",
@@ -196,7 +192,6 @@
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/foods_controller.rb",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-variables.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/script/ruby/parse_xml.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/global_meals_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
@@ -214,7 +209,6 @@
 		"/home/michele/Dropbox/Projects/less/custom-bootstrap/custom-variables.less",
 		"/home/michele/Dropbox/Projects/less/bootstrap/docs/assets/css/bootstrap.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/log/development.log",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/meals_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/bootstrap/main.js",
@@ -242,10 +236,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meals.html.erb-old",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_stat.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_show_tab_fuel.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_show_tab_burn.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_show_tab_fuel.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_fuel.html.erb"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_show_tab_fuel.html.erb"
 	],
 	"find":
 	{
@@ -276,6 +267,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"delete.gif",
+			"window.location.origin",
+			"helpers/foods",
 			"Turbo",
 			"full_title",
 			"defaults",
@@ -400,10 +394,7 @@
 			"draw",
 			"drain",
 			"fill",
-			"star-",
-			"select",
-			"draw",
-			"drain"
+			"star-"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -439,7 +430,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -455,8 +446,8 @@
 						"selection":
 						[
 							[
-								12,
-								12
+								375,
+								375
 							]
 						],
 						"settings":
@@ -474,43 +465,25 @@
 				},
 				{
 					"buffer": 1,
+					"file": "doc/Setting the default time zone for a Heroku app",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 288,
+						"buffer_size": 264,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										158,
-										163
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								160,
-								160
+								264,
+								264
 							]
 						],
 						"settings":
 						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_name": "Setting the default time zone for a Heroku app",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -520,24 +493,24 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/models/activity.rb",
+					"file": "/home/michele/Dropbox/Projects/node/TestWebServer/TestWebServer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1269,
+						"buffer_size": 244,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								395,
-								395
+								244,
+								244
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -547,51 +520,24 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/sheets/_meals_list.html.erb",
-					"semi_transient": false,
+					"file": "FitTracker.sublime-project",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 924,
+						"buffer_size": 306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								228,
-								228
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/sheets/_activities_list.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								100,
-								100
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
