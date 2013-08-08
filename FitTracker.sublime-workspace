@@ -57,28 +57,12 @@
 			}
 		},
 		{
-			"file": "doc/Setting the default time zone for a Heroku app",
+			"contents": "Handy Elephant Ltd\n9 Miller's Yard\nMill Lane\nCambridge, CB2 1RQ, UK\n\nGeneralist software engineer",
 			"settings":
 			{
-				"buffer_size": 264,
+				"buffer_size": 97,
 				"line_ending": "Unix",
-				"name": "Setting the default time zone for a Heroku app"
-			}
-		},
-		{
-			"file": "/home/michele/Dropbox/Projects/node/TestWebServer/TestWebServer.js",
-			"settings":
-			{
-				"buffer_size": 244,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "FitTracker.sublime-project",
-			"settings":
-			{
-				"buffer_size": 306,
-				"line_ending": "Unix"
+				"name": "Handy Elephant Ltd"
 			}
 		}
 	],
@@ -109,6 +93,9 @@
 	},
 	"file_history":
 	[
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/Setting the default time zone for a Heroku app",
+		"/home/michele/Dropbox/Projects/node/TestWebServer/TestWebServer.js",
 		"/home/michele/.config/sublime-text-3/Packages/User/nant.sublime-build",
 		"/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
@@ -116,7 +103,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sessions/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/contact.html.erb",
@@ -234,9 +220,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meals.html.erb-old",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_stat.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_show_tab_fuel.html.erb"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb"
 	],
 	"find":
 	{
@@ -267,6 +251,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"timeRegex",
 			"delete.gif",
 			"window.location.origin",
 			"helpers/foods",
@@ -393,8 +378,7 @@
 			"select",
 			"draw",
 			"drain",
-			"fill",
-			"star-"
+			"fill"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -430,7 +414,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -465,79 +449,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "doc/Setting the default time zone for a Heroku app",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 264,
+						"buffer_size": 97,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								264,
-								264
+								97,
+								69
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Setting the default time zone for a Heroku app",
+							"auto_name": "Handy Elephant Ltd",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/michele/Dropbox/Projects/node/TestWebServer/TestWebServer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 244,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								244,
-								244
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "FitTracker.sublime-project",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 306,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

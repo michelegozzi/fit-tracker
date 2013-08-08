@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
 	helper_method :sort_column, :sort_direction
 
-	before_filter :signed_in_user, only: [:edit, :update, :destroy, :following, :followers] #9.22, 9.46, 11.30
+	before_filter :signed_in_user, only: [:edit, :update, :destroy]
 	before_filter :correct_user, only: [:edit, :update]
 	before_filter :admin_user, only: [:index, :destroy]
-	before_filter :avoided_to_signed_in_user, only: [:new, :create] #9.6 Esercizio 6
+	before_filter :avoided_to_signed_in_user, only: [:new, :create]
 
 	def index
 		@users = User.paginate(page: params[:page], :per_page => 10)
@@ -31,11 +31,9 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-		#@user = User.find(params[:id])	#9.15
 	end
 
 	def update
-		#@user = User.find(params[:id]) #9.15
 		if @user.update_attributes(params[:user])
 			flash[:success] = "Profile updated"
 			sign_in @user
@@ -68,9 +66,6 @@ class UsersController < ApplicationController
 	end
 
 	private
-		#
-		# This method checks if the current user and the one passed by params (by id) are the same. In case they are different, this method force the redirection to the root path
-		#
 		def correct_user
 			@user = User.find(params[:id])
 			redirect_to(root_path) unless current_user?(@user)

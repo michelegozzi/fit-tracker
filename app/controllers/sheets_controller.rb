@@ -2,22 +2,16 @@ class SheetsController < ApplicationController
 	require 'json'
 
 	before_filter :signed_in_user, only: [:show, :new, :create, :edit, :update, :destroy]
-
-	before_filter :fix_meals_params, :only => [:create, :update]
+	#before_filter :fix_meals_params, :only => [:create, :update]
 
 	def show
 		@sheet = current_user.sheets.find(params[:id])
 		store_location
-		#@meals = @sheet.meals.order("time ASC").paginate(page: params[:page], :per_page => 3)
 	end
 
 	def new
 		@sheet = current_user.sheets.new
 		@sheet.date = Time.new #.strftime("%d-%m-%Y")
-
-		#@breakfast_meals = []
-		#@lunch_meals = []
-		#@dinner_meals = []
 	end
 
 	def create
@@ -49,15 +43,9 @@ class SheetsController < ApplicationController
 	def destroy
 		debugger
 		@sheet = current_user.sheets.find(params[:id])
-		#if current_user?(@user)
-		#	flash[:error] = "You can't destroy yourself."
-		#	redirect_to users_url
-		#else
-			@sheet.destroy
-			flash[:success] = "Sheet destroyed."
-			redirect_to current_user
-		#end
-
+		@sheet.destroy
+		flash[:success] = "Sheet destroyed."
+		redirect_to current_user
 	end
 
 
@@ -88,8 +76,6 @@ class SheetsController < ApplicationController
 					:id => sheet.id,
 					:title => "Day #{sheet.day}",
 					:start => "#{sheet.date.strftime("%Y-%m-%d")}",
-					#:backgroundColor => sheet.goals_met = 0 ? "grey" : sheet.goals_met = 1 ? "red" : "green",
-					#:backgroundColor => sheet.goals_met?.nil ? "grey" : sheet.goals_met? ? "green" : "red",
 					:backgroundColor => sheet.goals_met? ? "green" : "red",
 					:allDay => true,
 					:user_id => "#{sheet.user_id}"
@@ -98,10 +84,8 @@ class SheetsController < ApplicationController
 			list.to_json
 		end
 
-		def fix_meals_params
-
-			o = params[:sheet][:meals]
+		#def fix_meals_params
+			#o = params[:sheet][:meals]
 			#debugger
-			logger.debug o
-		end
+		#end
 end

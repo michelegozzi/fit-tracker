@@ -12,21 +12,6 @@ jQuery(document).ready(function() {
 			dest.val(jQuery(this).val());
 		}
 	});
-	
-	// set timepicker function for all time fields
-	/*
-	jQuery('.meal-time-field').each(function(){
-		jQuery(this).timepicker({
-			timeFormat: "hh:mm TT"
-		});
-	});
-
-	jQuery('.ui-datepicker-trigger').each(function(){
-		jQuery(this).click(function(){
-			jQuery(this).prev().first('input.hadDatepicker').datepicker("show");
-		});
-	});
-	*/
 
 	jQuery('.meal-time-field').each(function(){
 		jQuery(this).customTimePicker(false);
@@ -98,35 +83,3 @@ function add_meal_fields(link, association, content) {
 		targetObj: ar.find('input.meal-calories-field').last()
 	});
 }
-
-
-
-/*
-$.fn.blueText = function(){
- this.each(function(){
-  $(this).css("color","blue");
- });
- return this;
-};
-*/
-
-/*
-	$.fn.addtimepicker = function() {
-
-		this.timepicker({
-				timeFormat: "hh:mm TT"
-			});
-		});
-
-		this.next().first().click(
-			function () {
-				jQuery(this).prev().first('input.hadDatepicker').datepicker("show");
-			});
-		});
-		retun this;
-	};
-	*/
-
-/*
-
-*/
