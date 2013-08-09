@@ -1,0 +1,7 @@
+== How To Create API Documentation
+
+From the shell, using Rake + a task in Rakefile
+
+  $ rake rdoc
+
+generates all the documentation under the <tt>rdoc/</tt> directory.

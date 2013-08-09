@@ -1,3 +1,5 @@
+ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless defined?(ActiveRecord::MissingAttributeError)
+
 # == Schema Information
 #
 # Table name: meals
@@ -11,8 +13,6 @@
 #  category   :integer
 #  sheet_id   :integer
 #
-
-ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless defined?(ActiveRecord::MissingAttributeError)
 
 class Meal < ActiveRecord::Base
 	attr_accessible :calories, :name, :category, :time, :daytime

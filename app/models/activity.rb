@@ -1,3 +1,5 @@
+ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless defined?(ActiveRecord::MissingAttributeError)
+
 # == Schema Information
 #
 # Table name: activities
@@ -12,8 +14,6 @@
 #  updated_at :datetime         not null
 #  category   :integer
 #
-
-ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless defined?(ActiveRecord::MissingAttributeError)
 
 class Activity < ActiveRecord::Base
 	attr_accessible :name, :time, :duration, :intensity, :category	#, :sheet_id

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>GUARD_ERRORS - Fit-Tracker Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+    <li class="file"><a href="../doc/GUARD_ERRORS.html">GUARD_ERRORS</a>
+  
+    <li class="file"><a href="../doc/HOW_TO_INSTALL_NOKOGIRI.html">HOW_TO_INSTALL_NOKOGIRI</a>
+  
+    <li class="file"><a href="../doc/How_To_Create_API_Documentation.html">How_To_Create_API_Documentation</a>
+  
+    <li class="file"><a href="../doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+    <li class="file"><a href="../doc/TIME_ZONE.html">TIME_ZONE</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Admin.html">Admin</a>
+  
+    <li><a href="../Admin/FoodsController.html">Admin::FoodsController</a>
+  
+    <li><a href="../Admin/GlobalMealsController.html">Admin::GlobalMealsController</a>
+  
+    <li><a href="../FitTracker.html">FitTracker</a>
+  
+    <li><a href="../FitTracker/Application.html">FitTracker::Application</a>
+  
+    <li><a href="../Helpers.html">Helpers</a>
+  
+    <li><a href="../Helpers/FoodsController.html">Helpers::FoodsController</a>
+  
+    <li><a href="../Activity.html">Activity</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../Food.html">Food</a>
+  
+    <li><a href="../Meal.html">Meal</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../SessionsController.html">SessionsController</a>
+  
+    <li><a href="../SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="../Sheet.html">Sheet</a>
+  
+    <li><a href="../SheetsController.html">SheetsController</a>
+  
+    <li><a href="../StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+    <li><a href="../UsersController.html">UsersController</a>
+  
+    <li><a href="../UsersHelper.html">UsersHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<h2 id="label-Guard+Errors">Guard Errors</h2>
+
+<pre class="ruby"><span class="ruby-value">10</span>) <span class="ruby-constant">Admin</span><span class="ruby-operator">::</span><span class="ruby-constant">FoodsController</span> <span class="ruby-constant">GET</span> <span class="ruby-string">'new'</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">http</span> <span class="ruby-identifier">success</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">get</span> <span class="ruby-string">'new'</span>
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xadmin?' for nil:NilClass
+   # ./app/controllers/admin/foods_controller.rb:83:in `</span><span class="ruby-identifier">admin_user</span><span class="ruby-string">'
+   # ./spec/controllers/admin/foods_controller_spec.rb:42:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">11</span>) <span class="ruby-constant">Admin</span><span class="ruby-operator">::</span><span class="ruby-constant">FoodsController</span> <span class="ruby-constant">GET</span> <span class="ruby-string">'update'</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">http</span> <span class="ruby-identifier">success</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">get</span> <span class="ruby-string">'update'</span>
+   <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">RoutingError</span><span class="ruby-operator">:</span>
+     <span class="ruby-constant">No</span> <span class="ruby-identifier">route</span> <span class="ruby-identifier">matches</span> {:<span class="ruby-identifier">controller=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;admin/foods&quot;</span>, :<span class="ruby-identifier">action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;update&quot;</span>}
+   <span class="ruby-comment"># ./spec/controllers/admin/foods_controller_spec.rb:35:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">12</span>) <span class="ruby-constant">Admin</span><span class="ruby-operator">::</span><span class="ruby-constant">FoodsController</span> <span class="ruby-constant">GET</span> <span class="ruby-string">'create'</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">http</span> <span class="ruby-identifier">success</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">get</span> <span class="ruby-string">'create'</span>
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xadmin?' for nil:NilClass
+   # ./app/controllers/admin/foods_controller.rb:83:in `</span><span class="ruby-identifier">admin_user</span><span class="ruby-string">'
+   # ./spec/controllers/admin/foods_controller_spec.rb:21:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">13</span>) <span class="ruby-constant">Admin</span><span class="ruby-operator">::</span><span class="ruby-constant">FoodsController</span> <span class="ruby-constant">GET</span> <span class="ruby-string">'destroy'</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">http</span> <span class="ruby-identifier">success</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">get</span> <span class="ruby-string">'destroy'</span>
+   <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">RoutingError</span><span class="ruby-operator">:</span>
+     <span class="ruby-constant">No</span> <span class="ruby-identifier">route</span> <span class="ruby-identifier">matches</span> {:<span class="ruby-identifier">controller=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;admin/foods&quot;</span>, :<span class="ruby-identifier">action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;destroy&quot;</span>}
+   <span class="ruby-comment"># ./spec/controllers/admin/foods_controller_spec.rb:28:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">14</span>) <span class="ruby-constant">Admin</span><span class="ruby-operator">::</span><span class="ruby-constant">FoodsController</span> <span class="ruby-constant">GET</span> <span class="ruby-string">'index'</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">http</span> <span class="ruby-identifier">success</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">get</span> <span class="ruby-string">'index'</span>
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xadmin?' for nil:NilClass
+   # ./app/controllers/admin/foods_controller.rb:83:in `</span><span class="ruby-identifier">admin_user</span><span class="ruby-string">'
+   # ./spec/controllers/admin/foods_controller_spec.rb:7:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">15</span>) <span class="ruby-constant">Admin</span><span class="ruby-operator">::</span><span class="ruby-constant">FoodsController</span> <span class="ruby-constant">GET</span> <span class="ruby-string">'show'</span> <span class="ruby-identifier">returns</span> <span class="ruby-identifier">http</span> <span class="ruby-identifier">success</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">get</span> <span class="ruby-string">'show'</span>
+   <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">RoutingError</span><span class="ruby-operator">:</span>
+     <span class="ruby-constant">No</span> <span class="ruby-identifier">route</span> <span class="ruby-identifier">matches</span> {:<span class="ruby-identifier">controller=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;admin/foods&quot;</span>, :<span class="ruby-identifier">action=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;show&quot;</span>}
+   <span class="ruby-comment"># ./spec/controllers/admin/foods_controller_spec.rb:14:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">16</span>) <span class="ruby-constant">Authentication</span> <span class="ruby-identifier">signin</span> <span class="ruby-identifier">with</span> <span class="ruby-identifier">valid</span> <span class="ruby-identifier">information</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">it</span> { <span class="ruby-identifier">should</span> <span class="ruby-identifier">have_link</span>(<span class="ruby-string">'Users'</span>, <span class="ruby-identifier">href</span><span class="ruby-operator">:</span> <span class="ruby-identifier">users_path</span>) } <span class="ruby-comment">#9.27</span>
+     <span class="ruby-identifier">expected</span> <span class="ruby-identifier">link</span> <span class="ruby-string">&quot;Users&quot;</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">something</span>
+   <span class="ruby-comment"># ./spec/requests/authentication_pages_spec.rb:51:in `block (4 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">17</span>) <span class="ruby-constant">Authentication</span> <span class="ruby-identifier">authorization</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">non</span><span class="ruby-operator">-</span><span class="ruby-identifier">signed</span><span class="ruby-operator">-</span><span class="ruby-keyword">in</span> <span class="ruby-identifier">users</span> , <span class="ruby-value">11.33</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">the</span> <span class="ruby-constant">Relationships</span> <span class="ruby-identifier">controller</span> <span class="ruby-identifier">submitting</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">create</span> <span class="ruby-identifier">action</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">post</span> <span class="ruby-identifier">relationships_path</span> }
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">local</span> <span class="ruby-identifier">variable</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xrelationships_path' for #&lt;RSpec::Core::ExampleGroup::Nested_2::Nested_3::Nested_1::Nested_5::Nested_1:0xd69f034&gt;
+   # ./spec/requests/authentication_pages_spec.rb:180:in `</span><span class="ruby-identifier">block</span> (<span class="ruby-value">6</span> <span class="ruby-identifier">levels</span>) <span class="ruby-keyword">in</span> <span class="ruby-operator">&lt;</span><span class="ruby-identifier">top</span> (<span class="ruby-identifier">required</span>)<span class="ruby-operator">&gt;</span><span class="ruby-string">'
+
+18) Authentication authorization for non-signed-in users , 11.33 in the Relationships controller , 11.33 submitting to the destroy action 
+   Failure/Error: before { delete relationship_path(1) }
+   NoMethodError:
+     undefined method `relationship_path'</span> <span class="ruby-keyword">for</span> <span class="ruby-comment">#&lt;RSpec::Core::ExampleGroup::Nested_2::Nested_3::Nested_1::Nested_5::Nested_2:0xd6a8594&gt;</span>
+   <span class="ruby-comment"># ./spec/requests/authentication_pages_spec.rb:185:in `block (6 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">19</span>) <span class="ruby-constant">Authentication</span> <span class="ruby-identifier">authorization</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">non</span><span class="ruby-operator">-</span><span class="ruby-identifier">signed</span><span class="ruby-operator">-</span><span class="ruby-keyword">in</span> <span class="ruby-identifier">users</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">the</span> <span class="ruby-constant">Users</span> <span class="ruby-identifier">controller</span> , <span class="ruby-value">11.28</span> <span class="ruby-identifier">visiting</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">followers</span> <span class="ruby-identifier">page</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">visit</span> <span class="ruby-identifier">followers_user_path</span>(<span class="ruby-identifier">user</span>) }
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xfollowers_user_path' for #&lt;RSpec::Core::ExampleGroup::Nested_2::Nested_3::Nested_1::Nested_3::Nested_5:0xd6bfa8c&gt;
+   # ./spec/requests/authentication_pages_spec.rb:140:in `</span><span class="ruby-identifier">block</span> (<span class="ruby-value">6</span> <span class="ruby-identifier">levels</span>) <span class="ruby-keyword">in</span> <span class="ruby-operator">&lt;</span><span class="ruby-identifier">top</span> (<span class="ruby-identifier">required</span>)<span class="ruby-operator">&gt;</span><span class="ruby-string">'
+
+20) Authentication authorization for non-signed-in users in the Users controller visiting the user index 
+   Failure/Error: before { visit users_path }
+   NoMethodError:
+     undefined method `admin?'</span> <span class="ruby-keyword">for</span> <span class="ruby-keyword">nil</span><span class="ruby-operator">:</span><span class="ruby-constant">NilClass</span>
+   <span class="ruby-comment"># ./app/controllers/users_controller.rb:80:in `admin_user'</span>
+   <span class="ruby-comment"># ./spec/requests/authentication_pages_spec.rb:128:in `block (6 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">21</span>) <span class="ruby-constant">Authentication</span> <span class="ruby-identifier">authorization</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">non</span><span class="ruby-operator">-</span><span class="ruby-identifier">signed</span><span class="ruby-operator">-</span><span class="ruby-keyword">in</span> <span class="ruby-identifier">users</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">the</span> <span class="ruby-constant">Users</span> <span class="ruby-identifier">controller</span> , <span class="ruby-value">11.28</span> <span class="ruby-identifier">visiting</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">following</span> <span class="ruby-identifier">page</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">visit</span> <span class="ruby-identifier">following_user_path</span>(<span class="ruby-identifier">user</span>) }
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xfollowing_user_path' for #&lt;RSpec::Core::ExampleGroup::Nested_2::Nested_3::Nested_1::Nested_3::Nested_4:0xd785e1c&gt;
+   # ./spec/requests/authentication_pages_spec.rb:135:in `</span><span class="ruby-identifier">block</span> (<span class="ruby-value">6</span> <span class="ruby-identifier">levels</span>) <span class="ruby-keyword">in</span> <span class="ruby-operator">&lt;</span><span class="ruby-identifier">top</span> (<span class="ruby-identifier">required</span>)<span class="ruby-operator">&gt;</span><span class="ruby-string">'
+
+22) Authentication authorization for non-signed-in users 10.26 in the Microposts controller 10.26 submitting to the create action 
+   Failure/Error: before { post microposts_path }
+   NameError:
+     undefined local variable or method `microposts_path'</span> <span class="ruby-keyword">for</span> <span class="ruby-comment">#&lt;RSpec::Core::ExampleGroup::Nested_2::Nested_3::Nested_1::Nested_1::Nested_1:0xd7d1c54&gt;</span>
+   <span class="ruby-comment"># ./spec/requests/authentication_pages_spec.rb:89:in `block (6 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">23</span>) <span class="ruby-constant">Authentication</span> <span class="ruby-identifier">authorization</span> <span class="ruby-keyword">for</span> <span class="ruby-identifier">non</span><span class="ruby-operator">-</span><span class="ruby-identifier">signed</span><span class="ruby-operator">-</span><span class="ruby-keyword">in</span> <span class="ruby-identifier">users</span> <span class="ruby-value">10.26</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">the</span> <span class="ruby-constant">Microposts</span> <span class="ruby-identifier">controller</span> <span class="ruby-value">10.26</span> <span class="ruby-identifier">submitting</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">destroy</span> <span class="ruby-identifier">action</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">delete</span> <span class="ruby-identifier">micropost_path</span>(<span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>)) }
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/authentication_pages_spec.rb:94:in `block (6 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">24</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> , <span class="ruby-value">11.29</span> <span class="ruby-identifier">following</span><span class="ruby-operator">/</span><span class="ruby-identifier">followers</span> , <span class="ruby-value">11.29</span> <span class="ruby-identifier">followed</span> <span class="ruby-identifier">users</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">user</span>.<span class="ruby-identifier">follow!</span>(<span class="ruby-identifier">other_user</span>) }
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xfollow!' for #&lt;User:0xdbf21bc&gt;
+   # ./spec/requests/user_pages_spec.rb:233:in `</span><span class="ruby-identifier">block</span> (<span class="ruby-value">3</span> <span class="ruby-identifier">levels</span>) <span class="ruby-keyword">in</span> <span class="ruby-operator">&lt;</span><span class="ruby-identifier">top</span> (<span class="ruby-identifier">required</span>)<span class="ruby-operator">&gt;</span><span class="ruby-string">'
+
+25) User pages , 11.29 following/followers , 11.29 followed users 
+   Failure/Error: before { user.follow!(other_user) }
+   NoMethodError:
+     undefined method `follow!'</span> <span class="ruby-keyword">for</span> <span class="ruby-comment">#&lt;User:0xd9e7458&gt;</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:233:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">26</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> , <span class="ruby-value">11.29</span> <span class="ruby-identifier">following</span><span class="ruby-operator">/</span><span class="ruby-identifier">followers</span> , <span class="ruby-value">11.29</span> <span class="ruby-identifier">followed</span> <span class="ruby-identifier">users</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">user</span>.<span class="ruby-identifier">follow!</span>(<span class="ruby-identifier">other_user</span>) }
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xfollow!' for #&lt;User:0xd1221b0&gt;
+   # ./spec/requests/user_pages_spec.rb:233:in `</span><span class="ruby-identifier">block</span> (<span class="ruby-value">3</span> <span class="ruby-identifier">levels</span>) <span class="ruby-keyword">in</span> <span class="ruby-operator">&lt;</span><span class="ruby-identifier">top</span> (<span class="ruby-identifier">required</span>)<span class="ruby-operator">&gt;</span><span class="ruby-string">'
+
+27) User pages , 11.29 following/followers , 11.29 followers 
+   Failure/Error: before { user.follow!(other_user) }
+   NoMethodError:
+     undefined method `follow!'</span> <span class="ruby-keyword">for</span> <span class="ruby-comment">#&lt;User:0xd3a3074&gt;</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:233:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">28</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> , <span class="ruby-value">11.29</span> <span class="ruby-identifier">following</span><span class="ruby-operator">/</span><span class="ruby-identifier">followers</span> , <span class="ruby-value">11.29</span> <span class="ruby-identifier">followers</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">before</span> { <span class="ruby-identifier">user</span>.<span class="ruby-identifier">follow!</span>(<span class="ruby-identifier">other_user</span>) }
+   <span class="ruby-constant">NoMethodError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">undefined</span> <span class="ruby-identifier">method</span> <span class="ruby-node">%xfollow!' for #&lt;User:0xd9f2eac&gt;
+   # ./spec/requests/user_pages_spec.rb:233:in `</span><span class="ruby-identifier">block</span> (<span class="ruby-value">3</span> <span class="ruby-identifier">levels</span>) <span class="ruby-keyword">in</span> <span class="ruby-operator">&lt;</span><span class="ruby-identifier">top</span> (<span class="ruby-identifier">required</span>)<span class="ruby-operator">&gt;</span><span class="ruby-string">'
+
+29) User pages , 11.29 following/followers , 11.29 followers 
+   Failure/Error: before { user.follow!(other_user) }
+   NoMethodError:
+     undefined method `follow!'</span> <span class="ruby-keyword">for</span> <span class="ruby-comment">#&lt;User:0xd9ea144&gt;</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:233:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">30</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">31</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">32</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> <span class="ruby-value">10.19</span> <span class="ruby-identifier">microposts</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">33</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> <span class="ruby-value">10.19</span> <span class="ruby-identifier">microposts</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">34</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> <span class="ruby-value">10.19</span> <span class="ruby-identifier">microposts</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">35</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">follow</span><span class="ruby-operator">/</span><span class="ruby-identifier">unfollow</span> <span class="ruby-identifier">buttons</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">following</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">user</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">increment</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">followed</span> <span class="ruby-identifier">user</span> <span class="ruby-identifier">count</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">36</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">follow</span><span class="ruby-operator">/</span><span class="ruby-identifier">unfollow</span> <span class="ruby-identifier">buttons</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">following</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">user</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">increment</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">other</span> <span class="ruby-identifier">user</span><span class="ruby-string">'s followers count
+   Failure/Error: let!(:m1) { FactoryGirl.create(:micropost, user: user, content: &quot;Foo&quot;) } #10.19
+   NameError:
+     uninitialized constant Micropost
+   # ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">37</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">follow</span><span class="ruby-operator">/</span><span class="ruby-identifier">unfollow</span> <span class="ruby-identifier">buttons</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">following</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">user</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">toggling</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">button</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">38</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">follow</span><span class="ruby-operator">/</span><span class="ruby-identifier">unfollow</span> <span class="ruby-identifier">buttons</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">unfollowing</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">user</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">decrement</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">followed</span> <span class="ruby-identifier">user</span> <span class="ruby-identifier">count</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">39</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">follow</span><span class="ruby-operator">/</span><span class="ruby-identifier">unfollow</span> <span class="ruby-identifier">buttons</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">unfollowing</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">user</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">decrement</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">other</span> <span class="ruby-identifier">user</span><span class="ruby-string">'s followers count
+   Failure/Error: let!(:m1) { FactoryGirl.create(:micropost, user: user, content: &quot;Foo&quot;) } #10.19
+   NameError:
+     uninitialized constant Micropost
+   # ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">40</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">profile</span> <span class="ruby-identifier">page</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">follow</span><span class="ruby-operator">/</span><span class="ruby-identifier">unfollow</span> <span class="ruby-identifier">buttons</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">unfollowing</span> <span class="ruby-identifier">a</span> <span class="ruby-identifier">user</span> , <span class="ruby-value">11.32</span> <span class="ruby-identifier">toggling</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">button</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">let!</span>(:<span class="ruby-identifier">m1</span>) { <span class="ruby-constant">FactoryGirl</span>.<span class="ruby-identifier">create</span>(:<span class="ruby-identifier">micropost</span>, <span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">content</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Foo&quot;</span>) } <span class="ruby-comment">#10.19</span>
+   <span class="ruby-constant">NameError</span><span class="ruby-operator">:</span>
+     <span class="ruby-identifier">uninitialized</span> <span class="ruby-identifier">constant</span> <span class="ruby-constant">Micropost</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:72:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">41</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-identifier">signup</span> <span class="ruby-identifier">after</span> <span class="ruby-identifier">submission</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">it</span> { <span class="ruby-identifier">should</span> <span class="ruby-identifier">have_content</span>(<span class="ruby-string">'Confirmation can\t be blank'</span>) }
+     <span class="ruby-identifier">expected</span> <span class="ruby-identifier">there</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">be</span> <span class="ruby-identifier">content</span> <span class="ruby-string">&quot;Confirmation can't be blank&quot;</span> <span class="ruby-keyword">in</span> <span class="ruby-string">&quot;Fit Tracker | Sign up\n\t\tFit Tracker\n\n\t\tHome\n\t\t\tAbout\n\t\t\tContact\n\n\t\t\t\tSign in\n\t\t\n\n\t\t\tSign up\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\tThe form contains 7 errors.\n\t\t\t\n\t\t\t* Password digest can't be blank\n\t\t\t\t* Name can't be blank\n\t\t\t\t* Email can't be blank\n\t\t\t\t* Email is invalid\n\t\t\t\t* Password can't be blank\n\t\t\t\t* Password is too short (minimum is 6 characters)\n\t\t\t\t* Password confirmation can't be blank\n\t\t\t\n\t\n\n\nName\n\n\nEmail\n\n\nPassword\n\n\nConfirm Password\n\n\n\t\t\t\n\n\t\t\t\n\t\t\n\t\n\n\n\t\t\n\t\t\n\t\tPowered by Michele Gozzi\n\t\n\t&quot;</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:160:in `block (4 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">42</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">index</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">it</span> { <span class="ruby-identifier">should</span> <span class="ruby-identifier">have_selector</span>(<span class="ruby-string">'title'</span>, <span class="ruby-identifier">text</span><span class="ruby-operator">:</span> <span class="ruby-string">'All users'</span>) }
+     <span class="ruby-identifier">expected</span> <span class="ruby-identifier">css</span> <span class="ruby-string">&quot;title&quot;</span> <span class="ruby-identifier">with</span> <span class="ruby-identifier">text</span> <span class="ruby-string">&quot;All users&quot;</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">something</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:19:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">43</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">index</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">it</span> { <span class="ruby-identifier">should</span> <span class="ruby-identifier">have_selector</span>(<span class="ruby-string">'h1'</span>,    <span class="ruby-identifier">text</span><span class="ruby-operator">:</span> <span class="ruby-string">'All users'</span>) }
+     <span class="ruby-identifier">expected</span> <span class="ruby-identifier">css</span> <span class="ruby-string">&quot;h1&quot;</span> <span class="ruby-identifier">with</span> <span class="ruby-identifier">text</span> <span class="ruby-string">&quot;All users&quot;</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">something</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:20:in `block (3 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">44</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">index</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">pagination</span> 
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">it</span> { <span class="ruby-identifier">should</span> <span class="ruby-identifier">have_selector</span>(<span class="ruby-string">'div.pagination'</span>) }
+     <span class="ruby-identifier">expected</span> <span class="ruby-identifier">css</span> <span class="ruby-string">&quot;div.pagination&quot;</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">something</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:28:in `block (4 levels) in &lt;top (required)&gt;'</span>
+
+<span class="ruby-value">45</span>) <span class="ruby-constant">User</span> <span class="ruby-identifier">pages</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">index</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">pagination</span> <span class="ruby-value">9.33</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">list</span> <span class="ruby-identifier">each</span> <span class="ruby-identifier">user</span>
+   <span class="ruby-constant">Failure</span><span class="ruby-operator">/</span><span class="ruby-constant">Error</span><span class="ruby-operator">:</span> <span class="ruby-identifier">page</span>.<span class="ruby-identifier">should</span> <span class="ruby-identifier">have_selector</span>(<span class="ruby-string">'li'</span>, <span class="ruby-identifier">text</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">name</span>)
+     <span class="ruby-identifier">expected</span> <span class="ruby-identifier">css</span> <span class="ruby-string">&quot;li&quot;</span> <span class="ruby-identifier">with</span> <span class="ruby-identifier">text</span> <span class="ruby-string">&quot;Person 66&quot;</span> <span class="ruby-identifier">to</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">something</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:32:in `block (5 levels) in &lt;top (required)&gt;'</span>
+   <span class="ruby-comment"># ./spec/requests/user_pages_spec.rb:31:in `block (4 levels) in &lt;top (required)&gt;'</span>
+</pre>
+
+<p>Finished in 12.68 seconds 156 examples, 45 failures, 18 pending</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
