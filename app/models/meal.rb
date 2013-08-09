@@ -17,16 +17,17 @@ ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless 
 class Meal < ActiveRecord::Base
 	attr_accessible :calories, :name, :category, :time, :daytime
 
+  # Timepart attribute accessor needed to handle jquery-ui or bootstrap timepicker
 	attr_accessor :timepart
+  # Timepart attribute needed to handle jquery-ui or bootstrap timepicker
 	attr_accessible :timepart
 
 	#attr_accessor_with_default :timepart, Date.new.strftime("%I:%M %p")
 
 	belongs_to :sheet
 
+  # Meal categories
 	CATEGORIES = [['breakfast', 1], ['snack1', 2], ['lunch', 3], ['snack2', 4], ['dinner', 5]]
-
-
 
 	validates :name, presence: true, length: { maximum: 50 }
 	validates :calories,
@@ -81,6 +82,7 @@ class Meal < ActiveRecord::Base
 			logger.debug "DBG_20130612_2246 test_before_validation: #{self.category}"
 		end
 
+    # Set the timepart attribute
 		def set_timepart
 			logger.debug "DBG_20130612_1345 after_initialize"
 			if self.time.nil?

@@ -1,5 +1,4 @@
-Failures:
-
+== Guard Errors
  
   10) Admin::FoodsController GET 'new' returns http success
      Failure/Error: get 'new'

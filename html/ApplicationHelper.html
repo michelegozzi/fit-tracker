@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>module ApplicationHelper - App Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/helpers/application_helper.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-full_title">#full_title</a>
+    
+    <li><a href="#method-i-include_javascript">#include_javascript</a>
+    
+    <li><a href="#method-i-include_javascript_render">#include_javascript_render</a>
+    
+    <li><a href="#method-i-include_style">#include_style</a>
+    
+    <li><a href="#method-i-link_to_add_activity_fields">#link_to_add_activity_fields</a>
+    
+    <li><a href="#method-i-link_to_add_fields">#link_to_add_fields</a>
+    
+    <li><a href="#method-i-link_to_add_meal_fields">#link_to_add_meal_fields</a>
+    
+    <li><a href="#method-i-link_to_remove_fields">#link_to_remove_fields</a>
+    
+    <li><a href="#method-i-sortable">#sortable</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./Admin/FoodsController.html">Admin::FoodsController</a>
+  
+    <li><a href="./Admin/GlobalMealsController.html">Admin::GlobalMealsController</a>
+  
+    <li><a href="./FitTracker.html">FitTracker</a>
+  
+    <li><a href="./FitTracker/Application.html">FitTracker::Application</a>
+  
+    <li><a href="./Helpers.html">Helpers</a>
+  
+    <li><a href="./Helpers/FoodsController.html">Helpers::FoodsController</a>
+  
+    <li><a href="./Activity.html">Activity</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Food.html">Food</a>
+  
+    <li><a href="./Meal.html">Meal</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./SessionsController.html">SessionsController</a>
+  
+    <li><a href="./SessionsHelper.html">SessionsHelper</a>
+  
+    <li><a href="./Sheet.html">Sheet</a>
+  
+    <li><a href="./SheetsController.html">SheetsController</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module ApplicationHelper</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-full_title" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">full_title</span><span
+            class="method-args">(page_title)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Returns the full title on a per-page basis.</p>
+          
+
+          
+          <div class="method-source-code" id="full_title-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">full_title</span>(<span class="ruby-identifier">page_title</span>)
+    <span class="ruby-identifier">base_title</span> = <span class="ruby-string">&quot;Fit Tracker&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">page_title</span>.<span class="ruby-identifier">empty?</span>
+       <span class="ruby-identifier">base_title</span>
+    <span class="ruby-keyword">else</span>
+       <span class="ruby-node">&quot;#{base_title} | #{page_title}&quot;</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- full_title-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- full_title-method -->
+
+    
+      <div id="method-i-include_javascript" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">include_javascript</span><span
+            class="method-args">(file)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates script include tag elements for a javascript file in the :extrahead
+placeholder</p>
+          
+
+          
+          <div class="method-source-code" id="include_javascript-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">include_javascript</span> (<span class="ruby-identifier">file</span>)
+        <span class="ruby-identifier">content_for</span>(<span class="ruby-value">:extrahead</span>) { <span class="ruby-identifier">javascript_include_tag</span> <span class="ruby-identifier">file</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- include_javascript-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- include_javascript-method -->
+
+    
+      <div id="method-i-include_javascript_render" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">include_javascript_render</span><span
+            class="method-args">(file)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Renders script include tag elements for a javascript in the :extrahead
+placeholder</p>
+          
+
+          
+          <div class="method-source-code" id="include_javascript_render-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">include_javascript_render</span> (<span class="ruby-identifier">file</span>)
+        <span class="ruby-identifier">s</span> = <span class="ruby-string">&quot; &lt;script type=\&quot;text/javascript\&quot;&gt;&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">render</span>(<span class="ruby-value">:file</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">file</span>) <span class="ruby-operator">+</span> <span class="ruby-string">&quot;&lt;/script&gt;&quot;</span>
+        <span class="ruby-identifier">content_for</span>(<span class="ruby-value">:extrahead</span>, <span class="ruby-identifier">raw</span>(<span class="ruby-identifier">s</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- include_javascript_render-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- include_javascript_render-method -->
+
+    
+      <div id="method-i-include_style" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">include_style</span><span
+            class="method-args">(file)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates link tag elements for a css file in the :extraheadstyle placeholder</p>
+          
+
+          
+          <div class="method-source-code" id="include_style-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">include_style</span> (<span class="ruby-identifier">file</span>)
+        <span class="ruby-identifier">content_for</span>(<span class="ruby-value">:extraheadstyle</span>) { <span class="ruby-identifier">stylesheet_link_tag</span> <span class="ruby-identifier">file</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- include_style-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- include_style-method -->
+
+    
+      <div id="method-i-link_to_add_activity_fields" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">link_to_add_activity_fields</span><span
+            class="method-args">(inner_text, f, association = :activities, category_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a link tag that renders the form fields elements for the nested <a
+href="Activity.html">Activity</a> model</p>
+
+<p>Arguments:</p>
+<ul><li>
+<p>innerText, inner text of the link tag element (it’s possible to pass an
+html_safe element)</p>
+</li><li>
+<p>f, form_for element</p>
+</li><li>
+<p>association, use the symbol (:activities)</p>
+</li><li>
+<p>category_id, category identifier</p>
+</li><li>
+<p>new_object, created by the class definition of an association reflection
+object</p>
+</li></ul>
+
+<p>Example:</p>
+
+<pre>&lt;%= link_to_add_activity_fields '&lt;i class=&quot;icon-plus icon-white&quot;&gt;&lt;/i&gt;'.html_safe, f, :activities, category_id %&gt;</pre>
+          
+
+          
+          <div class="method-source-code" id="link_to_add_activity_fields-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_to_add_activity_fields</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-identifier">f</span>, <span class="ruby-identifier">association</span> = <span class="ruby-value">:activities</span>, <span class="ruby-identifier">category_id</span>)
+       <span class="ruby-identifier">new_object</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">object</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-identifier">association</span>).<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:category</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">category_id</span>, <span class="ruby-value">:duration</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>, <span class="ruby-value">:intensity</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+       <span class="ruby-identifier">link_to_add_fields</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-identifier">f</span>, <span class="ruby-identifier">association</span>, <span class="ruby-identifier">category_id</span>, <span class="ruby-identifier">new_object</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- link_to_add_activity_fields-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- link_to_add_activity_fields-method -->
+
+    
+      <div id="method-i-link_to_add_fields" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">link_to_add_fields</span><span
+            class="method-args">(inner_text, f, association, category_id, new_object)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a link tag that renders the form fields elements for nested models</p>
+
+<p>Arguments:</p>
+<ul><li>
+<p>innerText, inner text of the link tag element (it’s possible to pass an
+html_safe element)</p>
+</li><li>
+<p>f, form_for element</p>
+</li><li>
+<p>association, use the symbol</p>
+</li><li>
+<p>category_id, category identifier</p>
+</li><li>
+<p>new_object, created by the class definition of an association reflection
+object</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="link_to_add_fields-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_to_add_fields</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-identifier">f</span>, <span class="ruby-identifier">association</span>, <span class="ruby-identifier">category_id</span>, <span class="ruby-identifier">new_object</span>)
+        <span class="ruby-identifier">fields</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">fields_for</span>(<span class="ruby-identifier">association</span>, <span class="ruby-identifier">new_object</span>, <span class="ruby-value">:child_index</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">&quot;new_#{association}&quot;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">builder</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">render</span>(<span class="ruby-identifier">association</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">singularize</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_fields&quot;</span>, <span class="ruby-value">:f</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">builder</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">link_to_function</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-node">&quot;add_#{association.to_s.singularize}_fields(this, '#{association}', '#{escape_javascript(fields)}')&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- link_to_add_fields-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- link_to_add_fields-method -->
+
+    
+      <div id="method-i-link_to_add_meal_fields" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">link_to_add_meal_fields</span><span
+            class="method-args">(inner_text, f, association = :meals, category_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a link tag that renders the form fields elements for the nested <a
+href="Activity.html">Activity</a> model</p>
+
+<p>Arguments:</p>
+<ul><li>
+<p>innerText, inner text of the link tag element (it’s possible to pass an
+html_safe element)</p>
+</li><li>
+<p>f, form_for element</p>
+</li><li>
+<p>association, use the symbol (default = :meals)</p>
+</li><li>
+<p>category_id, category identifier</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="link_to_add_meal_fields-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_to_add_meal_fields</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-identifier">f</span>, <span class="ruby-identifier">association</span> = <span class="ruby-value">:meals</span>, <span class="ruby-identifier">category_id</span>)
+       <span class="ruby-identifier">new_object</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">object</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">reflect_on_association</span>(<span class="ruby-identifier">association</span>).<span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:category</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">category_id</span>, <span class="ruby-value">:calories</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+       <span class="ruby-identifier">link_to_add_fields</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-identifier">f</span>, <span class="ruby-identifier">association</span>, <span class="ruby-identifier">category_id</span>, <span class="ruby-identifier">new_object</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- link_to_add_meal_fields-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- link_to_add_meal_fields-method -->
+
+    
+      <div id="method-i-link_to_remove_fields" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">link_to_remove_fields</span><span
+            class="method-args">(inner_text, f, association)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a link tag that removes the form field elements</p>
+
+<p>Arguments:</p>
+<ul><li>
+<p>innerText, inner text of the link tag element (it’s possible to pass an
+html_safe element)</p>
+</li><li>
+<p>f, form_for element</p>
+</li><li>
+<p>association, use the symbol</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="link_to_remove_fields-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">link_to_remove_fields</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-identifier">f</span>, <span class="ruby-identifier">association</span>)
+        <span class="ruby-identifier">f</span>.<span class="ruby-identifier">hidden_field</span>(<span class="ruby-value">:_destroy</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">link_to_function</span>(<span class="ruby-identifier">inner_text</span>, <span class="ruby-node">&quot;remove_#{association.to_s.singularize}_fields(this)&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- link_to_remove_fields-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- link_to_remove_fields-method -->
+
+    
+      <div id="method-i-sortable" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sortable</span><span
+            class="method-args">(column, title = nil, icon_asc = "icon-arrow-up icon-white", icon_desc = "icon-arrow-down icon-white", icon_default = "icon-list icon-white")</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a link tag that handle the sorting criteria (column name and
+direction). It passes to the controller the <code>:sort</code> and
+<code>:direction</code> parameters.</p>
+
+<p>Arguments:</p>
+<ul><li>
+<p>column, identifies the column name used in the sorting criteria</p>
+</li><li>
+<p>title, the description used in the link tag element</p>
+</li><li>
+<p>icon_asc, bootstrap icon css classes used for the ascending icon
+rappresentation (default: <code>icon-arrow-up icon-white</code>)</p>
+</li><li>
+<p>icon_desc, bootstrap icon css classes used for the descending icon
+rappresentation (default: <code>icon-arrow-down icon-white</code>)</p>
+</li><li>
+<p>icon_default, bootstrap icon css classes used for the default icon
+rappresentation (default: <code>icon-list icon-white</code>)</p>
+</li></ul>
+          
+
+          
+          <div class="method-source-code" id="sortable-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sortable</span>(<span class="ruby-identifier">column</span>, <span class="ruby-identifier">title</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">icon_asc</span> = <span class="ruby-string">&quot;icon-arrow-up icon-white&quot;</span>, <span class="ruby-identifier">icon_desc</span> = <span class="ruby-string">&quot;icon-arrow-down icon-white&quot;</span>, <span class="ruby-identifier">icon_default</span> = <span class="ruby-string">&quot;icon-list icon-white&quot;</span>)
+        <span class="ruby-identifier">title</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">column</span>.<span class="ruby-identifier">titleize</span>
+        <span class="ruby-identifier">css_class</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">sort_column</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;current #{sort_direction}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">direction</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">sort_column</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sort_direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;asc&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;desc&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;asc&quot;</span>
+        <span class="ruby-identifier">i_css_class</span> = <span class="ruby-identifier">column</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">sort_column</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">sort_direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;asc&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">icon_asc</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">icon_desc</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">icon_default</span>
+        
+        <span class="ruby-identifier">link_to</span> <span class="ruby-node">&quot;#{title} #{content_tag :i, nil, class: i_css_class}&quot;</span>.<span class="ruby-identifier">html_safe</span>, {<span class="ruby-value">:sort</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">column</span>, <span class="ruby-value">:direction</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">direction</span>, <span class="ruby-value">:q</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:q</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-string">''</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:q</span>]}, {<span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">css_class</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- sortable-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- sortable-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

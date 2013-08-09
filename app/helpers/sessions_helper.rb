@@ -10,6 +10,7 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+  # Checks if an user is signed as an administrator
 	def signed_in_as_admin?
 		current_user.admin?
 	end

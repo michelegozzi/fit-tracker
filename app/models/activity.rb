@@ -1,9 +1,26 @@
+# == Schema Information
+#
+# Table name: activities
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  time       :datetime
+#  duration   :integer
+#  intensity  :integer
+#  sheet_id   :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  category   :integer
+#
+
 ActiveRecord::MissingAttributeError = ActiveModel::MissingAttributeError unless defined?(ActiveRecord::MissingAttributeError)
 
 class Activity < ActiveRecord::Base
 	attr_accessible :name, :time, :duration, :intensity, :category	#, :sheet_id
 
+  # Timepart attribute accessor needed to handle jquery-ui or bootstrap timepicker
 	attr_accessor :timepart
+  # Timepart attribute needed to handle jquery-ui or bootstrap timepicker
 	attr_accessible :timepart
 
 	belongs_to :sheet
@@ -12,7 +29,14 @@ class Activity < ActiveRecord::Base
    	#	super(params)
   	#end
 
+  # Activity categories
 	CATEGORIES = [['fitness_class', 1], ['other', 2]]
+
+  # Workout intensity level.
+  # It assumes the following values:
+  # 1. low
+  # 2. medium
+  # 3. high
 	INTENSITY_LEVEL = [['low', 1], ['medium', 2], ['high', 3]]
 
 	validates :name, presence: true, length: { maximum: 50 }

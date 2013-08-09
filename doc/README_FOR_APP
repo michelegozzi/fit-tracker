@@ -1,2 +1,26 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+
+== Welcome to Fit-Tracker
+
+Fit-Tracker is a web-application born with the main purpose to track the users's fitness workout and calories consumption.
+This application is programmed with:
+1. Ruby On Rails,
+2. jQuery,
+3. jQuery-UI
+4. Bootstrap
+5. HTML5
+6. CSS3
+
+== Features
+
+1.  Sheets Calendar: all the tracking sheets are managed through a calendar interface;
+    for every day (cell) you can create just one sheet.
+2.  Sheet Manager: every sheet gives you the possibility to track:
+    a.  daily calories consumption (I grouped the meals in 5 distinct sections)
+    b.  calorie target
+    c.  water (glasses) consumption
+    d.  sleep hours
+    e.  class activities (such as gim, yoga class, jujitsu training, football match, ecc.)
+    d.  other activities (where there's a real calories consumption!!!)

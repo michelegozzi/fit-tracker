@@ -6,10 +6,20 @@ class UsersController < ApplicationController
 	before_filter :admin_user, only: [:index, :destroy]
 	before_filter :avoided_to_signed_in_user, only: [:new, :create]
 
+  # Returns a collection of users in a paginated form (10 elements per page)
 	def index
 		@users = User.paginate(page: params[:page], :per_page => 10)
 	end
 
+  # Accepts:
+  # 1. users's <tt>params[:id]</tt>
+  # 2. <tt>sort_column</tt>, see the helper method <tt>sort_column</tt>
+  # 3. <tt>sort_direction</tt>
+  # 4. params[:page]
+  #
+  # Returns:
+  # 1. an <tt>@user</tt> instance selected by <tt>params[:id]</tt>
+  # 2. a sorted collection of sheets, handled by the user, in a paginated form (7 elements per page)
 	def show
 		@user = User.find(params[:id])
 		@sheets = @user.sheets.order(sort_column + " " + sort_direction).paginate(page: params[:page], :per_page => 7)
