@@ -1,0 +1,26 @@
+== GIT Commands
+
+Add origin:
+  $ git remote add origin https://github.com/michelegozzi/fit-tracker.git
+
+Push master branch to origin:
+
+  $ git push -u origin master
+
+Other commands:
+  $ git commit -am "msg"
+  $ git merge <branchname> (from the master)
+  $ git checkout -b <branchname>
+
+== Heroku Commands
+
+Various Heroku commands:
+
+  $ git push heroku master
+  $ git remote rm heroku
+  $ git remote add heroku git@heroku.com:fit-tracker.git
+  $ heroku run rake db:migrate
+  $ heroku keys:add id_rsa.pub
+  $ heroku logs --tail
+  $ heroku run rake db:populatefoods
+  $ heroku run bash

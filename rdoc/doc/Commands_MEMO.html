@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>README_FOR_APP - Fit-Tracker Documentation</title>
+<title>Commands_MEMO - Fit-Tracker Documentation</title>
 
 <link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
@@ -121,10 +121,34 @@
 
 <div id="documentation" class="description">
   
-<p>Use this <a href="../README_rdoc.html">README</a> file to introduce your
-application and point to useful places in the API for learning more. Run
-“rake doc:app” to generate API documentation for your models, controllers,
-helpers, and libraries.</p>
+<h2 id="label-GIT+Commands">GIT Commands</h2>
+
+<p>Add origin:</p>
+
+<pre>$ git remote add origin https://github.com/michelegozzi/fit-tracker.git</pre>
+
+<p>Push master branch to origin:</p>
+
+<pre>$ git push -u origin master</pre>
+
+<p>Other commands:</p>
+
+<pre>$ git commit -am &quot;msg&quot;
+$ git merge &lt;branchname&gt; (from the master)
+$ git checkout -b &lt;branchname&gt;</pre>
+
+<h2 id="label-Heroku+Commands">Heroku Commands</h2>
+
+<p>Various Heroku commands:</p>
+
+<pre>$ git push heroku master
+$ git remote rm heroku
+$ git remote add heroku git@heroku.com:fit-tracker.git
+$ heroku run rake db:migrate
+$ heroku keys:add id_rsa.pub
+$ heroku logs --tail
+$ heroku run rake db:populatefoods
+$ heroku run bash</pre>
 
 </div>
 
