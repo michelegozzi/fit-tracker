@@ -1,6 +1,6 @@
 == Welcome to Fit-Tracker
 
-Fit-Tracker is a web-application born with the main purpose to track the users's fitness workout and calories consumption.
+Fit-Tracker is a web application born with the main purpose to track the users's fitness workouts and calorie consumption.
 This application is programmed with:
 1. Ruby On Rails,
 2. jQuery,
@@ -11,12 +11,22 @@ This application is programmed with:
 
 == Features
 
-1.  Sheets Calendar: all the tracking sheets are managed through a calendar interface;
-    for every day (cell) you can create just one sheet.
-2.  Sheet Manager: every sheet gives you the possibility to track:
-    * daily calories consumption / meals (I grouped the meals in 5 distinct sections/categories)
+1.  Calendar: all the tracking entries are managed through a calendar interface;
+    for every day (cell) you can create just one entry.
+2.  Sheet/Entry Manager: every entry gives you the possibility to track:
+    * daily calorie consumption and meals (I grouped the meals in 5 distinct sections/categories)
     * calorie target
     * water (glasses) consumption
-    * sleep hours
-    * class activities (such as gim, yoga class, jujitsu training, football match, ecc.)
-    * other activities (where there's a real calories consumption!!!)
+    * hours of sleep
+    * class activities (such as gym, yoga class, jujitsu training, football match, etc.)
+    * other activities (where there's a real calorie consumption ... not watching football on TV!!!)
+3.  Foods database
+4.  Restricted administration section (tools for managing users and foods)
+
+== Future Implementations
+
+Compatible with my free time, I'm planning to implement the following new features:
+* Weight, BMI, Waist Circumference tracking entries
+* Data graphs and charts
+* Print version
+* Open ID access
