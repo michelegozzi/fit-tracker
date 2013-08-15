@@ -48,21 +48,28 @@
 	"buffers":
 	[
 		{
-			"file": "doc/Failures",
+			"file": "app/controllers/sheets_controller.rb",
 			"settings":
 			{
-				"buffer_size": 12796,
-				"line_ending": "Unix",
-				"name": "Failures:"
+				"buffer_size": 1943,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Handy Elephant Ltd\n9 Miller's Yard\nMill Lane\nCambridge, CB2 1RQ, UK\n\nGeneralist software engineer",
+			"file": "/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
 			"settings":
 			{
-				"buffer_size": 97,
+				"buffer_size": 515,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/michele/Dropbox/Docs/Resume/US/Datalogic/13th August 2013",
+			"settings":
+			{
+				"buffer_size": 3239,
 				"line_ending": "Unix",
-				"name": "Handy Elephant Ltd"
+				"name": "13th August 2013"
 			}
 		}
 	],
@@ -93,16 +100,39 @@
 	},
 	"file_history":
 	[
+		"/media/WD500/software/devel/Windows7/lnk.txt",
+		"/media/WD500/software/devel/Windows7/crk/Windows_Loader_v2.1.4/Windows Loader/Keys.ini",
+		"/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/README.rdoc",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/How_To_Create_API_Documentation",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/rdoc/index.html",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/Commands_MEMO",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/rdoc.sh",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Rakefile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/README_FOR_APP",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/GUARD_ERRORS",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/HOW_TO_INSTALL_NOKOGIRI",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/TIME_ZONE",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/Failures",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/users/show.js.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/main.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/Setting the default time zone for a Heroku app",
 		"/home/michele/Dropbox/Projects/node/TestWebServer/TestWebServer.js",
 		"/home/michele/.config/sublime-text-3/Packages/User/nant.sublime-build",
 		"/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/meals.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sessions/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/contact.html.erb",
@@ -128,7 +158,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/sheets_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/application_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130710204533_rename_foods_columns.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
 		"/home/michele/.bash_profile",
 		"/home/michele/.profile",
@@ -141,14 +170,12 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/show.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/edit.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/admin/foods/foods_table.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/application.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/table.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/users/show.js.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/show.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/helpers/foods_helper_spec.rb.old",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/how to install nokogiri with-xml2 include.txt",
@@ -167,8 +194,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/meal_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/food_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/activity_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/static_pages_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_search_form.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
@@ -180,7 +205,6 @@
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-variables.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/script/ruby/parse_xml.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/global_meals_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/global_meals/index.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/helpers/meals_helper.rb",
 		"/home/michele/Downloads/MyFoodapediaData/Food_Display_Table.xml",
@@ -203,24 +227,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_burn.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application-print.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application-all.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery-ui/main.js",
-		"/home/michele/Dropbox/Projects/less/bootstrap/less/alerts.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_error_messages.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/edit.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/new.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_info.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_sheets_table.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/index.html.erb",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/pagination4willpaginate.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_table.html.erb",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/pagination4willpaginate_old.less",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/fittracker-bootstrap.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_table.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/show.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/meals/_meals.html.erb-old",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meal.html.erb"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery-ui/main.js"
 	],
 	"find":
 	{
@@ -251,6 +258,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"categoryId",
+			"link_to_add_activity_fields",
+			"sort_column",
+			"helper_method",
+			":sort_direction",
+			"fix_meals_params",
 			"timeRegex",
 			"delete.gif",
 			"window.location.origin",
@@ -372,13 +385,7 @@
 			"$",
 			"debug",
 			"flash",
-			"10px",
-			"include_javascript",
-			"draw",
-			"select",
-			"draw",
-			"drain",
-			"fill"
+			"10px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -386,6 +393,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"category_id",
 			"t.decimal :",
 			":",
 			"\n	</Food_Display_Row>\n	<Food_Display_Row>\n		",
@@ -414,58 +422,83 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "doc/Failures",
-					"semi_transient": false,
+					"file": "app/controllers/sheets_controller.rb",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 12796,
+						"buffer_size": 1943,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Failures:",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 34.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 97,
+						"buffer_size": 515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								69
+								219,
+								219
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Handy Elephant Ltd",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/michele/Dropbox/Docs/Resume/US/Datalogic/13th August 2013",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3239,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								964,
+								964
+							]
+						],
+						"settings":
+						{
+							"auto_name": "13th August 2013",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,

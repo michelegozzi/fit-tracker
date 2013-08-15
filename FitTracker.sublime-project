@@ -2,16 +2,28 @@
 	"folders":
 	[
 		{
+			"follow_symlinks": true,
 			"path": "/home/michele/Dropbox/Projects/ror/FitTracker"
 		},
 		{
+			"follow_symlinks": true,
 			"path": "/home/michele/Dropbox/Projects/less/fittracker-bootstrap"
 		},
 		{
+			"follow_symlinks": true,
 			"path": "/home/michele/Dropbox/Projects/less/bootstrap"
 		},
 		{
+			"follow_symlinks": true,
 			"path": "/home/michele/Dropbox/Projects/ror/RailsExample"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/michele/Dropbox/Projects/ror/portfolio"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/michele/Dropbox/Projects/ror/jQueryNinja"
 		}
 	]
 }
