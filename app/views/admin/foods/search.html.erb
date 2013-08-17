@@ -1,16 +1,10 @@
 <% provide(:title, "Foods Manager") %>
 <h1>Foods Manager</h1>
 
+<%= render :partial => 'aside', :locals => { :f => nil, :uobj => nil, :bcobj => nil } %>
+
 <div class="row-fluid">
-	<aside class="span2">
-
-		<h3><%= params[:controller].humanize.singularize.upcase %></h3>
-		<%= render "shared/user_stat", object: nil %>
-		<%= render 'breadcrumb' %>
-		<%= render 'search_form' %>
-	</aside>
-
-	<div class="span8">
+	<div class="span12">
 		<div class="row-fluid">
 			<div class="span12">
 				<% if @foods.any? %>

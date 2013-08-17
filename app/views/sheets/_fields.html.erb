@@ -6,22 +6,24 @@
 <%= render 'shared/error_messages', object: f.object %>
 
 <div id="validation_error" class="row-fluid">
-		<div id="error_explanation" class="span8 offset2">
+		<div id="error_explanation" class="span12">
 			<div id="validation_error_message" class="alert alert-error">
 			</div>
 		</div>
 </div>
 
-<div class="row-fluid">
-	<aside class="span2">
-		<h1><%= params[:action].upcase %></h1>
-		<%= render "shared/user_stat", object: nil %>
-		<%= render 'shared/breadcrumb', object: @sheet %>
-		<%= f.submit params[:action]=="edit" ? "Save changes" : "Save", class: "btn btn-large btn-primary" %>
-		<!--<input type="button" id="btnValidate" value="validate" />-->
-	</aside>
+<% # content_for(:aside) do %>
+    <% # = params[:action].upcase %>
+    <% # = render "shared/user_stat", object: nil %>
+    <% # = render 'shared/breadcrumb', object: @sheet %>
+    <% # = f.submit params[:action]=="edit" ? "Save changes" : "Save", class: "btn btn-large btn-primary" %>
+<% # end %>
 
-	<div class="span8">
+<%= render :partial => 'shared/aside', :locals => { :uobj => nil, :bcobj => @sheet } %>
+
+<div class="row-fluid">
+	<div class="span12">
+  
 		<div class="row-fluid">
 			<div class="span12">
 				<table class="table">
@@ -54,14 +56,11 @@
 		</div>
 
 		<div class="row-fluid">
-
 			<div class="span12">
-
 				<ul class="nav nav-tabs" id="fieldsTab">
 					<li class="active"><a href="#fuel">Fuel Tracker</a></li>
 					<li><a href="#burn">Burn Tracker</a></li>
 				</ul>
-
 				<div class="tab-content">
 					<%= render 'fields_tab_fuel', f: f %>
 					<%= render 'fields_tab_burn', f: f %>
@@ -71,5 +70,12 @@
 
 	</div>
 </div>
+<div class="row-fluid">
+  <div class="span12">
+    <%= f.submit params[:action]=="edit" ? "Save changes" : "Save", class: "btn btn-large btn-primary" %>
+  </div>
+</div>
+
+
 
 <%= debug(f.object) if Rails.env.development? %>

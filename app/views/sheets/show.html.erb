@@ -1,16 +1,15 @@
-<% provide(:title, "Sheet") %>
 <% include_javascript 'sheets/show.js' %>
 
+<% provide(:title, "Sheet") %>
+<h1>Sheet Detail</h1>
+
+<%= render :partial => 'shared/aside', :locals => { :uobj => nil, :bcobj => @sheet } %>
+
 <div class="row-fluid">
-	<aside class="span2">
-
-		<h1><%= params[:controller].singularize.upcase %></h1>
-		<%= render "shared/user_stat", object: nil %>
-		<%= render 'shared/breadcrumb', object: @sheet %>
-		
-	</aside>
-
-	<div class="span8">
+		<% # = params[:controller].singularize.upcase %>
+		<% # = render "shared/user_stat", object: nil %>
+		<% # = render 'shared/breadcrumb', object: @sheet %>
+	
 		<div class="row-fluid">
 			<div class="span12">
 				<table class="table">

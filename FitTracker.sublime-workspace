@@ -48,28 +48,54 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/sheets_controller.rb",
+			"file": "app/views/sheets/_fields.html.erb",
 			"settings":
 			{
-				"buffer_size": 1943,
+				"buffer_size": 2202,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
+			"contents": "<div class=\"tab-pane\" id=\"burn\">\n	<div class=\"row-fluid\">\n\n		<div class=\"span9\">\n			<%= f.label \"Activities\" %>\n			<div id=\"activitiesAccordion\" class=\"hidden-phone\">\n				<% Activity::CATEGORIES.each do |category| %>\n					<%= render :partial => 'activities_list',\n						:locals => {\n							:f => f,\n							:activities => @sheet.activities.where(\"category = :category\", {:category => category[1]}),\n							:categoryId => category[1],\n							:categoryKey => category[0]\n						} %>\n				<% end %>\n			</div>\n		</div>\n		<div class=\"span3\">\n			<section>\n				<div id=\"energy\">\n					<%= f.label :energy_level %>\n					<%= f.radio_button :energy_level, 1, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 2, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 3, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 4, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 5, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 6, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 7, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 8, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 9, :class => 'energyLevel' %>\n					<% #= f.radio_button :energy_level, 10, :class => 'battery' %>\n					<br>\n				</div>\n			</section>\n		</div>\n	</div>\n	<div class=\"row-fluid\">\n\n		<div class=\"span12\">\n			<%= f.label :notes do\n				('Notes (<b><span id=\"notesCounter\">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe\n				end %>\n\n				<%= f.text_area :notes,\n					:rows => 5,\n					placeholder: \"Put your notes here...\",\n					:onkeypress => \"return taLimit(this);\",\n					:onkeyup => \"return taCount(this,'notesCounter');\", :class => 'span12' %>\n		</div>\n	</div>\n</div>",
+			"file": "app/views/sheets/_fields_tab_burn.html.erb",
+			"file_size": 1783,
+			"file_write_time": 130212265651173665,
 			"settings":
 			{
-				"buffer_size": 515,
-				"line_ending": "Windows"
+				"buffer_size": 1780,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/michele/Dropbox/Docs/Resume/US/Datalogic/13th August 2013",
+			"file": "app/views/sheets/_fields_tab_fuel.html.erb",
 			"settings":
 			{
-				"buffer_size": 3239,
-				"line_ending": "Unix",
-				"name": "13th August 2013"
+				"buffer_size": 1553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/shared/_aside.html.erb",
+			"settings":
+			{
+				"buffer_size": 525,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/sheets/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/shared/_user_info.html.erb",
+			"settings":
+			{
+				"buffer_size": 554,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -100,14 +126,79 @@
 	},
 	"file_history":
 	[
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_footer.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_info.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_aside.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/show.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_sheets_table.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/admin_pages_spec.rb",
+		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_stat.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/user_pages_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/factories.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/authentication_pages_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/views/helpers/foods/index.html.erb_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/views/static_pages/contact.html.erb_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/static_pages_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/config/initializers/omniauth.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/config/routes.rb",
+		"/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/lib/tasks/sample_data.rake",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/controllers/static_pages_controller.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environment.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_tab.html.erb",
+		"/home/michele/Dropbox/Docs/Resume/US/untitled",
+		"/home/michele/Dropbox/Projects/ror/portfolio/public/uploads/data.xml",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/home.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/assets/stylesheets/global/custom.css.scss",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/assets/stylesheets/application.css",
+		"/home/michele/Dropbox/Projects/ror/portfolio/public/upload/data.xml",
+		"/home/michele/Dropbox/Projects/ror/portfolio/db/migrate/20130815060106_add_index_to_resources_project_id.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/config/routes.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/db/migrate/20130815053203_create_sectors.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/db/migrate/20130815060024_create_resources.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/models/resource.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/models/project.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/models/sector.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/db/migrate/20130815054122_create_projects.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/db/migrate/20130815055043_add_indexes_to_projects.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/db/migrate/20130815054708_add_index_to_sectors_description.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130528054922_create_users.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_infoclin.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_crossingme.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/index.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_fittracker.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/config/environments/production.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_proquoteweb.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/layouts/_footer.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/helpers/application_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/assets/javascripts/static_pages/index.js",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/layouts/_header.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_dsa.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_drugstherapy.html.erb",
+		"/home/michele/Dropbox/Projects/ror/portfolio/app/assets/javascripts/application.js",
+		"/home/michele/Dropbox/Projects/ror/jQueryNinja/Gemfile",
+		"/home/michele/Dropbox/Docs/Resume/US/Datalogic/13th August 2013",
 		"/media/WD500/software/devel/Windows7/lnk.txt",
 		"/media/WD500/software/devel/Windows7/crk/Windows_Loader_v2.1.4/Windows Loader/Keys.ini",
-		"/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/README.rdoc",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/How_To_Create_API_Documentation",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/rdoc/index.html",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/Commands_MEMO",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/meal.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/activity.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/rdoc.sh",
@@ -116,9 +207,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/GUARD_ERRORS",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/HOW_TO_INSTALL_NOKOGIRI",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/TIME_ZONE",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
@@ -132,14 +221,10 @@
 		"/home/michele/.config/sublime-text-3/Packages/User/nant.sublime-build",
 		"/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sessions/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/contact.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/_home_for_unsigned_users.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_footer.html.erb",
 		"/home/michele/Dropbox/Docs/English Lessons/2013-05-05 - chapter 5 - cover letter and CV.txt",
 		"/home/michele/Dropbox/Docs/Resume/Uk/Citrix/cover_letter.txt",
 		"/home/michele/Dropbox/Docs/Resume/Uk/cover letter.txt",
@@ -150,8 +235,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/controllers/admin/foods_controller_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/controllers/static_pages_controller_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/foods_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/factories.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/static_pages_spec.rb",
 		"/home/michele/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/michele/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/michele/Dropbox/Docs/Resume/Uk/SQL Server Interview Questions and Answers.txt",
@@ -166,68 +249,11 @@
 		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/lib/bundler/rubygems_integration.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_breadcrumb.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_breadcrumb.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/show.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/edit.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/admin/foods/foods_table.js",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/application.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/table.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/show.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/helpers/foods_helper_spec.rb.old",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/how to install nokogiri with-xml2 include.txt",
-		"/home/michele/Dropbox/Projects/ror/RailsExample/config/application.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/config/application.rb",
-		"/home/michele/Dropbox/Projects/ror/RailsExample/config/environments/test.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environments/test.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/config/environment.rb",
-		"/home/michele/Dropbox/Projects/ror/RailsExample/config/environment.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/static_pages_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/admin/foods_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/RailsExample/spec/helpers/static_pages_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/controllers/relationships_controller_spec.rb.old",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/user_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/sheet_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/meal_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/food_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/models/activity_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/static_pages_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_search_form.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/config/routes.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130705161548_add_index_to_foods_display_name.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130705161615_add_index_to_meals_name.rb",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/foods_controller.rb",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-variables.less",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/script/ruby/parse_xml.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/admin/global_meals_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/global_meals/index.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/helpers/meals_helper.rb",
-		"/home/michele/Downloads/MyFoodapediaData/Food_Display_Table.xml",
-		"/home/michele/Desktop/meals.xml",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130703194151_create_foods.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/public/uploads/PolizzaCare9054383.pdf",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/global_meals/upload_html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/sheet.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/user.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/global_meals/new.html.erb",
-		"/home/michele/Dropbox/Projects/less/bootstrap/less/variables.less",
-		"/home/michele/Dropbox/Projects/less/custom-bootstrap/custom-variables.less",
-		"/home/michele/Dropbox/Projects/less/bootstrap/docs/assets/css/bootstrap.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/log/development.log",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/helpers/meals_controller.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/bootstrap/main.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/bootstrap/bootstrap-typeahead-fork.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery/main.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_burn.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application-print.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/application-all.css",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/jquery-ui/main.js"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/table.js"
 	],
 	"find":
 	{
@@ -238,6 +264,9 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/home/michele/Dropbox/Projects/ror/FitTracker,/home/michele/Dropbox/Projects/less/custom-bootstrap,/home/michele/Dropbox/Projects/less/fittracker-bootstrap,-tmp/*,-uploads/*,-*.xml",
+			"/home/michele/Dropbox/Projects/ror/FitTracker,/home/michele/Dropbox/Projects/less/custom-bootstrap,/home/michele/Dropbox/Projects/less/fittracker-bootstrap,-tmp/*,-uploads/*",
+			"/home/michele/Dropbox/Projects/ror/FitTracker,/home/michele/Dropbox/Projects/less/custom-bootstrap,/home/michele/Dropbox/Projects/less/fittracker-bootstrap,-tmp/*",
 			"/home/michele/Dropbox/Projects/ror/FitTracker,/home/michele/Dropbox/Projects/less/custom-bootstrap,/home/michele/Dropbox/Projects/less/fittracker-bootstrap",
 			"/home/michele/Dropbox/Projects/ror/FitTracker",
 			"/home/michele/Dropbox/Projects/less",
@@ -258,6 +287,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"render \"shared/user_stat\"",
+			"yield",
+			"margin-left:-20px",
+			".brand",
+			"admin_user",
+			".order",
+			"find",
+			"bs-docs",
+			"dsa",
+			"drugstherapy",
+			"crossingme",
 			"categoryId",
 			"link_to_add_activity_fields",
 			"sort_column",
@@ -374,18 +414,7 @@
 			"bootstrap-timepicker-hour",
 			"meal-container",
 			"getAllFields",
-			"name",
-			"time",
-			"calories",
-			"calaories",
-			"tips",
-			"allFields",
-			"checkLength",
-			"rei",
-			"$",
-			"debug",
-			"flash",
-			"10px"
+			"name"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -393,6 +422,9 @@
 		"regex": true,
 		"replace_history":
 		[
+			"fittracker",
+			"dsa",
+			"drugstherapy",
 			"category_id",
 			"t.decimal :",
 			":",
@@ -427,51 +459,51 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/sheets_controller.rb",
-					"semi_transient": true,
+					"file": "app/views/sheets/_fields.html.erb",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1943,
+						"buffer_size": 2202,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								869,
+								869
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 727.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
+					"file": "app/views/sheets/_fields_tab_burn.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 515,
+						"buffer_size": 1780,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								219,
-								219
+								165,
+								165
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -481,25 +513,105 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/home/michele/Dropbox/Docs/Resume/US/Datalogic/13th August 2013",
+					"file": "app/views/sheets/_fields_tab_fuel.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3239,
+						"buffer_size": 1553,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								964,
-								964
+								162,
+								162
 							]
 						],
 						"settings":
 						{
-							"auto_name": "13th August 2013",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/shared/_aside.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/sheets/show.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								198,
+								198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/shared/_user_info.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -586,7 +698,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 288.0,
+	"side_bar_width": 363.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

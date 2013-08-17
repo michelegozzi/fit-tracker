@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=480, initial-scale=1.0">
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    "application-all", :media => "screen, tv, projection" %>
     <%= stylesheet_link_tag    "application-print", :media => "print, handheld" %>
@@ -14,18 +15,31 @@
   <body>
     <div id="holder">
       <%= render 'layouts/header' %>
-    
+
       <div id="#body" class="container-fluid">
-        <% if flash.any? %>
-          <div class="row-fluid">
-            <div class="span8 offset2">
-              <% flash.each do |key, value| %>
-                <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-              <% end %>
+
+        <div class="row-fluid">
+          <aside class="span2">
+            <%= yield(:aside) %>
+          </aside>
+
+          <div class="span8">
+            <% if flash.any? %>
+              <div class="row-fluid">
+                <div class="span12">
+                  <% flash.each do |key, value| %>
+                    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+            <div class="row-fluid">
+              <div class="span12">
+                <%= yield %>
+              </div>
             </div>
           </div>
-        <% end %>
-        <%= yield %>
+        </div>
       </div>
       <%= debug(params) if Rails.env.development? %>
       <%= render 'layouts/footer' %>

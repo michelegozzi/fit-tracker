@@ -95,6 +95,4 @@ module ApplicationHelper
 		
 		link_to "#{title} #{content_tag :i, nil, class: i_css_class}".html_safe, {:sort => column, :direction => direction, :q => params[:q].nil? ? '' : params[:q]}, {:class => css_class}
 	end
-
-
 end

@@ -1,22 +1,25 @@
 <% provide(:title, "Sign in") %>
 <h1>Sign in</h1>
 
-<div class="row-fluid">
-  <div class="offset5 span4">
-		<%= form_tag sessions_path do %>
-			
-      <p>
+<%= form_tag sessions_path do %>
+  <div class="row-fluid">
+    <div class="span4 offset4">
 			<%= label_tag :email %>
-			<%= text_field_tag :email, params[:email], class: "span6" %>
+			<%= text_field_tag :email, params[:email], class: "span12" %>
 
 			<%= label_tag :password %>
-			<%= password_field_tag :password, '', class: "span6" %>
-      </p>
-      <p>
-			<%= submit_tag "Sign in", class: "btn btn-primary span3" %>
-      </p>
-		<% end%>
+			<%= password_field_tag :password, '', class: "span12" %>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4 offset4">
+			<%= submit_tag "Sign in", class: "btn btn-primary span4" %>
+    </div>
+  </div>
+<% end%>
 
+<div class="row-fluid">
+  <div class="span4 offset4">
 		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
 	</div>
 </div>

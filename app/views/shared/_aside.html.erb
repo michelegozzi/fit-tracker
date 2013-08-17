@@ -1,0 +1,13 @@
+<% content_for(:aside) do %>
+  <!--<section>
+    <h3>-->
+      <% # = params[:controller].humanize.singularize.upcase %>
+    <!--</h3>
+  </section>-->
+  <section>
+    <%= render "shared/user_stat", :object => uobj.nil? ? nil : uobj %>
+  </section>
+  <section>
+    <%= render 'shared/breadcrumb', :object => bcobj.nil? ? nil : bcobj %>
+  </section>
+<% end %>

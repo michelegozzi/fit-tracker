@@ -1,23 +1,19 @@
 <% include_javascript 'users/show.js' %>
 
-<div class="row-fluid">
-	<aside class="span2">
-		<section>
-			<%= render "shared/user_stat", object: @user %>
-			<%= render 'shared/breadcrumb', object: @sheet %>
-		</section>
-		<section>
-			
-		</section>
-		
-	</aside>
+<% # content_for(:aside) do %>
+    <% # = render "shared/user_stat", object: @user %>
+    <% # = render 'shared/breadcrumb', object: @sheet %>
+<% # end %>
 
-	<div class="span5">
+<%= render :partial => 'shared/aside', :locals => { :uobj => @user, :bcobj => @sheet } %>
+
+<div class="row-fluid">
+
+	<div class="span7">
 		<div id="calendar"></div>
 	</div>
 	
-	<div class="span3">
-		<% #if object.sheets.any? %>
+	<div class="span5">
 		<% if @sheets.any? %>
 			<h3>Sheets (<%= @sheets.count %>)</h3>
 				<%= render :partial => "shared/user_sheets_table" %>

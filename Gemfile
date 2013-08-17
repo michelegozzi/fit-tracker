@@ -6,19 +6,16 @@ gem 'rails', '3.2.11'
 gem 'therubyracer'
 gem 'rspec'
 gem 'sass', '~> 3.2'
-#gem 'bootstrap-sass', '~> 2.3.1.2'	#'2.1'
-#gem 'bcrypt-ruby', '3.0.1'
-gem 'faker', '1.0.1'							#9.29
-gem 'will_paginate', '3.0.3'					#9.31
-#gem 'bootstrap-will_paginate', '0.0.6'			#9.31
+#gem 'bootstrap-sass', '~> 2.3.1.2' #'2.1'
+#gem 'bcrypt-ruby'#, '3.0.1'
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'faker', '1.0.1'              #9.29
+gem 'will_paginate', '3.0.3'          #9.31
+#gem 'bootstrap-will_paginate', '0.0.6'     #9.31
 gem 'jquery-rails'
 gem 'debugger', group: [:development, :test]
 gem 'json'
 #gem 'safe_attributes'
-gem 'devise', '1.1.3'
-
-gem 'omniauth'
-	
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

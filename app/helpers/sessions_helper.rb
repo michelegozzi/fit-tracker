@@ -12,7 +12,7 @@ module SessionsHelper
 
   # Checks if an user is signed as an administrator
 	def signed_in_as_admin?
-		current_user.admin?
+		signed_in? && current_user.admin?
 	end
 
 	def current_user=(user)
