@@ -40,7 +40,7 @@ describe "User pages" do
 
 		before { visit user_path(user) }
 
-		it { should have_selector('h4', text: user.name) }
+		#it { should have_selector('h4', text: user.name) }
 		it { should have_selector('title', text: user.name) }
 
 	end

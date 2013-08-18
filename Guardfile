@@ -7,6 +7,7 @@ require 'active_support/core_ext'
 guard 'spork', :cucumber => false, :wait => 50, :rspec_env => { 'RAILS_ENV' => 'test' } do
   watch('config/application.rb')
   watch('config/environment.rb')
+  watch('config/routes.rb') { "spec/routing" }
   watch(%r{^config/environments/.+\.rb$})
   watch(%r{^config/initializers/.+\.rb$})
   watch('Gemfile')

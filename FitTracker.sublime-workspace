@@ -48,53 +48,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/sheets/_fields.html.erb",
+			"file": "/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
 			"settings":
 			{
-				"buffer_size": 2202,
+				"buffer_size": 1845,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<div class=\"tab-pane\" id=\"burn\">\n	<div class=\"row-fluid\">\n\n		<div class=\"span9\">\n			<%= f.label \"Activities\" %>\n			<div id=\"activitiesAccordion\" class=\"hidden-phone\">\n				<% Activity::CATEGORIES.each do |category| %>\n					<%= render :partial => 'activities_list',\n						:locals => {\n							:f => f,\n							:activities => @sheet.activities.where(\"category = :category\", {:category => category[1]}),\n							:categoryId => category[1],\n							:categoryKey => category[0]\n						} %>\n				<% end %>\n			</div>\n		</div>\n		<div class=\"span3\">\n			<section>\n				<div id=\"energy\">\n					<%= f.label :energy_level %>\n					<%= f.radio_button :energy_level, 1, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 2, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 3, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 4, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 5, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 6, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 7, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 8, :class => 'energyLevel' %>\n					<%= f.radio_button :energy_level, 9, :class => 'energyLevel' %>\n					<% #= f.radio_button :energy_level, 10, :class => 'battery' %>\n					<br>\n				</div>\n			</section>\n		</div>\n	</div>\n	<div class=\"row-fluid\">\n\n		<div class=\"span12\">\n			<%= f.label :notes do\n				('Notes (<b><span id=\"notesCounter\">' + Sheet::NOTES_MAXIMUM.to_s + '</span></b> characters left)').html_safe\n				end %>\n\n				<%= f.text_area :notes,\n					:rows => 5,\n					placeholder: \"Put your notes here...\",\n					:onkeypress => \"return taLimit(this);\",\n					:onkeyup => \"return taCount(this,'notesCounter');\", :class => 'span12' %>\n		</div>\n	</div>\n</div>",
-			"file": "app/views/sheets/_fields_tab_burn.html.erb",
-			"file_size": 1783,
-			"file_write_time": 130212265651173665,
+			"file": "/home/michele/Desktop/Hi Michele,",
 			"settings":
 			{
-				"buffer_size": 1780,
+				"buffer_size": 3172,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/sheets/_fields_tab_fuel.html.erb",
+			"file": "app/assets/stylesheets/all/universal.css.scss",
 			"settings":
 			{
-				"buffer_size": 1553,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/shared/_aside.html.erb",
-			"settings":
-			{
-				"buffer_size": 525,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/sheets/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 1331,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/shared/_user_info.html.erb",
-			"settings":
-			{
-				"buffer_size": 554,
+				"buffer_size": 497,
 				"line_ending": "Unix"
 			}
 		}
@@ -126,27 +99,42 @@
 	},
 	"file_history":
 	[
+		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
+		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/fittracker-bootstrap.less",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_aside.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/new.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/show.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/user_pages_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/edit.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/admin_pages_spec.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Guardfile",
+		"/home/michele/Desktop/Hi Michele,",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_aside.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/new.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/edit.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sessions/new.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_info.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_fuel.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_burn.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/bootstrap/main.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_footer.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_info.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_aside.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/show.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_sheets_table.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/admin_pages_spec.rb",
-		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_user_stat.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/user_pages_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/factories.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/sessions_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/users_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/authentication_pages_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/views/helpers/foods/index.html.erb_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/views/static_pages/contact.html.erb_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/static_pages_spec.rb",
@@ -209,7 +197,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/TIME_ZONE",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_activities_list.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/models/food.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/helpers/application_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sheets_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/doc/Failures",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/sheets/fields.js.erb",
@@ -222,7 +209,6 @@
 		"/home/michele/Dropbox/Docs/Resume/Uk/The Sport Company XYZ/cover_letter.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_meals_list.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/about.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sessions/new.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/contact.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/static_pages/_home_for_unsigned_users.html.erb",
 		"/home/michele/Dropbox/Docs/English Lessons/2013-05-05 - chapter 5 - cover letter and CV.txt",
@@ -240,20 +226,7 @@
 		"/home/michele/Dropbox/Docs/Resume/Uk/SQL Server Interview Questions and Answers.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/sheets_helper_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/helpers/application_helper_spec.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130710204533_rename_foods_columns.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/lib/tasks/sample_data.rake",
-		"/home/michele/.bash_profile",
-		"/home/michele/.profile",
-		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/ISSUES.md",
-		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/README.md",
-		"/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.2.3/lib/bundler/rubygems_integration.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_breadcrumb.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_breadcrumb.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/new.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/edit.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/admin/foods/foods_table.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/application.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/javascripts/global/table.js"
+		"/home/michele/Dropbox/Projects/ror/FitTracker/db/migrate/20130710204533_rename_foods_columns.rb"
 	],
 	"find":
 	{
@@ -287,6 +260,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"render :partial => 'shared/aside'",
 			"render \"shared/user_stat\"",
 			"yield",
 			"margin-left:-20px",
@@ -413,8 +387,7 @@
 			"box_sizing",
 			"bootstrap-timepicker-hour",
 			"meal-container",
-			"getAllFields",
-			"name"
+			"getAllFields"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -459,51 +432,51 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/sheets/_fields.html.erb",
+					"file": "/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2202,
+						"buffer_size": 1845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								869,
-								869
+								857,
+								857
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 727.0,
+						"translation.y": 1360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/sheets/_fields_tab_burn.html.erb",
+					"file": "/home/michele/Desktop/Hi Michele,",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1780,
+						"buffer_size": 3172,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								165,
-								165
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -513,108 +486,27 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/sheets/_fields_tab_fuel.html.erb",
+					"file": "app/assets/stylesheets/all/universal.css.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1553,
+						"buffer_size": 497,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								162,
-								162
+								266,
+								266
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/shared/_aside.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 525,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								525,
-								525
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/sheets/show.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1331,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								198,
-								198
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/shared/_user_info.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 554,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								298,
-								298
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 400.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

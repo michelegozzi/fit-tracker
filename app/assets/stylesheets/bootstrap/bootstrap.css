@@ -5247,6 +5247,23 @@ a.badge:focus {
   margin-left: -0.5em !important;
   margin-right: -1em !important;
 }
+.navbar {
+  margin-bottom: 20px !important;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  overflow-y: scroll;
+}
+/*
+@media (min-width: 979px) {
+  body {
+      padding-top: 60px;
+  }
+}
+*/
 header .brand {
   font-size: 1.7em;
   color: #ffffff;
@@ -5257,6 +5274,23 @@ header .brand {
 header .brand:hover {
   color: #ffffff;
   text-decoration: none;
+}
+/* universal */
+#holder {
+  min-height: 100%;
+  position: relative;
+}
+#body {
+  padding-bottom: 100px;
+  /* footer s height */
+
+}
+footer {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 h1 {
   text-align: center;
