@@ -5257,13 +5257,11 @@ body {
 html {
   overflow-y: scroll;
 }
-/*
 @media (min-width: 979px) {
   body {
-      padding-top: 60px;
+    padding-top: 60px;
   }
 }
-*/
 header .brand {
   font-size: 1.7em;
   color: #ffffff;

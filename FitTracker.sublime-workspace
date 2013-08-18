@@ -47,30 +47,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
-			"settings":
-			{
-				"buffer_size": 1845,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/michele/Desktop/Hi Michele,",
-			"settings":
-			{
-				"buffer_size": 3172,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/all/universal.css.scss",
-			"settings":
-			{
-				"buffer_size": 497,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/User/nant.sublime-build",
 	"command_palette":
@@ -99,7 +75,12 @@
 	},
 	"file_history":
 	[
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
+		"/home/michele/Dropbox/Projects/ror/FitTracker/config/routes.rb",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
+		"/home/michele/Desktop/Hi Michele,",
 		"/home/michele/Dropbox/Projects/less/fittracker-bootstrap/fittracker-bootstrap.less",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/shared/_aside.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/new.html.erb",
@@ -108,9 +89,7 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/edit.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/admin_pages_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/Guardfile",
-		"/home/michele/Desktop/Hi Michele,",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/Gemfile",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/application.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_fields.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_aside.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/users/new.html.erb",
@@ -124,7 +103,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/sheets/_fields_tab_burn.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/bootstrap/main.css",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_footer.html.erb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/layouts/_header.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/search.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/_foods_table.html.erb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/views/admin/foods/index.html.erb",
@@ -139,7 +117,6 @@
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/views/static_pages/contact.html.erb_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/spec/requests/static_pages_spec.rb",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/config/initializers/omniauth.rb",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/config/routes.rb",
 		"/home/michele/Dropbox/Docs/Visto/Procura della Repubblica.txt",
 		"/home/michele/Dropbox/Projects/ror/FitTracker/app/controllers/sessions_controller.rb",
 		"/home/michele/Dropbox/Projects/ror/portfolio/lib/tasks/sample_data.rake",
@@ -174,7 +151,6 @@
 		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/layouts/_footer.html.erb",
 		"/home/michele/Dropbox/Projects/ror/portfolio/app/helpers/application_helper.rb",
 		"/home/michele/Dropbox/Projects/ror/portfolio/app/assets/javascripts/static_pages/index.js",
-		"/home/michele/Dropbox/Projects/ror/FitTracker/app/assets/stylesheets/all/universal.css.scss",
 		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/layouts/_header.html.erb",
 		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_dsa.html.erb",
 		"/home/michele/Dropbox/Projects/ror/portfolio/app/views/static_pages/_drugstherapy.html.erb",
@@ -427,90 +403,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/home/michele/Dropbox/Projects/less/fittracker-bootstrap/custom-other.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1845,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								857,
-								857
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1360.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/michele/Desktop/Hi Michele,",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/assets/stylesheets/all/universal.css.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 497,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								266,
-								266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 400.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -590,7 +484,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 363.0,
+	"side_bar_width": 189.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
