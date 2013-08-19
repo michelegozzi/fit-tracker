@@ -3,9 +3,10 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= full_title(yield(:title)) %></title>
-    <%= stylesheet_link_tag    "application-all", :media => "screen, tv, projection" %>
-    <%= stylesheet_link_tag    "application-print", :media => "print" %>
-    <%= stylesheet_link_tag    "application-handheld", :media => "handheld" %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <% # = stylesheet_link_tag    "application-all", :media => "screen, tv, projection" %>
+    <% # = stylesheet_link_tag    "application-print", :media => "print" %>
+    <% # = stylesheet_link_tag    "application-handheld", :media => "handheld" %>
     <%= yield(:extraheadstyle) %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
