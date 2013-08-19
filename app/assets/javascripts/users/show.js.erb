@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
 				console.log('Clicked on the slot: ' + date);
 			}
 			console.log('a day has been clicked!');
-			document.location = "/sheets/new";
+			document.location = "/sheets/new?date="+date;
 		},
 
 		eventClick: function(calEvent, jsEvent, view) {

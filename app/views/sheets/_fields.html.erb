@@ -26,32 +26,23 @@
   
 		<div class="row-fluid">
 			<div class="span12">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Date</th>
-							<th>Week Number</th>
-							<th>Goals Met:</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<div class="input-append date" id="sheet_date_markup" data-date="<%= f.object.date.strftime("%d-%m-%Y") %>" data-date-format="dd-mm-yyyy">
-									<%= f.text_field :date, :size => 10, :value => f.object.date.strftime("%d-%m-%Y") %>
-									<span class="add-on ui-datepicker-trigger"><i class="icon-th"></i></span>
-								</div>
-							</td>
-							<td>
-								<%= f.number_field :week_num %>
-							</td>
-							<td>
-								<% # f.select :goals_met, Sheet::GOALS_MET, {:prompt => 'Choose ...'} %>
-								<%= f.select :goals_met, Sheet::GOALS_MET, {:include_blank => 'Choose ...'} %>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+        <div class="row-fluid">
+          <div class="span4">
+            <%= f.label :date, placeholder: "Change your date here..." %>
+            <div class="input-append date" id="sheet_date_markup" data-date="<%= f.object.date.strftime("%d-%m-%Y") %>" data-date-format="dd-mm-yyyy">
+              <%= f.text_field :date, :size => 10, :value => f.object.date.strftime("%d-%m-%Y") %>
+              <span class="add-on ui-datepicker-trigger"><i class="icon-th"></i></span>
+            </div>
+          </div>
+          <div class="span4">
+            <%= f.label :week_num, :label => "Week Number" %>
+            <%= f.number_field :week_num %>
+          </div>
+          <div class="span4">
+            <%= f.label :goals_met, :label => "Goals Met" %>
+            <%= f.select :goals_met, Sheet::GOALS_MET, {:include_blank => 'Choose ...'} %>
+          </div>
+        </div>
 			</div>
 		</div>
 

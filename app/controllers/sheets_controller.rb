@@ -10,11 +10,18 @@ class SheetsController < ApplicationController
 	end
 
 	def new
+    date = params[:date].to_date
+
+    if date.nil?
+      date = Time.new
+    end
+
 		@sheet = current_user.sheets.new
-		@sheet.date = Time.new #.strftime("%d-%m-%Y")
+		@sheet.date = date
 	end
 
 	def create
+
 		@sheet = current_user.sheets.new(params[:sheet])
 		if @sheet.save
 			#parsed_json = JSON(your_json_string)
